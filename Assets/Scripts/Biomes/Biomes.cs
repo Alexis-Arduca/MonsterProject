@@ -59,4 +59,31 @@ public class Biomes : MonoBehaviour
             Instantiate(monster.gameObject, randomPos, Quaternion.identity);
         }
     }
+
+    /// <summary>
+    /// Delete all monsters
+    /// </summary>
+    public void ClearBiome()
+    {
+        Monster[] monsters = Object.FindObjectsByType<Monster>(FindObjectsSortMode.None);
+
+        foreach (var monster in monsters)
+        {
+            GameObject.DestroyImmediate(monster.gameObject);
+        }
+    }
+
+    /// <summary>
+    /// Usage for test in UnityEditor mode
+    /// </summary>
+    public void Executer()
+    {
+        Bounds bounds = GetComponent<Renderer>()?.bounds ?? new Bounds(transform.position, Vector3.zero);
+
+        Debug.Log("DESTROY EVERY MONSTERS !");
+        ClearBiome();
+
+        Debug.Log("BIOMES EXECUTION IN EDITOR MODE !");
+        SpawnMonsters(bounds);
+    }
 }
