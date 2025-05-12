@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
-    private bool playerAction = false;
+    [Header("UI")]
     private int appleCount;
+    public TMP_Text appleCountUI;
+
+    private bool playerAction = false;
     private PlayerMovement playerMovement;
     
     // Start is called before the first frame update
@@ -14,6 +18,8 @@ public class PlayerController : MonoBehaviour
         playerMovement = GetComponent<PlayerMovement>();
 
         appleCount = 0;
+
+        UpdateAppleUI();
 
         GameEventsManager.instance.appleEvents.onAppleCollected += AppleCollected;
         GameEventsManager.instance.appleEvents.onAppleUsed += AppleUsed;
@@ -42,6 +48,11 @@ public class PlayerController : MonoBehaviour
     /// Apples function
     /// </summary>
     /// <returns></returns>
+    private void UpdateAppleUI()
+    {
+        appleCountUI.text = $"{appleCount}";
+    }
+
     public int GetApples()
     {
         return appleCount;
@@ -50,10 +61,12 @@ public class PlayerController : MonoBehaviour
     private void AppleCollected(int value)
     {
         appleCount += value;
+        UpdateAppleUI();
     }
 
     private void AppleUsed(int value)
     {
         appleCount -= value;
+        UpdateAppleUI();
     }
 }
