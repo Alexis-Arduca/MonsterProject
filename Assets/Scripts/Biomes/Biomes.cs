@@ -5,6 +5,7 @@ public class Biomes : MonoBehaviour
 {
     public List<Monster> assignedMonsters;
     public float spawnDistance = 5f;
+    public int monsterNumber = 3;
 
     void Start()
     {
@@ -29,34 +30,39 @@ public class Biomes : MonoBehaviour
 
         List<Vector3> monstersPositions = new List<Vector3>();
 
-        foreach (var monster in assignedMonsters)
+        while (monsterNumber > 0)
         {
-            Vector3 randomPos = new Vector3();
-            bool validPosition = false;
+            monsterNumber -= 1;
 
-            while (!validPosition)
+            foreach (var monster in assignedMonsters)
             {
-                randomPos = new Vector3(
-                    Random.Range(bounds.min.x + 1f, bounds.max.x - 1f),
-                    bounds.min.y + 0.5f,
-                    Random.Range(bounds.min.z + 1f, bounds.max.z - 1f)
-                );
+                Vector3 randomPos = new Vector3();
+                bool validPosition = false;
 
-                validPosition = true;
-                foreach (Vector3 monsterPos in monstersPositions)
+                while (!validPosition)
                 {
-                    Vector2 posXZ = new Vector2(randomPos.x, randomPos.z);
-                    Vector2 monsterXZ = new Vector2(monsterPos.x, monsterPos.z);
-                    if (Vector2.Distance(posXZ, monsterXZ) < spawnDistance)
+                    randomPos = new Vector3(
+                        Random.Range(bounds.min.x + 1f, bounds.max.x - 1f),
+                        bounds.min.y + 0.5f,
+                        Random.Range(bounds.min.z + 1f, bounds.max.z - 1f)
+                    );
+
+                    validPosition = true;
+                    foreach (Vector3 monsterPos in monstersPositions)
                     {
-                        validPosition = false;
-                        break;
+                        Vector2 posXZ = new Vector2(randomPos.x, randomPos.z);
+                        Vector2 monsterXZ = new Vector2(monsterPos.x, monsterPos.z);
+                        if (Vector2.Distance(posXZ, monsterXZ) < spawnDistance)
+                        {
+                            validPosition = false;
+                            break;
+                        }
                     }
                 }
+            
+                monstersPositions.Add(randomPos);
+                Instantiate(monster.gameObject, randomPos, Quaternion.identity);
             }
-        
-            monstersPositions.Add(randomPos);
-            Instantiate(monster.gameObject, randomPos, Quaternion.identity);
         }
     }
 
@@ -71,6 +77,8 @@ public class Biomes : MonoBehaviour
         {
             GameObject.DestroyImmediate(monster.gameObject);
         }
+
+        monsterNumber = 3;
     }
 
     /// <summary>

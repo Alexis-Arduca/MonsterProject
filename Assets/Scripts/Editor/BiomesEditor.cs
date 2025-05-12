@@ -6,7 +6,17 @@ public class MonScriptEditor : Editor
 {
     public override void OnInspectorGUI()
     {
-        DrawDefaultInspector();
+        if (target == null)
+            return;
+
+        try
+        {
+            DrawDefaultInspector();
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError("Error - DrawDefaultInspector: " + e.Message);
+        }
 
         Biomes script = (Biomes)target;
         if (GUILayout.Button("Spawn Monsters"))
