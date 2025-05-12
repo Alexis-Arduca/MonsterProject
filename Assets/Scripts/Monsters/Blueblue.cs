@@ -27,4 +27,9 @@ public class Blueblue : Monster
     {
         base.HandlePower();
     }
+
+    protected override void HandleFollowing()
+    {
+        base.HandleFollowing();
+    }
 }

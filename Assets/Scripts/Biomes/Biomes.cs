@@ -82,7 +82,7 @@ public class Biomes : MonoBehaviour
     }
 
     /// <summary>
-    /// Usage for test in UnityEditor mode
+    /// Usage for test in UnityEditor mode only
     /// </summary>
     public void Executer()
     {
