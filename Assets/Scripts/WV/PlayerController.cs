@@ -2,14 +2,21 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody _rb;
+    [Header("Movement")]
+    private const float MoveSpeed = 5f;
     private Vector3 _moveDirection;
-    private float _moveSpeed = 5f;
-    private float _jumpForce = 5f;
-    private bool _isGrounded;
+
+    [Header("Initialization")]
+    private Rigidbody _rb;
     private Camera _camera;
-    private GameObject _pickable;
-    private Rigidbody _pickableRb;
+
+    [Header("Pickup")]
+    private const float PickupDistance = 2f;
+    private bool _isHoldingItem;
+    private PickableController _pickableController;
+
+    [Header("Camera")]
+    [SerializeField] [Range(0, 10)] private float mouseSensitivity = 2f;
 
     private void Start()
     {
@@ -21,23 +28,46 @@ public class PlayerController : MonoBehaviour
     {
         HandleCamera();
         HandleMovement();
-        HandleJump();
         if (Input.GetKeyDown(KeyCode.E))
+            HandleAction();
+    }
+
+    private void HandleAction()
+    {
+        if (!_isHoldingItem)
+        {
             HandlePickup();
+        }
+        else
+        {
+            HandleItem();
+        }
+    }
+
+    private void HandleItem()
+    {
+        if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out RaycastHit hit, PickupDistance))
+        {
+            if (hit.collider.TryGetComponent(out MonsterController monsterController))
+            {
+                monsterController.Interact(_pickableController.name);
+            }
+            else
+            {
+                _pickableController.Drop();
+            }
+            _isHoldingItem = false;
+        }
     }
 
     private void HandlePickup()
     {
-        RaycastHit hit;
-        if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out hit, 2f))
+        if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out RaycastHit hit, PickupDistance))
         {
-            if (hit.collider.CompareTag("Pickable"))
+            if (hit.collider.TryGetComponent(out _pickableController))
             {
-                _pickable = hit.collider.gameObject;
-                _pickableRb = _pickable.GetComponent<Rigidbody>();
-                _pickableRb.isKinematic = true; // Disable physics
-                _pickable.transform.SetParent(_camera.transform);
-                _pickable.transform.localPosition = transform.position + _camera.transform.forward * 2f; // Position in front of the camera
+                _pickableController.Pickup(_camera.transform);
+                _isHoldingItem = true;
             }
         }
     }
@@ -48,8 +78,8 @@ public class PlayerController : MonoBehaviour
         float mouseY = Input.GetAxis("Mouse Y");
         Vector3 cameraRotation = _camera.transform.localEulerAngles;
 
-        cameraRotation.x -= mouseY;
-        cameraRotation.y += mouseX;
+        cameraRotation.x -= mouseY * mouseSensitivity;
+        cameraRotation.y += mouseX * mouseSensitivity;
         _camera.transform.localEulerAngles = cameraRotation;
     }
 
@@ -61,15 +91,6 @@ public class PlayerController : MonoBehaviour
         _moveDirection = new Vector3(moveHorizontal, 0.0f, moveVertical);
         _moveDirection.Normalize();
 
-        _rb.MovePosition(transform.position + Time.deltaTime * _moveSpeed * _moveDirection);
-    }
-
-    private void HandleJump()
-    {
-        if (Input.GetButtonDown("Jump") && _isGrounded)
-        {
-            _rb.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
-            _isGrounded = false;
-        }
+        _rb.MovePosition(transform.position + Time.deltaTime * MoveSpeed * _moveDirection);
     }
 }
