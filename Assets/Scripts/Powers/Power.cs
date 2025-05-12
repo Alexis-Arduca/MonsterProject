@@ -14,4 +14,9 @@ public class Power : MonoBehaviour
     protected virtual void Update()
     {
     }
+
+    public virtual void PowerEffect()
+    {
+
+    }
 }
