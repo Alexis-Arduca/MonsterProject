@@ -17,6 +17,6 @@ public class Power : MonoBehaviour
 
     public virtual void PowerEffect()
     {
-
+        // Each power will implement is own effect
     }
 }

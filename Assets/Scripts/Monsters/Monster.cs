@@ -32,7 +32,6 @@ public class Monster : MonoBehaviour
         Vector3.right
     };
 
-
     protected virtual void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -50,6 +49,9 @@ public class Monster : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Patrol Section
+    /// </summary>
     protected virtual void HandlePatrolling()
     {
         rb.MovePosition(rb.position + patrolDirection * patrolSpeed * Time.deltaTime);
@@ -67,6 +69,9 @@ public class Monster : MonoBehaviour
         patrolDirection = directions[Random.Range(0, directions.Length)];
     }
 
+    /// <summary>
+    /// Power Section
+    /// </summary>
     protected virtual void UsePower()
     {
         power.PowerEffect();

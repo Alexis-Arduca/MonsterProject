@@ -4,6 +4,7 @@ public class GameEventsManager : MonoBehaviour
 {
     public static GameEventsManager instance { get; private set; }
 
+    public AppleEvents appleEvents;
 
     private void Awake()
     {
@@ -14,5 +15,6 @@ public class GameEventsManager : MonoBehaviour
         instance = this;
 
         // initialize all events
+        appleEvents = new AppleEvents();
     }
 }
