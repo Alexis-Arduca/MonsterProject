@@ -1,11 +1,12 @@
 using UnityEngine;
 using System;
 
-// [CreateAssetMenu(fileName = "Spit", menuName = "Inventory/Bomb")]
+[CreateAssetMenu(fileName = "NewSpit", menuName = "Powers/Spit")]
 public class Spit : Power
 {
     public GameObject spitObject;
     public int spitEntityNumber = 3;
+    public float timeBeforeRemoval = 1f;
 
     protected override void Start()
     {
@@ -17,13 +18,14 @@ public class Spit : Power
         base.Update();
     }
 
-    public override void PowerEffect()
+    public override void PowerEffect(Vector3 origin)
     {
-        base.PowerEffect();
+        base.PowerEffect(origin);
 
         for (int i = 0; i < spitEntityNumber; i++)
         {
-            Instantiate(spitObject);
+            GameObject obj = Instantiate(spitObject, origin, Quaternion.identity);
+            Destroy(obj, timeBeforeRemoval);
         }
     }
 }

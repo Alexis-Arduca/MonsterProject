@@ -1,7 +1,7 @@
 using UnityEngine;
 using System;
 
-public class Power : MonoBehaviour
+public class Power : ScriptableObject
 {
     [Header("Description")]
     [SerializeField] protected string powerName;
@@ -15,7 +15,7 @@ public class Power : MonoBehaviour
     {
     }
 
-    public virtual void PowerEffect()
+    public virtual void PowerEffect(Vector3 origin)
     {
         // Each power will implement is own effect
     }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class Monster : MonoBehaviour
 {
     public enum ElementType { Null, Fire, Ice, Electric, Psychic }
-    public enum State { Patrolling, Chasing, Attacking, Defensive }
+    public enum State { Patrolling, Power }
 
     [Header("Description")]
     [SerializeField] protected string monsterName;
@@ -38,14 +38,21 @@ public class Monster : MonoBehaviour
         currentState = State.Patrolling;
     }
 
+    private float stateChangeTimer = 0f;
     protected virtual void Update()
     {
+        stateChangeTimer += Time.deltaTime;
+
+        if (stateChangeTimer >= 5f)
+        {
+            currentState = State.Power;
+            stateChangeTimer = 0f;
+        }
+
         switch (currentState)
         {
             case State.Patrolling: HandlePatrolling(); break;
-            // case State.Chasing: HandleChasing(); break;
-            // case State.Attacking: HandleAttacking(); break;
-            // case State.Defensive: HandleDefensive(); break;
+            case State.Power: HandlePower(); break;
         }
     }
 
@@ -72,8 +79,11 @@ public class Monster : MonoBehaviour
     /// <summary>
     /// Power Section
     /// </summary>
-    protected virtual void UsePower()
+    
+    
+    protected virtual void HandlePower()
     {
-        power.PowerEffect();
+        power.PowerEffect(transform.position);
+        currentState = State.Patrolling;
     }
 }

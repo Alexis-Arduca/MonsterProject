@@ -23,8 +23,8 @@ public class Blueblue : Monster
         base.SetNewPatrolDirection();
     }
     
-    protected override void UsePower()
+    protected override void HandlePower()
     {
-        base.UsePower();
+        base.HandlePower();
     }
 }
