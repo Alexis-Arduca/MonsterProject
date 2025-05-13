@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.AI;
 using System.Collections.Generic;
 
 public class Monster : MonoBehaviour
@@ -11,10 +12,14 @@ public class Monster : MonoBehaviour
     [SerializeField] protected string description;
 
     [Header("Parameters")]
+    [SerializeField] protected int code;
     [SerializeField] protected ElementType element = ElementType.Null;
     [SerializeField] protected List<ElementType> weakness = new List<ElementType>();
     [SerializeField] protected List<ElementType> immunity = new List<ElementType>();
     [SerializeField] protected bool isFriendly = false;
+    protected State currentState;
+    protected Rigidbody rb;
+    private static readonly Vector3[] directions = { Vector3.forward, Vector3.back, Vector3.left, Vector3.right };
 
     [Header("Power")]
     [SerializeField] protected Power power;
@@ -22,37 +27,60 @@ public class Monster : MonoBehaviour
     [Header("Patrol")]
     [SerializeField] protected float patrolSpeed = 1.5f;
     [SerializeField] protected float patrolChangeInterval = 3f;
+    [SerializeField] protected float maxPatrolDistance = 5f;
     private Vector3 basePosition;
     private float patrolTimer;
     private float stateChangeTimer = 0f;
     private Vector3 patrolDirection;
-    protected State currentState;
-    protected Rigidbody rb;
-    private static readonly Vector3[] directions = { Vector3.forward, Vector3.back, Vector3.left, Vector3.right };
 
+    [Header("Follow")]
+    [SerializeField] protected float maxFollowDistance = 2f;
+    private NavMeshAgent agent;
+    private bool isClose;
+    private Vector3 playerPos;
+
+    
     protected virtual void Start()
     {
         rb = GetComponent<Rigidbody>();
 
         currentState = State.Patrolling;
         basePosition = transform.position;
+        agent = GetComponent<NavMeshAgent>();
+
+        GameEventsManager.instance.trailEvents.onItemPickup += ActivateTrail;
+        GameEventsManager.instance.trailEvents.onItemGive += DeactivateTrail;
+    }
+
+    protected virtual void OnDisable()
+    {
+        GameEventsManager.instance.trailEvents.onItemPickup -= ActivateTrail;
+        GameEventsManager.instance.trailEvents.onItemGive -= DeactivateTrail;
     }
 
     protected virtual void Update()
     {
-        stateChangeTimer += Time.deltaTime;
+        playerPos = GameObject.Find("Player").transform.position;
 
-        if (stateChangeTimer >= 5f)
+                    // Power State \\
+        // stateChangeTimer += Time.deltaTime;
+
+        // if (stateChangeTimer >= 5f)
+        // {
+        //     currentState = State.Power;
+        //     stateChangeTimer = 0f;
+        // }
+
+        if (isFriendly && Vector3.Distance(playerPos, transform.position) > maxFollowDistance)
         {
-            currentState = State.Power;
-            stateChangeTimer = 0f;
+            currentState = State.Following;
         }
 
         switch (currentState)
         {
             case State.Patrolling: HandlePatrolling(); break;
             case State.Power: HandlePower(); break;
-            // case State.Following: HandleFollowing(); break;
+            case State.Following: HandleFollowing(); break;
         }
     }
 
@@ -61,7 +89,19 @@ public class Monster : MonoBehaviour
     /// </summary>
     protected virtual void HandlePatrolling()
     {
-        rb.MovePosition(rb.position + patrolDirection * patrolSpeed * Time.deltaTime);
+        Vector3 nextPosition = rb.position + patrolDirection * patrolSpeed * Time.deltaTime;
+        float distanceFromBase = Vector3.Distance(basePosition, nextPosition);
+
+        if (distanceFromBase <= maxPatrolDistance)
+        {
+            rb.MovePosition(nextPosition);
+        }
+        else
+        {
+            patrolDirection = (basePosition - rb.position).normalized;
+            rb.MovePosition(rb.position + patrolDirection * patrolSpeed * Time.deltaTime);
+        }
+
         patrolTimer -= Time.deltaTime;
 
         if (patrolTimer <= 0)
@@ -90,6 +130,38 @@ public class Monster : MonoBehaviour
     /// </summary>
     protected virtual void HandleFollowing()
     {
-        // TODO Victor
+        if (Vector3.Distance(playerPos, transform.position) > maxFollowDistance)
+        {
+            agent.SetDestination(playerPos);
+        }
+        else
+        {
+            basePosition = playerPos;
+            maxPatrolDistance = maxFollowDistance;
+            currentState = State.Patrolling;
+        }
+    }
+
+    /// <summary>
+    /// Trail Section
+    /// </summary>
+    protected virtual void ActivateTrail(int monster)
+    {
+        if (monster == code)
+        {
+            MonsterTrail trail = GetComponent<MonsterTrail>();
+
+            trail.enabled = true;
+        }
+    }
+
+    protected virtual void DeactivateTrail(int monster)
+    {
+        if (monster == code)
+        {
+            MonsterTrail trail = GetComponent<MonsterTrail>();
+
+            trail.enabled = false;
+        }
     }
 }

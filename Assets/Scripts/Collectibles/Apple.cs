@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Apple : MonoBehaviour
 {
-    public int appleNumber;
+    public int code;
     
     // Start is called before the first frame update
     void Start()
@@ -21,7 +21,7 @@ public class Apple : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            GameEventsManager.instance.appleEvents.OnAppleCollected(appleNumber);
+            GameEventsManager.instance.trailEvents.OnItemPickup(code);
             Destroy(gameObject);
         }
     }

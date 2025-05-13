@@ -8,6 +8,11 @@ public class Blueblue : Monster
         base.Start();
     }
 
+    protected override void OnDisable()
+    {
+        base.OnDisable();
+    }
+
     protected override void Update()
     {
         base.Update();
@@ -31,5 +36,15 @@ public class Blueblue : Monster
     protected override void HandleFollowing()
     {
         base.HandleFollowing();
+    }
+
+    protected override void ActivateTrail(int monster)
+    {
+        base.ActivateTrail(monster);
+    }
+
+    protected override void DeactivateTrail(int monster)
+    {
+        base.DeactivateTrail(monster);
     }
 }
