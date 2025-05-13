@@ -1,19 +1,26 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MonsterController : MonoBehaviour
 {
-    private string _wantedItem = "Pickable";
+    private ThoughtBubbleController _thoughtBubble;
+    public Image wantedItem;
+    private PickableController _pickableController;
 
-    public void Interact(string name)
+    private void Start()
     {
-        if (name == _wantedItem)
+        _thoughtBubble = GetComponentInChildren<ThoughtBubbleController>();
+        _thoughtBubble.ShowBubble();
+        _thoughtBubble.SetWantedItem(wantedItem);
+
+    }
+
+    public void Interact(PickableController item)
+    {
+        if (wantedItem == item.icon)
         {
-            Debug.Log($"Monster: I want {name}!");
-            // Add logic for monster interaction here
-        }
-        else
-        {
-            Debug.Log($"Monster: I don't want {name}.");
+            _thoughtBubble.HideBubble();
+            item.Destroy();
         }
     }
 }

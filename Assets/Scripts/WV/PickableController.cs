@@ -1,8 +1,11 @@
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PickableController : MonoBehaviour
 {
     private Rigidbody _rb;
+    public Image icon;
 
     private void Start()
     {
@@ -17,7 +20,7 @@ public class PickableController : MonoBehaviour
             _rb.useGravity = false;
         }
         transform.SetParent(cameraT);
-        transform.localPosition = new Vector3(1, 0, 2);
+        transform.localPosition = new Vector3(.5f, 0, 1);
     }
 
     public void Drop()
@@ -28,5 +31,10 @@ public class PickableController : MonoBehaviour
             _rb.useGravity = true;
         }
         transform.SetParent(null);
+    }
+
+    public void Destroy()
+    {
+        Destroy(gameObject);
     }
 }

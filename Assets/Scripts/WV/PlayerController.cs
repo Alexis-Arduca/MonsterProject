@@ -12,7 +12,6 @@ public class PlayerController : MonoBehaviour
 
     [Header("Pickup")]
     private const float PickupDistance = 2f;
-    private bool _isHoldingItem;
     private PickableController _pickableController;
 
     [Header("Camera")]
@@ -34,7 +33,7 @@ public class PlayerController : MonoBehaviour
 
     private void HandleAction()
     {
-        if (!_isHoldingItem)
+        if (!_pickableController)
         {
             HandlePickup();
         }
@@ -50,13 +49,13 @@ public class PlayerController : MonoBehaviour
         {
             if (hit.collider.TryGetComponent(out MonsterController monsterController))
             {
-                monsterController.Interact(_pickableController.name);
+                monsterController.Interact(_pickableController);
             }
-            else
-            {
-                _pickableController.Drop();
-            }
-            _isHoldingItem = false;
+        }
+        else
+        {
+            _pickableController.Drop();
+            _pickableController = null;
         }
     }
 
@@ -67,7 +66,6 @@ public class PlayerController : MonoBehaviour
             if (hit.collider.TryGetComponent(out _pickableController))
             {
                 _pickableController.Pickup(_camera.transform);
-                _isHoldingItem = true;
             }
         }
     }
@@ -87,10 +85,9 @@ public class PlayerController : MonoBehaviour
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
+        Vector3 cameraForward = _camera.transform.forward;
+        Vector3 cameraRight = _camera.transform.right;
 
-        _moveDirection = new Vector3(moveHorizontal, 0.0f, moveVertical);
-        _moveDirection.Normalize();
-
-        _rb.MovePosition(transform.position + Time.deltaTime * MoveSpeed * _moveDirection);
+        _rb.MovePosition(transform.position + Time.deltaTime * MoveSpeed * (moveVertical * cameraForward + moveHorizontal * cameraRight));
     }
 }
