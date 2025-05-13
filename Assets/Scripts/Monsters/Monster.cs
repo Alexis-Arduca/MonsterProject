@@ -145,6 +145,11 @@ public class Monster : MonoBehaviour
     /// <summary>
     /// Trail Section
     /// </summary>
+    public virtual void SetupCode(int newCode)
+    {
+        code = newCode;
+    }
+
     protected virtual void ActivateTrail(int monster)
     {
         if (monster == code)

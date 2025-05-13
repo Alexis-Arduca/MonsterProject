@@ -19,12 +19,12 @@ public class MonScriptEditor : Editor
         }
 
         Biomes script = (Biomes)target;
-        if (GUILayout.Button("Spawn Monsters"))
+        if (GUILayout.Button("Generate Biome"))
         {
             script.Executer();
         }
 
-        if (GUILayout.Button("Delete Monsters"))
+        if (GUILayout.Button("Clear Biome"))
         {
             script.ClearBiome();
         }

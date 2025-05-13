@@ -4,7 +4,7 @@ using UnityEngine.AI;
 [RequireComponent(typeof(LineRenderer), typeof(NavMeshAgent))]
 public class MonsterTrail : MonoBehaviour
 {
-    public Transform player;
+    private Transform player;
     private NavMeshAgent agent;
     private LineRenderer lineRenderer;
     private NavMeshPath path;
@@ -13,6 +13,7 @@ public class MonsterTrail : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         lineRenderer = GetComponent<LineRenderer>();
+        player = GameObject.Find("Player").transform;
         path = new NavMeshPath();
     }
 
