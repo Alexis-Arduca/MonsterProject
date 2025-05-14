@@ -6,6 +6,7 @@ public class Biomes : MonoBehaviour
     [Header("List for Testing")]
     public List<Monster> assignedMonsters;
     public List<Collectible> assignedCollectibles;
+    public List<GameObject> assignesObstacles;
     public List<int> codeList;
 
     [Header("Biome Parameters")]
@@ -16,8 +17,9 @@ public class Biomes : MonoBehaviour
     {
         Bounds bounds = GetComponent<Renderer>()?.bounds ?? new Bounds(transform.position, Vector3.one * 10f);
 
-        monsterNumber = 3;
+        monsterNumber = assignedMonsters.Count;
 
+        SpawnObstacles(bounds);
         SpawnMonstersAndCollectibles(bounds);
     }
 
@@ -36,7 +38,7 @@ public class Biomes : MonoBehaviour
             assignedCollectibles == null || assignedCollectibles.Count < monsterNumber ||
             codeList == null || codeList.Count < monsterNumber)
         {
-            Debug.LogWarning("Spawn cancelled: not enough data.");
+            Debug.LogWarning("Monsters spawn cancelled: not enough data.");
             return;
         }
 
@@ -69,7 +71,36 @@ public class Biomes : MonoBehaviour
     }
 
     /// <summary>
-    /// Get Valid Position for Monsters and Collectibles
+    /// Will handle the spawn of the obstacles and decor.
+    /// Not sure about we will perform that for the moment
+    /// </summary>
+    /// <param name="bounds"></param>
+    private void SpawnObstacles(Bounds bounds)
+    {
+        if (assignesObstacles == null)
+        {
+            Debug.LogWarning("Obstacle spawn cancelled: not enough data.");
+            return;
+        }
+
+        Debug.Log("hey");
+        List<Vector3> usedPositions = new List<Vector3>();
+        float nbObstacles = Random.Range(assignesObstacles.Count + 30f, 80);
+
+        Debug.Log("hey2");
+        for (int i = 0; i < nbObstacles; i++)
+        {
+            Debug.Log("hey loop");
+            int obstaclesIndex = Random.Range(0, assignesObstacles.Count);
+            Vector3 obstaclesPos = GetObstaclePosition(bounds, usedPositions);
+            Instantiate(assignesObstacles[obstaclesIndex], obstaclesPos, Quaternion.identity);
+    
+            usedPositions.Add(obstaclesPos);
+        }
+    }
+
+    /// <summary>
+    /// Get Valid Position for Monsters
     /// </summary>
     private Vector3 GetValidPosition(Bounds bounds, List<Vector3> existingPositions)
     {
@@ -107,6 +138,13 @@ public class Biomes : MonoBehaviour
         return pos;
     }
 
+    /// <summary>
+    /// Get Valid position for collectibles
+    /// </summary>
+    /// <param name="center"></param>
+    /// <param name="existingPositions"></param>
+    /// <param name="bounds"></param>
+    /// <returns></returns>
     private Vector3 GetNearbyValidPosition(Vector3 center, List<Vector3> existingPositions, Bounds bounds)
     {
         Vector3 pos = center;
@@ -153,6 +191,49 @@ public class Biomes : MonoBehaviour
 
         return pos;
     }
+
+    /// <summary>
+    /// Get valid position for Obstacles
+    /// </summary>
+    /// <param name="bounds"></param>
+    /// <param name="existingPositions"></param>
+    /// <returns></returns>
+    private Vector3 GetObstaclePosition(Bounds bounds, List<Vector3> existingPositions)
+    {
+        Vector3 pos = Vector3.zero;
+        bool valid = false;
+        int attempts = 0;
+
+        while (!valid && attempts < 50)
+        {
+            pos = new Vector3(
+                Random.Range(bounds.min.x + 1f, bounds.max.x - 1f),
+                bounds.min.y + 0.5f,
+                Random.Range(bounds.min.z + 1f, bounds.max.z - 1f)
+            );
+
+            valid = true;
+            foreach (Vector3 p in existingPositions)
+            {
+                if (Vector3.Distance(pos, p) < 0.1f)
+                {
+                    valid = false;
+                    break;
+                }
+            }
+
+            attempts++;
+        }
+
+        if (!valid)
+        {
+            Debug.LogWarning("Failed to find valid position for obstacle, fallback to center");
+            pos = bounds.center;
+        }
+
+        return pos;
+    }
+
 
     /// <summary>
     /// Reset the Biome. Use for Unity Editor

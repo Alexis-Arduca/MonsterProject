@@ -379,7 +379,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_Extents: {x: 0.00001, y: 0.00001, z: 0.00001}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
@@ -822,7 +822,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_Extents: {x: 0.00001, y: 0.00001, z: 0.00001}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
@@ -858,7 +858,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_Extents: {x: 0.00001, y: 0.00001, z: 0.00001}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
@@ -1099,6 +1099,8 @@ MonoBehaviour:
   - {fileID: 3331778281727191369, guid: 24801c65e42d25b44a146fa608dee282, type: 3}
   - {fileID: 3331778281727191369, guid: 24801c65e42d25b44a146fa608dee282, type: 3}
   - {fileID: 3331778281727191369, guid: 24801c65e42d25b44a146fa608dee282, type: 3}
+  assignesObstacles:
+  - {fileID: 8884084500403721340, guid: c75384827a1eedf428bb5dd9f926d1bf, type: 3}
   codeList: 4e1500009aef0600931d0000
   spawnDistance: 5
 --- !u!114 &1581384697
@@ -1344,7 +1346,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_Extents: {x: 0.00001, y: 0.00001, z: 0.00001}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
