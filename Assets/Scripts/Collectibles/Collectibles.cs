@@ -6,6 +6,7 @@ public class Collectible : MonoBehaviour
 {
     [Header("Description")]
     [SerializeField] protected string itemName;
+    [SerializeField] protected BiomesTemplate.BiomeType spawnBiome;
     private int code;
 
     protected virtual void Start()
@@ -23,6 +24,15 @@ public class Collectible : MonoBehaviour
             GameEventsManager.instance.trailEvents.OnItemPickup(code);
             Destroy(gameObject);
         }
+    }
+
+    /// <summary>
+    /// Getter functions
+    /// </summary>
+    /// <returns></returns>
+    public virtual BiomesTemplate.BiomeType GetBiomeSpawn()
+    {
+        return spawnBiome;
     }
 
     /// <summary>

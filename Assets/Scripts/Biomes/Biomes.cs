@@ -3,21 +3,18 @@ using System.Collections.Generic;
 
 public class Biomes : MonoBehaviour
 {
-    [Header("List for Testing")]
-    public List<Monster> assignedMonsters;
-    public List<Collectible> assignedCollectibles;
-    public List<GameObject> assignesObstacles;
-    public List<int> codeList;
-
     [Header("Biome Parameters")]
     public float spawnDistance = 5f;
+
+    public List<Monster> assignedMonsters;
+    public List<Collectible> assignedCollectibles;
+    public List<GameObject> assignedObstacles;
+    public List<int> codeList;
     private int monsterNumber;
 
-    void Start()
+    void Awake()
     {
         Bounds bounds = GetComponent<Renderer>()?.bounds ?? new Bounds(transform.position, Vector3.one * 10f);
-
-        monsterNumber = assignedMonsters.Count;
 
         SpawnObstacles(bounds);
         SpawnMonstersAndCollectibles(bounds);
@@ -28,26 +25,41 @@ public class Biomes : MonoBehaviour
     }
 
     /// <summary>
+    /// Will fill the biome with everything he need
+    /// </summary>
+    /// <param name="myMonsters"></param>
+    /// <param name="myCollectibles"></param>
+    /// <param name="myObstacles"></param>
+    /// <param name="myCodes"></param>
+    public void FillBiome(List<Monster> myMonsters, List<Collectible> myCollectibles, List<GameObject> myObstacles, List<int> myCodes)
+    {
+        assignedMonsters = myMonsters;
+        assignedCollectibles = myCollectibles;
+        assignedObstacles = myObstacles;
+        codeList = myCodes;
+    }
+
+    /// <summary>
     /// Will handle the spawn of the obstacles and decor.
     /// Not sure about we will perform that for the moment
     /// </summary>
     /// <param name="bounds"></param>
     private void SpawnObstacles(Bounds bounds)
     {
-        if (assignesObstacles == null)
+        if (assignedObstacles == null)
         {
             Debug.LogWarning("Obstacle spawn cancelled: not enough data.");
             return;
         }
 
         List<Vector3> usedPositions = new List<Vector3>();
-        float nbObstacles = Random.Range(assignesObstacles.Count + 30f, 80);
+        float nbObstacles = Random.Range(assignedObstacles.Count + 30f, 80);
 
         for (int i = 0; i < nbObstacles; i++)
         {
-            int obstaclesIndex = Random.Range(0, assignesObstacles.Count);
+            int obstaclesIndex = Random.Range(0, assignedObstacles.Count);
             Vector3 obstaclesPos = GetObstaclePosition(bounds, usedPositions);
-            Instantiate(assignesObstacles[obstaclesIndex], obstaclesPos, Quaternion.identity);
+            Instantiate(assignedObstacles[obstaclesIndex], obstaclesPos, Quaternion.identity);
     
             usedPositions.Add(obstaclesPos);
         }
@@ -60,15 +72,14 @@ public class Biomes : MonoBehaviour
     /// <param name="bounds"></param>
     private void SpawnMonstersAndCollectibles(Bounds bounds)
     {
-        if (assignedMonsters == null || assignedMonsters.Count < monsterNumber ||
-            assignedCollectibles == null || assignedCollectibles.Count < monsterNumber ||
-            codeList == null || codeList.Count < monsterNumber)
+        if (assignedMonsters == null || assignedCollectibles == null || codeList == null)
         {
             Debug.LogWarning("Monsters spawn cancelled: not enough data.");
             return;
         }
 
         List<Vector3> usedPositions = new List<Vector3>();
+        monsterNumber = assignedMonsters.Count;
 
         for (int i = 0; i < monsterNumber; i++)
         {
@@ -233,7 +244,6 @@ public class Biomes : MonoBehaviour
 
         return pos;
     }
-
 
     /// <summary>
     /// Reset the Biome. Use for Unity Editor

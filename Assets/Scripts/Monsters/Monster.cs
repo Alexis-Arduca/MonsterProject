@@ -17,6 +17,7 @@ public class Monster : MonoBehaviour
     [SerializeField] protected List<ElementType> weakness = new List<ElementType>();
     [SerializeField] protected List<ElementType> immunity = new List<ElementType>();
     [SerializeField] protected bool isFriendly = false;
+    [SerializeField] protected BiomesTemplate.BiomeType spawnBiome;
     protected State currentState;
     protected Rigidbody rb;
     private static readonly Vector3[] directions = { Vector3.forward, Vector3.back, Vector3.left, Vector3.right };
@@ -140,6 +141,15 @@ public class Monster : MonoBehaviour
             maxPatrolDistance = maxFollowDistance;
             currentState = State.Patrolling;
         }
+    }
+
+    /// <summary>
+    /// Getter functions
+    /// </summary>
+    /// <returns></returns>
+    public virtual BiomesTemplate.BiomeType GetBiomeSpawn()
+    {
+        return spawnBiome;
     }
 
     /// <summary>

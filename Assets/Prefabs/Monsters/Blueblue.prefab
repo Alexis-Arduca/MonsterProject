@@ -132,6 +132,7 @@ MonoBehaviour:
   weakness: 
   immunity: 01000000
   isFriendly: 0
+  spawnBiome: 2
   power: {fileID: 11400000, guid: dd655295db25c5342b3eae3de76fbcc4, type: 2}
   patrolSpeed: 1.5
   patrolChangeInterval: 3
@@ -305,4 +306,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b8aa16e9c7baa49a40b5d72c81dd5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
