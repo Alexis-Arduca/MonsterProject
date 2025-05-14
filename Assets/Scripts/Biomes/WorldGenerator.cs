@@ -1,9 +1,11 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 
 public class WorldGenerator : MonoBehaviour
 {
     [Header("Ressources")]
+    public Biomes lobby;
     public List<Biomes> biomes;
     public List<Monster> monsters;
     public List<Collectible> collectibles;
@@ -40,9 +42,28 @@ public class WorldGenerator : MonoBehaviour
 
             biome.FillBiome(monsterToAdd, collectibleToAdd, obstacleToAdd, biomeCode);
             biomesToSpawn.Add(biome);
+        }
 
-            // Temp for test
-            Instantiate(biome);
+        HandleBiomeSpawning(biomesToSpawn);
+    }
+
+    private void HandleBiomeSpawning(List<Biomes> biomesToSpawn)
+    {
+        Instantiate(lobby, Vector3.zero, Quaternion.identity);
+        // Instantiate(player, new Vector3(0, 0.5f, 0), Quaternion.identity);
+
+        List<Vector3> positions = new List<Vector3>
+        {
+            new Vector3(0, 0, 25),
+            new Vector3(-25, 0, -25),
+            new Vector3(25, 0, -25)
+        };
+
+        List<Biomes> shuffledBiomes = biomesToSpawn.OrderBy(x => Random.value).ToList();
+
+        for (int i = 0; i < shuffledBiomes.Count; i++)
+        {
+            Instantiate(shuffledBiomes[i], positions[i], Quaternion.identity);
         }
     }
 

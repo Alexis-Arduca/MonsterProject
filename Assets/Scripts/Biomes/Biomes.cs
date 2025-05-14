@@ -12,12 +12,16 @@ public class Biomes : MonoBehaviour
     public List<int> codeList;
     private int monsterNumber;
 
-    void Awake()
+    void Start()
     {
         Bounds bounds = GetComponent<Renderer>()?.bounds ?? new Bounds(transform.position, Vector3.one * 10f);
 
-        SpawnObstacles(bounds);
-        SpawnMonstersAndCollectibles(bounds);
+        // Temp unless if 'lobby' is always the same
+        if (gameObject.GetComponent<BiomesTemplate>().biomeType != BiomesTemplate.BiomeType.Lobby)
+        {
+            SpawnObstacles(bounds);
+            SpawnMonstersAndCollectibles(bounds);
+        }
     }
 
     void Update()
