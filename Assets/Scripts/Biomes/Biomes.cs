@@ -28,6 +28,32 @@ public class Biomes : MonoBehaviour
     }
 
     /// <summary>
+    /// Will handle the spawn of the obstacles and decor.
+    /// Not sure about we will perform that for the moment
+    /// </summary>
+    /// <param name="bounds"></param>
+    private void SpawnObstacles(Bounds bounds)
+    {
+        if (assignesObstacles == null)
+        {
+            Debug.LogWarning("Obstacle spawn cancelled: not enough data.");
+            return;
+        }
+
+        List<Vector3> usedPositions = new List<Vector3>();
+        float nbObstacles = Random.Range(assignesObstacles.Count + 30f, 80);
+
+        for (int i = 0; i < nbObstacles; i++)
+        {
+            int obstaclesIndex = Random.Range(0, assignesObstacles.Count);
+            Vector3 obstaclesPos = GetObstaclePosition(bounds, usedPositions);
+            Instantiate(assignesObstacles[obstaclesIndex], obstaclesPos, Quaternion.identity);
+    
+            usedPositions.Add(obstaclesPos);
+        }
+    }
+
+    /// <summary>
     /// Will handle the spawn of the monsters and the collectibles.
     /// Need to spawn each monster one time and their collectible next to them. Will also setup their shared code.
     /// </summary>
@@ -71,37 +97,11 @@ public class Biomes : MonoBehaviour
     }
 
     /// <summary>
-    /// Will handle the spawn of the obstacles and decor.
-    /// Not sure about we will perform that for the moment
+    /// Get valid position for monsters
     /// </summary>
     /// <param name="bounds"></param>
-    private void SpawnObstacles(Bounds bounds)
-    {
-        if (assignesObstacles == null)
-        {
-            Debug.LogWarning("Obstacle spawn cancelled: not enough data.");
-            return;
-        }
-
-        Debug.Log("hey");
-        List<Vector3> usedPositions = new List<Vector3>();
-        float nbObstacles = Random.Range(assignesObstacles.Count + 30f, 80);
-
-        Debug.Log("hey2");
-        for (int i = 0; i < nbObstacles; i++)
-        {
-            Debug.Log("hey loop");
-            int obstaclesIndex = Random.Range(0, assignesObstacles.Count);
-            Vector3 obstaclesPos = GetObstaclePosition(bounds, usedPositions);
-            Instantiate(assignesObstacles[obstaclesIndex], obstaclesPos, Quaternion.identity);
-    
-            usedPositions.Add(obstaclesPos);
-        }
-    }
-
-    /// <summary>
-    /// Get Valid Position for Monsters
-    /// </summary>
+    /// <param name="existingPositions"></param>
+    /// <returns></returns>
     private Vector3 GetValidPosition(Bounds bounds, List<Vector3> existingPositions)
     {
         Vector3 pos = Vector3.zero;
@@ -254,20 +254,36 @@ public class Biomes : MonoBehaviour
             DestroyImmediate(collectible.gameObject);
         }
 
+        GameObject[] obstacles = GameObject.FindGameObjectsWithTag("Obstacles");
+        foreach (var obstacle in obstacles)
+        {
+            DestroyImmediate(obstacle.gameObject);
+        }
+
         monsterNumber = 3;
     }
 
     /// <summary>
-    /// Execute the spawning. Use for Unity Editor
+    /// Unity Editor functions
     /// </summary>
-    public void Executer()
+    public void EditorMonsters()
     {
         Bounds bounds = GetComponent<Renderer>()?.bounds ?? new Bounds(transform.position, Vector3.one * 10f);
 
         ClearBiome();
         monsterNumber = 3;
 
-        Debug.Log("BIOMES EXECUTION IN EDITOR MODE !");
+        Debug.Log("BIOMES EXECUTION IN EDITOR MODE (MONSTERS) !");
         SpawnMonstersAndCollectibles(bounds);
+    }
+
+    public void EditorObstacles()
+    {
+        Bounds bounds = GetComponent<Renderer>()?.bounds ?? new Bounds(transform.position, Vector3.one * 10f);
+
+        ClearBiome();
+
+        Debug.Log("BIOMES EXECUTION IN EDITOR MODE (OBSTACLES) !");
+        SpawnObstacles(bounds);
     }
 }
