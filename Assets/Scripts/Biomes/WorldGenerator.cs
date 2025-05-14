@@ -193,4 +193,43 @@ public class WorldGenerator : MonoBehaviour
             availableCodes.RemoveAt(index);
         }
     }
+    
+    /// <summary>
+    /// Unity Editor functions
+    /// </summary>
+    public void Executer()
+    {
+        ClearWorld();
+
+        Start();
+    }
+
+    public void ClearWorld()
+    {
+        Debug.Log("DESTROY THE WORLD !");
+
+        Biomes[] biome = Object.FindObjectsByType<Biomes>(FindObjectsSortMode.None);
+        foreach (var biomeToDestroy in biomes)
+        {
+            DestroyImmediate(biomeToDestroy.gameObject);
+        }
+
+        Monster[] monsters = Object.FindObjectsByType<Monster>(FindObjectsSortMode.None);
+        foreach (var monster in monsters)
+        {
+            DestroyImmediate(monster.gameObject);
+        }
+
+        Collectible[] collectibles = Object.FindObjectsByType<Collectible>(FindObjectsSortMode.None);
+        foreach (var collectible in collectibles)
+        {
+            DestroyImmediate(collectible.gameObject);
+        }
+
+        GameObject[] obstacles = GameObject.FindGameObjectsWithTag("Obstacles");
+        foreach (var obstacle in obstacles)
+        {
+            DestroyImmediate(obstacle.gameObject);
+        }
+    }
 }

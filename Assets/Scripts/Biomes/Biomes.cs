@@ -273,31 +273,5 @@ public class Biomes : MonoBehaviour
         {
             DestroyImmediate(obstacle.gameObject);
         }
-
-        monsterNumber = 3;
-    }
-
-    /// <summary>
-    /// Unity Editor functions
-    /// </summary>
-    public void EditorMonsters()
-    {
-        Bounds bounds = GetComponent<Renderer>()?.bounds ?? new Bounds(transform.position, Vector3.one * 10f);
-
-        ClearBiome();
-        monsterNumber = 3;
-
-        Debug.Log("BIOMES EXECUTION IN EDITOR MODE (MONSTERS) !");
-        SpawnMonstersAndCollectibles(bounds);
-    }
-
-    public void EditorObstacles()
-    {
-        Bounds bounds = GetComponent<Renderer>()?.bounds ?? new Bounds(transform.position, Vector3.one * 10f);
-
-        ClearBiome();
-
-        Debug.Log("BIOMES EXECUTION IN EDITOR MODE (OBSTACLES) !");
-        SpawnObstacles(bounds);
     }
 }
