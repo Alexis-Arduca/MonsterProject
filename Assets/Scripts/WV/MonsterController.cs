@@ -5,10 +5,18 @@ using UnityEngine.UI;
 public class MonsterController : MonoBehaviour
 {
     private ThoughtBubbleController _thoughtBubble;
-    public Image wantedItem;
-    private PickableController _pickableController;
+
     private NavMeshAgent _agent;
+    private bool _following;
+
+    [Header("Thought Bubble")]
+    [Tooltip("The item the monster wants.")]
+    public Image wantedItem;
+
+    [Header("NavMesh")]
+    [Tooltip("The target the monster will follow.")]
     public Transform target;
+
 
     private void Start()
     {
@@ -16,7 +24,6 @@ public class MonsterController : MonoBehaviour
         _thoughtBubble.ShowBubble();
         _thoughtBubble.SetWantedItem(wantedItem);
         _agent = GetComponent<NavMeshAgent>();
-        _agent.autoBraking = true;
     }
 
     public void Interact(PickableController item)
@@ -25,7 +32,20 @@ public class MonsterController : MonoBehaviour
         {
             _thoughtBubble.HideBubble();
             item.Destroy();
-            _agent.SetDestination(target.position);
+            _following = true;
         }
+    }
+
+    private void Update()
+    {
+        if (target && _following)
+        {
+            MoveToTarget();
+        }
+    }
+
+    private void MoveToTarget()
+    {
+        _agent.SetDestination(target.position);
     }
 }
