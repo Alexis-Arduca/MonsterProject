@@ -4,13 +4,11 @@ using UnityEngine.UI;
 public class ThoughtBubbleController : MonoBehaviour
 {
     [Header("Camera")]
+    [Tooltip("The camera that the bubble will face.")]
     public Transform cameraTransform;
 
-    [Header("Bubble")]
-    [Tooltip("The bubble should be a child of the monster")]
-    public GameObject bubbleUI; // The whole bubble (with sprite + item icon)
-
     [Header("Item Image")]
+    [Tooltip("The icon that represents the item the monster wants.")]
     public Image wantedItemIcon; // For example, the sphere icon
 
     private void LateUpdate()
@@ -28,11 +26,11 @@ public class ThoughtBubbleController : MonoBehaviour
 
     public void HideBubble()
     {
-        bubbleUI.SetActive(false);
+        gameObject.SetActive(false);
     }
 
     public void ShowBubble()
     {
-        bubbleUI.SetActive(true);
+        gameObject.SetActive(true);
     }
 }

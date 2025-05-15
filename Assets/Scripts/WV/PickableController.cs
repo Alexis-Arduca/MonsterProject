@@ -5,6 +5,9 @@ using UnityEngine.UI;
 public class PickableController : MonoBehaviour
 {
     private Rigidbody _rb;
+
+    [Header("Pickup")]
+    [Tooltip("The icon that represents this item in the UI.")]
     public Image icon;
 
     private void Start()
@@ -19,7 +22,7 @@ public class PickableController : MonoBehaviour
             _rb.isKinematic = true;
             _rb.useGravity = false;
         }
-        transform.SetParent(cameraT);
+        transform.SetParent(cameraT, true);
         transform.localPosition = new Vector3(.5f, 0, 1);
     }
 
