@@ -1,25 +1,24 @@
+using System;
 using TMPro;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("UI")]
-    public TextMeshProUGUI interactionText;
+    [Header("UI")] public TextMeshProUGUI interactionText;
 
-    [Header("Movement")]
-    private const float MoveSpeed = 5f;
+    [Header("Movement")] private const float MoveSpeed = 5f;
     private Vector3 _moveDirection;
 
-    [Header("Initialization")]
-    private Rigidbody _rb;
+    [Header("Initialization")] private Rigidbody _rb;
     private Camera _camera;
 
-    [Header("Pickup")]
-    private const float PickupDistance = 2f;
+    [Header("Interaction")] private const float InteractDistance = 2f;
+    private RaycastHit _hit;
     private PickableController _pickableController;
+    private MonsterController _monsterController;
 
-    [Header("Camera")]
-    [SerializeField] [Range(0, 10)] private float mouseSensitivity = 2f;
+    [Header("Camera")] [SerializeField] [Range(0, 10)]
+    private float mouseSensitivity = 2f;
 
     private void Start()
     {
@@ -28,52 +27,71 @@ public class PlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         interactionText.gameObject.SetActive(false);
+        _pickableController = null;
     }
 
     private void Update()
     {
         HandleCamera();
         HandleMovement();
-        if (Input.GetKeyDown(KeyCode.E))
-            HandleAction();
+        HandleRaycast();
     }
 
-    private void HandleAction()
+    private void HandleRaycast()
     {
-        if (!_pickableController)
+        if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out _hit, InteractDistance))
         {
-            HandlePickup();
-        }
-        else
-        {
-            HandleItem();
-        }
-    }
-
-    private void HandleItem()
-    {
-        if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out RaycastHit hit, PickupDistance))
-        {
-            if (hit.collider.TryGetComponent(out MonsterController monsterController))
+            if (_hit.collider.TryGetComponent(out PickableController pickableController))
             {
-                monsterController.Interact(_pickableController);
+                interactionText.gameObject.SetActive(true);
+                interactionText.text = "Press E to pick up";
+                HandlePickup(pickableController);
+            }
+            else if (_hit.collider.TryGetComponent(out MonsterController monsterController) && _pickableController != null)
+            {
+                interactionText.gameObject.SetActive(true);
+                interactionText.text = "Press E to give item";
+                HandleItem(monsterController);
+            }
+            else
+            {
+                interactionText.gameObject.SetActive(false);
+                if (Input.GetKeyDown(KeyCode.E) && _pickableController != null)
+                {
+                    _pickableController.Drop();
+                    _pickableController = null;
+                }
             }
         }
         else
         {
-            _pickableController.Drop();
+            interactionText.gameObject.SetActive(false);
+            if (Input.GetKeyDown(KeyCode.E) && _pickableController != null)
+            {
+                _pickableController.Drop();
+                _pickableController = null;
+            }
+        }
+    }
+
+    private void HandleItem(MonsterController monsterController)
+    {
+        _monsterController = monsterController;
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            _monsterController.Interact(_pickableController);
+            interactionText.gameObject.SetActive(false);
             _pickableController = null;
         }
     }
 
-    private void HandlePickup()
+    private void HandlePickup(PickableController pickableController)
     {
-        if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out RaycastHit hit, PickupDistance))
+        _pickableController = pickableController;
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            if (hit.collider.TryGetComponent(out _pickableController))
-            {
-                _pickableController.Pickup(_camera.transform);
-            }
+            _pickableController.Pickup(_camera.transform);
+            interactionText.gameObject.SetActive(false);
         }
     }
 
@@ -95,6 +113,7 @@ public class PlayerController : MonoBehaviour
         Vector3 cameraForward = _camera.transform.forward;
         Vector3 cameraRight = _camera.transform.right;
 
-        _rb.MovePosition(transform.position + Time.deltaTime * MoveSpeed * (moveVertical * cameraForward + moveHorizontal * cameraRight));
+        _rb.MovePosition(transform.position +
+                         Time.deltaTime * MoveSpeed * (moveVertical * cameraForward + moveHorizontal * cameraRight));
     }
 }

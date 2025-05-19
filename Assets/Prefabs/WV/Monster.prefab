@@ -123,7 +123,7 @@ Rigidbody:
   m_GameObject: {fileID: 1358957413600415257}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 1
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -235,7 +235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8383619558229023687, guid: a4921f4db78ecb646bf1a4466976510c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8383619558229023687, guid: a4921f4db78ecb646bf1a4466976510c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -243,19 +243,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8383619558229023687, guid: a4921f4db78ecb646bf1a4466976510c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8383619558229023687, guid: a4921f4db78ecb646bf1a4466976510c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8383619558229023687, guid: a4921f4db78ecb646bf1a4466976510c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8383619558229023687, guid: a4921f4db78ecb646bf1a4466976510c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8383619558229023687, guid: a4921f4db78ecb646bf1a4466976510c, type: 3}
       propertyPath: m_AnchoredPosition.y
