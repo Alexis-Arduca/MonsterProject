@@ -1,7 +1,11 @@
+using TMPro;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("UI")]
+    public TextMeshProUGUI interactionText;
+
     [Header("Movement")]
     private const float MoveSpeed = 5f;
     private Vector3 _moveDirection;
@@ -21,6 +25,9 @@ public class PlayerController : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody>();
         _camera = GetComponentInChildren<Camera>();
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        interactionText.gameObject.SetActive(false);
     }
 
     private void Update()
