@@ -9,7 +9,6 @@ public class WorldGenerator : MonoBehaviour
     public List<Biomes> biomes;
     public List<Monster> monsters;
     public List<Collectible> collectibles;
-    public List<GameObject> obstacles;
     private List<int> codes = new List<int>();
 
     [Header("Parameters")]
@@ -37,10 +36,9 @@ public class WorldGenerator : MonoBehaviour
 
             List<Monster> monsterToAdd = AddMonsters(biomeType);
             List<Collectible> collectibleToAdd = AddCollectibles(biomeType);
-            List<GameObject> obstacleToAdd = AddObstacles(biomeType);
             List<int> biomeCode = AddCodes(monsterToAdd.Count);
 
-            biome.FillBiome(monsterToAdd, collectibleToAdd, obstacleToAdd, biomeCode);
+            biome.FillBiome(monsterToAdd, collectibleToAdd, biomeCode);
             biomesToSpawn.Add(biome);
         }
 
@@ -107,27 +105,6 @@ public class WorldGenerator : MonoBehaviour
         }
 
         return collectibleToAdd;
-    }
-
-    /// <summary>
-    /// Add obstacles to the corresponding biomes
-    /// </summary>
-    /// <param name="biomeType"></param>
-    /// <returns></returns>
-    private List<GameObject> AddObstacles(BiomesTemplate.BiomeType biomeType)
-    {
-        List<GameObject> obstaclesToAdd = new List<GameObject>();
-
-        foreach (GameObject obstacle in obstacles)
-        {
-            if (obstacle.GetComponent<ObstaclesTemplate>().spawnBiome == biomeType)
-            {
-                Debug.Log("Obstacle added !");
-                obstaclesToAdd.Add(obstacle);
-            }
-        }
-
-        return obstaclesToAdd;
     }
 
     /// <summary>

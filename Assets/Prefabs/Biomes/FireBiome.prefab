@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1777593672162039261}
   - component: {fileID: 3773365288287280439}
   m_Layer: 0
-  m_Name: BasicBiome
+  m_Name: FireBiome
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,7 +68,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 2ae9a020183a3f64cb9d4295f5ebc823, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -127,7 +127,6 @@ MonoBehaviour:
   spawnDistance: 5
   assignedMonsters: []
   assignedCollectibles: []
-  assignesObstacles: []
   codeList: 
 --- !u!114 &1777593672162039261
 MonoBehaviour:
@@ -141,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6965fcf4c7b6fea43be038b430a26340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  biomeType: 2
+  biomeType: 1
 --- !u!114 &3773365288287280439
 MonoBehaviour:
   m_ObjectHideFlags: 0
