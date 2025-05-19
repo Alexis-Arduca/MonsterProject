@@ -9,6 +9,7 @@ public class Biomes : MonoBehaviour
     public List<Monster> assignedMonsters;
     public List<Collectible> assignedCollectibles;
     public List<int> codeList;
+    public List<GameObject> monsterSpawnpoints;
     private int monsterNumber;
 
     void Start()
@@ -68,7 +69,9 @@ public class Biomes : MonoBehaviour
             Collectible collectiblePrefab = assignedCollectibles[collectibleIndex];
             assignedCollectibles.RemoveAt(collectibleIndex);
 
-            Vector3 monsterPos = GetValidPosition(bounds, usedPositions);
+            int index = Random.Range(0, monsterSpawnpoints.Count);
+            Vector3 monsterPos = monsterSpawnpoints[index].transform.position;
+            monsterSpawnpoints.RemoveAt(index);
             usedPositions.Add(monsterPos);
             GameObject monsterObj = Instantiate(monsterPrefab.gameObject, monsterPos, Quaternion.identity);
             monsterObj.GetComponent<Monster>().SetupCode(sharedCode);
@@ -78,48 +81,6 @@ public class Biomes : MonoBehaviour
             GameObject collectibleObj = Instantiate(collectiblePrefab.gameObject, collectiblePos, Quaternion.identity);
             collectibleObj.GetComponent<Collectible>().SetupCode(sharedCode);
         }
-    }
-
-    /// <summary>
-    /// Get valid position for monsters
-    /// </summary>
-    /// <param name="bounds"></param>
-    /// <param name="existingPositions"></param>
-    /// <returns></returns>
-    private Vector3 GetValidPosition(Bounds bounds, List<Vector3> existingPositions)
-    {
-        Vector3 pos = Vector3.zero;
-        bool valid = false;
-        int attempts = 0;
-
-        while (!valid && attempts < 50)
-        {
-            pos = new Vector3(
-                Random.Range(bounds.min.x + 1f, bounds.max.x - 1f),
-                bounds.min.y + 0.5f,
-                Random.Range(bounds.min.z + 1f, bounds.max.z - 1f)
-            );
-
-            valid = true;
-            foreach (Vector3 p in existingPositions)
-            {
-                if (Vector2.Distance(new Vector2(pos.x, pos.z), new Vector2(p.x, p.z)) < spawnDistance)
-                {
-                    valid = false;
-                    break;
-                }
-            }
-
-            attempts++;
-        }
-
-        if (!valid)
-        {
-            Debug.LogWarning("Failed to find valid position for monster, fallback to center");
-            pos = bounds.center;
-        }
-
-        return pos;
     }
 
     /// <summary>
