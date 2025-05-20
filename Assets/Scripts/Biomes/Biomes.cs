@@ -121,13 +121,13 @@ public class Biomes : MonoBehaviour
                 break;
             }
             foreach (Vector3 p in existingPositions)
+            {
+                if (Vector2.Distance(new Vector2(pos.x, pos.z), new Vector2(p.x, p.z)) < spawnDistance)
                 {
-                    if (Vector2.Distance(new Vector2(pos.x, pos.z), new Vector2(p.x, p.z)) < spawnDistance)
-                    {
-                        valid = false;
-                        break;
-                    }
+                    valid = false;
+                    break;
                 }
+            }
 
             attempts++;
         }
@@ -158,6 +158,31 @@ public class Biomes : MonoBehaviour
         foreach (var collectible in collectibles)
         {
             DestroyImmediate(collectible.gameObject);
+        }
+    }
+    
+    /// <summary>
+    /// Collision to check if we enter in a biome
+    /// </summary>
+    /// <param name="other"></param>
+    protected virtual void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            switch (GetComponent<BiomesTemplate>().biomeType)
+            {
+                case BiomesTemplate.BiomeType.Ice:
+                    GameEventsManager.instance.biomeEvents.OnIceBiomeEnter("Assets/Story/IceBiome.txt");
+                    break;
+
+                case BiomesTemplate.BiomeType.Stormy:
+                    GameEventsManager.instance.biomeEvents.OnThunderBiomeEnter("Assets/Story/ThunderBiome.txt");
+                    break;
+
+                case BiomesTemplate.BiomeType.Lava:
+                    GameEventsManager.instance.biomeEvents.OnFireBiomeEnter("Assets/Story/LavaBiome.txt");
+                    break;
+            }
         }
     }
 }
