@@ -48,3 +48,6 @@ Assets/AssetStoreTools*
 
 # Ignore builds
 Builds/
+
+# User Settings (personal)
+UserSettings/

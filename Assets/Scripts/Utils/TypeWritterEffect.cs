@@ -4,49 +4,42 @@ using TMPro;
 
 public class TypewriterEffect : MonoBehaviour
 {
-    public TextMeshProUGUI textComponent;
-    private string fullText;
+    public TMPro.TMP_Text textComponent;
     public float typingSpeed = 0.05f;
     public float moveDuration = 2f;
     public float moveDistance = 50f;
 
     private string currentText = "";
 
-    public void Start()
+    public IEnumerator ShowText(string msg)
     {
-        
-    }
+        if (textComponent == null)
+            yield break;
 
-    public void StartText(string msg)
-    {
-        this.fullText = msg;
-        StartCoroutine(ShowText());
-    }
-
-    IEnumerator ShowText()
-    {
-        for (int i = 0; i <= fullText.Length; i++)
+        textComponent.text = "";
+        for (int i = 0; i <= msg.Length; i++)
         {
-            currentText = fullText.Substring(0, i);
-            textComponent.text = currentText;
+            textComponent.text = msg.Substring(0, i);
             yield return new WaitForSeconds(typingSpeed);
         }
-        StartCoroutine(MoveTextUp());
+
+        yield return new WaitForSeconds(1);
+        textComponent.text = "";
     }
 
-    IEnumerator MoveTextUp()
-    {
-        Vector3 originalPosition = textComponent.rectTransform.anchoredPosition;
-        Vector3 targetPosition = originalPosition + new Vector3(0, moveDistance, 0);
-        float elapsedTime = 0f;
+    // IEnumerator MoveTextUp()
+    // {
+    //     Vector3 originalPosition = textComponent.rectTransform.anchoredPosition;
+    //     Vector3 targetPosition = originalPosition + new Vector3(0, moveDistance, 0);
+    //     float elapsedTime = 0f;
 
-        while (elapsedTime < moveDuration)
-        {
-            textComponent.rectTransform.anchoredPosition = Vector3.Lerp(originalPosition, targetPosition, elapsedTime / moveDuration);
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
+    //     while (elapsedTime < moveDuration)
+    //     {
+    //         textComponent.rectTransform.anchoredPosition = Vector3.Lerp(originalPosition, targetPosition, elapsedTime / moveDuration);
+    //         elapsedTime += Time.deltaTime;
+    //         yield return null;
+    //     }
 
-        textComponent.rectTransform.anchoredPosition = targetPosition;
-    }
+    //     textComponent.rectTransform.anchoredPosition = targetPosition;
+    // }
 }
