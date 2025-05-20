@@ -20,19 +20,29 @@ public class MonsterController : MonoBehaviour
 
     private void Start()
     {
-        _thoughtBubble = GetComponentInChildren<ThoughtBubbleController>();
-        _thoughtBubble.ShowBubble();
-        _thoughtBubble.SetWantedItem(wantedItem);
         _agent = GetComponent<NavMeshAgent>();
+
+        _thoughtBubble = GetComponentInChildren<ThoughtBubbleController>();
+        _thoughtBubble.SetWantedItem(wantedItem);
+
+        _thoughtBubble.ShowBubble();
+        _thoughtBubble.HideText();
+        _thoughtBubble.ShowItem();
     }
 
     public void Interact(PickableController item)
     {
-        if (wantedItem == item.icon)
+        if (item.icon == wantedItem)
         {
             _thoughtBubble.HideBubble();
-            item.Destroy();
             _following = true;
+            item.Destroy();
+        }
+        else
+        {
+            _thoughtBubble.ShowItem();
+            _thoughtBubble.HideText();
+            _following = false;
         }
     }
 

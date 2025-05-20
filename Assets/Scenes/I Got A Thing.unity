@@ -119,6 +119,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &51493662 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 784440596798449995, guid: e05c024e07ea2084da62724404218974, type: 3}
+  m_PrefabInstance: {fileID: 8579965522371447363}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &58395224
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,17 +251,6 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
---- !u!114 &339119193 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1554524215708298695, guid: e05c024e07ea2084da62724404218974, type: 3}
-  m_PrefabInstance: {fileID: 8579965522371447363}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &601088244
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,7 +479,7 @@ GameObject:
   - component: {fileID: 1844741074}
   - component: {fileID: 1844741073}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Text Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -796,7 +796,7 @@ Transform:
   m_GameObject: {fileID: 1938444561}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1051,7 +1051,7 @@ PrefabInstance:
     - target: {fileID: 2123003126042686819, guid: 7dfede20e7b31114f9c72b4b43c1c16c, type: 3}
       propertyPath: icon
       value: 
-      objectReference: {fileID: 339119193}
+      objectReference: {fileID: 51493662}
     - target: {fileID: 4975139192017178735, guid: 7dfede20e7b31114f9c72b4b43c1c16c, type: 3}
       propertyPath: m_Name
       value: Pickable
@@ -1117,14 +1117,17 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 2141874010}
-    - target: {fileID: 7155398264188953956, guid: e05c024e07ea2084da62724404218974, type: 3}
+    - target: {fileID: 7127547821515927371, guid: e05c024e07ea2084da62724404218974, type: 3}
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 1938444564}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5361199555652827542, guid: e05c024e07ea2084da62724404218974, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: e05c024e07ea2084da62724404218974, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,9 +8,19 @@ public class ThoughtBubbleController : MonoBehaviour
     [Tooltip("The camera that the bubble will face.")]
     public Transform cameraTransform;
 
-    [Header("Item Image")]
-    [Tooltip("The icon that represents the item the monster wants.")]
-    public Image wantedItemIcon; // For example, the sphere icon
+    [Header("Item")]
+    private Image _wantedItemIcon;
+
+    [Header("Text")]
+    public TextMeshPro text;
+
+    private void Start()
+    {
+        _wantedItemIcon = GetComponentInChildren<Image>();
+        // Set the bubble to be inactive at the start
+        gameObject.SetActive(true);
+        text.enabled = false;
+    }
 
     private void LateUpdate()
     {
@@ -19,9 +30,7 @@ public class ThoughtBubbleController : MonoBehaviour
 
     public void SetWantedItem(Image itemIcon)
     {
-        wantedItemIcon.gameObject.SetActive(false); // Hide old
-        wantedItemIcon = itemIcon;
-        wantedItemIcon.gameObject.SetActive(true); // Show new
+        _wantedItemIcon = itemIcon;
     }
 
     public void HideBubble()
@@ -32,5 +41,25 @@ public class ThoughtBubbleController : MonoBehaviour
     public void ShowBubble()
     {
         gameObject.SetActive(true);
+    }
+
+    public void ShowItem()
+    {
+        _wantedItemIcon.gameObject.SetActive(true);
+    }
+
+    public void HideItem()
+    {
+        _wantedItemIcon.gameObject.SetActive(false);
+    }
+
+    public void ShowText()
+    {
+        text.enabled = true;
+    }
+
+    public void HideText()
+    {
+        text.enabled = false;
     }
 }
