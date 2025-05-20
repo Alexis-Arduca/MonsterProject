@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class MonsterController : MonoBehaviour
 {
-    private ThoughtBubbleController _thoughtBubble;
+    public ThoughtBubbleController thoughtBubble;
 
     private NavMeshAgent _agent;
     private bool _following;
@@ -22,26 +22,26 @@ public class MonsterController : MonoBehaviour
     {
         _agent = GetComponent<NavMeshAgent>();
 
-        _thoughtBubble = GetComponentInChildren<ThoughtBubbleController>();
-        _thoughtBubble.SetWantedItem(wantedItem);
+        thoughtBubble = GetComponentInChildren<ThoughtBubbleController>();
+        thoughtBubble.SetWantedItem(wantedItem);
 
-        _thoughtBubble.ShowBubble();
-        _thoughtBubble.HideText();
-        _thoughtBubble.ShowItem();
+        thoughtBubble.ShowBubble();
+        thoughtBubble.HideText();
+        thoughtBubble.ShowItem();
     }
 
     public void Interact(PickableController item)
     {
         if (item.icon == wantedItem)
         {
-            _thoughtBubble.HideBubble();
+            thoughtBubble.HideBubble();
             _following = true;
             item.Destroy();
         }
         else
         {
-            _thoughtBubble.ShowItem();
-            _thoughtBubble.HideText();
+            thoughtBubble.ShowItem();
+            thoughtBubble.HideText();
             _following = false;
         }
     }
