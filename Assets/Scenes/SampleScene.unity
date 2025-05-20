@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loreToRead:
-  - ./Assets/Story/Lore.txt
+  - Assets/Story/Lore.txt
 --- !u!4 &207435149
 Transform:
   m_ObjectHideFlags: 0

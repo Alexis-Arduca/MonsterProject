@@ -15,20 +15,43 @@ public class LoreManager : MonoBehaviour
         currentIndex = 0;
         twe = GetComponent<TypewriterEffect>();
 
-        StartCoroutine(ReadLoreCoroutine());
+        GameEventsManager.instance.biomeEvents.onFireBiomeEnter += EnterBiomeStory;
+        GameEventsManager.instance.biomeEvents.onThunderBiomeEnter += EnterBiomeStory;
+        GameEventsManager.instance.biomeEvents.onIceBiomeEnter += EnterBiomeStory;
+
+        NextLoreText();
     }
 
-    private IEnumerator ReadLoreCoroutine()
+    private void OnDisable()
+    {
+        GameEventsManager.instance.biomeEvents.onFireBiomeEnter -= EnterBiomeStory;
+        GameEventsManager.instance.biomeEvents.onThunderBiomeEnter -= EnterBiomeStory;
+        GameEventsManager.instance.biomeEvents.onIceBiomeEnter -= EnterBiomeStory;
+    }
+
+    private void EnterBiomeStory(string file)
+    {
+        string[] lines = rtf.ReadFileLinesTab(file);
+
+        StartCoroutine(ReadLoreCoroutine(lines));
+    }
+
+    private void NextLoreText()
     {
         while (currentIndex < loreToRead.Count)
         {
             string[] lines = rtf.ReadFileLinesTab(loreToRead[currentIndex]);
             currentIndex++;
 
-            foreach (var line in lines)
-            {
-                yield return StartCoroutine(twe.ShowText(line));
-            }
+            StartCoroutine(ReadLoreCoroutine(lines));
+        }
+    }
+
+    private IEnumerator ReadLoreCoroutine(string[] lines)
+    {
+        foreach (var line in lines)
+        {
+            yield return StartCoroutine(twe.ShowText(line));
         }
     }
 }
