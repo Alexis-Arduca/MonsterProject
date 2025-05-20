@@ -43,42 +43,49 @@ public class PlayerController : MonoBehaviour
         {
             if (_hit.collider.TryGetComponent(out PickableController pickableController))
             {
-                interactionText.gameObject.SetActive(true);
-                interactionText.text = "Press E to pick up";
                 HandlePickup(pickableController);
             }
             else if (_hit.collider.TryGetComponent(out MonsterController monsterController) && _pickableController != null)
             {
-                interactionText.gameObject.SetActive(true);
-                interactionText.text = "Press E to give item";
                 HandleItem(monsterController);
             }
             else
             {
                 interactionText.gameObject.SetActive(false);
-                if (Input.GetKeyDown(KeyCode.E) && _pickableController != null)
+                if (_pickableController != null)
                 {
-                    _pickableController.Drop();
-                    _pickableController = null;
+                    HandleDrop();
                 }
             }
         }
         else
         {
             interactionText.gameObject.SetActive(false);
-            if (Input.GetKeyDown(KeyCode.E) && _pickableController != null)
+            if (_pickableController != null)
             {
-                _pickableController.Drop();
-                _pickableController = null;
+                HandleDrop();
             }
+        }
+    }
+
+    private void HandleDrop()
+    {
+        interactionText.gameObject.SetActive(true);
+        interactionText.text = "Press E to drop item";
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            _pickableController.Drop();
+            _pickableController = null;
         }
     }
 
     private void HandleItem(MonsterController monsterController)
     {
-        _monsterController = monsterController;
+        interactionText.gameObject.SetActive(true);
+        interactionText.text = "Press E to give item";
         if (Input.GetKeyDown(KeyCode.E))
         {
+            _monsterController = monsterController;
             _monsterController.Interact(_pickableController);
             interactionText.gameObject.SetActive(false);
             _pickableController = null;
@@ -87,11 +94,12 @@ public class PlayerController : MonoBehaviour
 
     private void HandlePickup(PickableController pickableController)
     {
-        _pickableController = pickableController;
+        interactionText.gameObject.SetActive(true);
+        interactionText.text = "Press E to pick up";
         if (Input.GetKeyDown(KeyCode.E))
         {
+            _pickableController = pickableController;
             _pickableController.Pickup(_camera.transform);
-            interactionText.gameObject.SetActive(false);
         }
     }
 

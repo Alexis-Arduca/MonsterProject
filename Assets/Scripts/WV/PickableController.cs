@@ -33,7 +33,7 @@ public class PickableController : MonoBehaviour
             _rb.isKinematic = false;
             _rb.useGravity = true;
         }
-        transform.SetParent(null);
+        transform.SetParent(null, true);
     }
 
     public void Destroy()
