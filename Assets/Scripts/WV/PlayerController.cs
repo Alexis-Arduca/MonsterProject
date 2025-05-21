@@ -7,7 +7,7 @@ using UnityEngine;
 // It handles the camera rotation, player movement, and interactions with pickable items and monsters.
 // </summary>
 
-public class PlayerController : MonoBehaviour
+public class PlayerController2 : MonoBehaviour
 {
     [Header("UI")] public TextMeshProUGUI interactionText;
 
