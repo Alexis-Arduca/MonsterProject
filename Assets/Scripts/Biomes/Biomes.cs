@@ -11,6 +11,7 @@ public class Biomes : MonoBehaviour
     public List<int> codeList;
     public List<GameObject> monsterSpawnpoints;
     private int monsterNumber;
+    private bool hasBeenTriggered = false;
 
     void Start()
     {
@@ -142,6 +143,22 @@ public class Biomes : MonoBehaviour
     }
 
     /// <summary>
+    /// Handle Camera travelling when entering a biome
+    /// </summary>
+    /// <param name="biomeTransform"></param>
+    /// <returns></returns>
+    private Vector3 GetTopViewPosition(Transform biomeTransform)
+    {
+        return biomeTransform.position + Vector3.up * 40f;
+    }
+
+    private Quaternion GetTopViewRotation()
+    {
+        return Quaternion.Euler(90f, 0f, 0f);
+    }
+
+
+    /// <summary>
     /// Reset the Biome. Use for Unity Editor
     /// </summary>
     public void ClearBiome()
@@ -167,8 +184,12 @@ public class Biomes : MonoBehaviour
     /// <param name="other"></param>
     protected virtual void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (hasBeenTriggered) { return; }
+    
+        if (other.CompareTag("Player") && GetComponent<BiomesTemplate>().biomeType != BiomesTemplate.BiomeType.Lobby)
         {
+            hasBeenTriggered = true;
+
             switch (GetComponent<BiomesTemplate>().biomeType)
             {
                 case BiomesTemplate.BiomeType.Ice:

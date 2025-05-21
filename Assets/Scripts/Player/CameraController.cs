@@ -23,17 +23,23 @@ public class CameraZoom : MonoBehaviour
                 Debug.LogError("PlayerMovement does not exist !");
             }
         }
+        GameEventsManager.instance.loreEvents.onImportantLoreEvent += ChangeAction;
+    }
+
+    void OnDisable()
+    {
+        GameEventsManager.instance.loreEvents.onImportantLoreEvent -= ChangeAction;
     }
 
     private void ChangeAction()
     {
         playerAction = !playerAction;
 
-        if (playerAction == true) {
-            Cursor.lockState = CursorLockMode.None;
-        } else {
-            Cursor.lockState = CursorLockMode.Locked;
-        }
+        // if (playerAction == true) {
+        //     Cursor.lockState = CursorLockMode.None;
+        // } else {
+        //     Cursor.lockState = CursorLockMode.Locked;
+        // }
     }
 
     void Update()

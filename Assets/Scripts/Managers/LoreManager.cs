@@ -6,7 +6,6 @@ public class LoreManager : MonoBehaviour
 {
     public List<string> loreToRead;
     private int currentIndex;
-
     private TypewriterEffect twe;
     private ReadTextFile rtf = new ReadTextFile();
 
@@ -19,7 +18,7 @@ public class LoreManager : MonoBehaviour
         GameEventsManager.instance.biomeEvents.onThunderBiomeEnter += EnterBiomeStory;
         GameEventsManager.instance.biomeEvents.onIceBiomeEnter += EnterBiomeStory;
 
-        NextLoreText();
+        // NextLoreText();
     }
 
     private void OnDisable()

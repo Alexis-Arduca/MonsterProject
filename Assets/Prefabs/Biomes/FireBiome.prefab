@@ -231,6 +231,7 @@ GameObject:
   - component: {fileID: 1882156667052452538}
   - component: {fileID: 1777593672162039261}
   - component: {fileID: 3773365288287280439}
+  - component: {fileID: 3687489543981794849}
   m_Layer: 0
   m_Name: FireBiome
   m_TagString: Untagged
@@ -398,6 +399,27 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 5f287d115f64fc24ea0edf58c24dbb99, type: 2}
   m_BuildHeightMesh: 0
+--- !u!65 &3687489543981794849
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5013860845908494421}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5072397710109404039
 GameObject:
   m_ObjectHideFlags: 0

@@ -62,6 +62,8 @@ public class WorldGenerator : MonoBehaviour
         {
             Instantiate(shuffledBiomes[i], positions[i], Quaternion.identity);
         }
+
+        GameObject.Find("LoreManager").GetComponent<BiomeCameraTravelling>().InitializeBiomes();
     }
 
     /// <summary>
