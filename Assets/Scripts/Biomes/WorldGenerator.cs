@@ -48,7 +48,6 @@ public class WorldGenerator : MonoBehaviour
     private void HandleBiomeSpawning(List<Biomes> biomesToSpawn)
     {
         Instantiate(lobby, Vector3.zero, Quaternion.identity);
-        // Instantiate(player, new Vector3(0, 0.5f, 0), Quaternion.identity);
 
         List<Vector3> positions = new List<Vector3>
         {
@@ -135,9 +134,15 @@ public class WorldGenerator : MonoBehaviour
     /// <returns></returns>
     private bool HandleParameters()
     {
-        if (monsters == null || collectibles == null)
+        if (monsters == null || collectibles == null || biomes == null)
         {
-            Debug.Log("Invalid Parameters: Monsters or Collectibles list are empty !");
+            Debug.Log("Invalid Parameters: There is at least 1 empty parameters !");
+            return false;
+        }
+
+        if (biomes.Count != 3)
+        {
+            Debug.Log("Invalid Parameters: We need exactly 3 biomes !");
             return false;
         }
 
@@ -170,17 +175,10 @@ public class WorldGenerator : MonoBehaviour
             availableCodes.RemoveAt(index);
         }
     }
-    
+
     /// <summary>
-    /// Unity Editor functions
+    /// Clear the current scene (use as an Editor function)
     /// </summary>
-    public void Executer()
-    {
-        ClearWorld();
-
-        Start();
-    }
-
     public void ClearWorld()
     {
         Debug.Log("DESTROY THE WORLD !");
@@ -208,5 +206,15 @@ public class WorldGenerator : MonoBehaviour
         {
             DestroyImmediate(obstacle.gameObject);
         }
+    }
+    
+    /// <summary>
+    /// Unity Editor functions
+    /// </summary>
+    public void Executer()
+    {
+        ClearWorld();
+
+        Start();
     }
 }

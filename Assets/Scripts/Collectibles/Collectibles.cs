@@ -1,6 +1,4 @@
 using UnityEngine;
-using UnityEngine.AI;
-using System.Collections.Generic;
 
 public class Collectible : MonoBehaviour
 {
@@ -8,14 +6,6 @@ public class Collectible : MonoBehaviour
     [SerializeField] protected string itemName;
     [SerializeField] protected BiomesTemplate.BiomeType spawnBiome;
     private int code;
-
-    protected virtual void Start()
-    {
-    }
-
-    protected virtual void Update()
-    {
-    }
 
     protected virtual void OnTriggerEnter(Collider other)
     {
