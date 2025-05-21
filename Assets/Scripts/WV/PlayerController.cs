@@ -1,4 +1,3 @@
-using System;
 using TMPro;
 using UnityEngine;
 
@@ -24,10 +23,13 @@ public class PlayerController : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody>();
         _camera = GetComponentInChildren<Camera>();
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
         interactionText.gameObject.SetActive(false);
         _pickableController = null;
+        _monsterController = null;
     }
 
     private void Update()
@@ -47,6 +49,7 @@ public class PlayerController : MonoBehaviour
             }
             else if (_hit.collider.TryGetComponent(out MonsterController monsterController) && _pickableController != null)
             {
+                interactionText.gameObject.SetActive(false);
                 HandleItem(monsterController);
             }
             else
@@ -61,6 +64,12 @@ public class PlayerController : MonoBehaviour
         else
         {
             interactionText.gameObject.SetActive(false);
+            if (_monsterController != null)
+            {
+                _monsterController.thoughtBubble.HideText();
+                _monsterController.thoughtBubble.ShowItem();
+            }
+
             if (_pickableController != null)
             {
                 HandleDrop();
@@ -81,11 +90,15 @@ public class PlayerController : MonoBehaviour
 
     private void HandleItem(MonsterController monsterController)
     {
-        interactionText.gameObject.SetActive(true);
-        interactionText.text = "Press E to give item";
+        _monsterController = monsterController;
+        if (Vector3.Distance(_hit.transform.position, transform.position) <= InteractDistance + .6f)
+        {
+            _monsterController.thoughtBubble.HideItem();
+            _monsterController.thoughtBubble.ShowText();
+        }
+
         if (Input.GetKeyDown(KeyCode.E))
         {
-            _monsterController = monsterController;
             _monsterController.Interact(_pickableController);
             interactionText.gameObject.SetActive(false);
             _pickableController = null;
