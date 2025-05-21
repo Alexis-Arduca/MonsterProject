@@ -6,6 +6,7 @@ public class GameEventsManager : MonoBehaviour
 
     public TrailEvents trailEvents;
     public BiomeEvents biomeEvents;
+    public LoreEvents loreEvents;
 
     private void Awake()
     {
@@ -18,5 +19,6 @@ public class GameEventsManager : MonoBehaviour
         // initialize all events
         trailEvents = new TrailEvents();
         biomeEvents = new BiomeEvents();
+        loreEvents = new LoreEvents();
     }
 }

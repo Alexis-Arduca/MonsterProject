@@ -550,6 +550,10 @@ PrefabInstance:
       propertyPath: m_UseGravity
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1980197981203724770, guid: 2af6ec18dfb288f4c8dfd202ceaac66a, type: 3}
+      propertyPath: jump.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7947214128399276129, guid: 2af6ec18dfb288f4c8dfd202ceaac66a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
