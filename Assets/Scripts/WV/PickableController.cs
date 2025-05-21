@@ -1,6 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+// <summary>
+// Attached to the Pickable Prefab.
+// This script is responsible for controlling the pickable items in the game.
+// It handles the pickup, drop, and destroy actions for the items.
+// </summary>
+
 public class PickableController : MonoBehaviour
 {
     private Rigidbody _rb;

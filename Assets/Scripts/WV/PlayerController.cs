@@ -1,17 +1,23 @@
 using TMPro;
 using UnityEngine;
 
+// <summary>
+// Attached to the Player Prefab.
+// This script is responsible for controlling the player's movement and interactions.
+// It handles the camera rotation, player movement, and interactions with pickable items and monsters.
+// </summary>
+
 public class PlayerController : MonoBehaviour
 {
     [Header("UI")] public TextMeshProUGUI interactionText;
 
-    [Header("Movement")] private const float MoveSpeed = 5f;
+    private const float MoveSpeed = 5f;
     private Vector3 _moveDirection;
 
-    [Header("Initialization")] private Rigidbody _rb;
+    private Rigidbody _rb;
     private Camera _camera;
 
-    [Header("Interaction")] private const float InteractDistance = 2f;
+    private const float InteractDistance = 2f;
     private RaycastHit _hit;
     private PickableController _pickableController;
     private MonsterController _monsterController;

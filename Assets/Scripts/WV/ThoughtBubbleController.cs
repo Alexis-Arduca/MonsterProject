@@ -2,29 +2,31 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+// <summary>
+// Attached to the Thought Bubble Prefab.
+// This script is responsible for controlling the thought bubble that appears above the monster.
+// It handles the visibility and positioning of the bubble based on the camera's position.
+// </summary>
+
 public class ThoughtBubbleController : MonoBehaviour
 {
     [Header("Camera")]
     [Tooltip("The camera that the bubble will face.")]
     public Transform cameraTransform;
 
-    [Header("Item")]
     private Image _wantedItemIcon;
 
-    [Header("Text")]
     public TextMeshPro text;
 
     private void Start()
     {
         _wantedItemIcon = GetComponentInChildren<Image>();
-        // Set the bubble to be inactive at the start
         gameObject.SetActive(true);
         text.enabled = false;
     }
 
     private void LateUpdate()
     {
-        // Make the bubble always face the camera
         transform.LookAt(transform.position + cameraTransform.forward);
     }
 

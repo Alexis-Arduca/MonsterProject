@@ -2,6 +2,12 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 
+// <summary>
+// Attached to the Monster Prefab.
+// This script is responsible for controlling the monster's behavior.
+// It handles the monster's movement towards the player and the interaction with the player.
+// </summary>
+
 public class MonsterController : MonoBehaviour
 {
     public ThoughtBubbleController thoughtBubble;
@@ -16,7 +22,6 @@ public class MonsterController : MonoBehaviour
     [Header("NavMesh")]
     [Tooltip("The target the monster will follow.")]
     public Transform target;
-
 
     private void Start()
     {
