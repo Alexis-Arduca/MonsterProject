@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 using System.Collections.Generic;
+using System.Collections;
 
 public class Monster : MonoBehaviour
 {
@@ -39,15 +40,33 @@ public class Monster : MonoBehaviour
     private NavMeshAgent agent;
     private bool isClose;
     private Vector3 playerPos;
+    private float jumpHeight = 2f;
+    private float jumpDuration = 0.5f;
+    private bool isJumping = false;
 
-    
     protected virtual void Start()
     {
         rb = GetComponent<Rigidbody>();
+        if (rb == null)
+        {
+            Debug.LogWarning($"No Rigidbody found on {gameObject.name}. Adding one.");
+            rb = gameObject.AddComponent<Rigidbody>();
+            rb.isKinematic = true; // Par défaut kinematic pour éviter les conflits avec NavMeshAgent
+            rb.useGravity = false;
+        }
 
-        currentState = State.Patrolling;
-        basePosition = transform.position;
         agent = GetComponent<NavMeshAgent>();
+        if (agent == null)
+        {
+            Debug.LogError($"No NavMeshAgent found on {gameObject.name}. Please add one.");
+            enabled = false; // Désactiver le script si pas d'agent
+            return;
+        }
+
+        agent.autoTraverseOffMeshLink = false; // Désactiver la traversée automatique des OffMeshLinks
+
+        currentState = State.Following;
+        basePosition = transform.position;
 
         GameEventsManager.instance.trailEvents.onItemPickup += ActivateTrail;
         GameEventsManager.instance.trailEvents.onItemGive += DeactivateTrail;
@@ -61,16 +80,18 @@ public class Monster : MonoBehaviour
 
     protected virtual void Update()
     {
+        if (!agent.isOnNavMesh)
+        {
+            Debug.LogWarning($"{gameObject.name} is not on a NavMesh!");
+            return;
+        }
+
         playerPos = GameObject.Find("Player").transform.position;
-
-                    // Power State \\
-        // stateChangeTimer += Time.deltaTime;
-
-        // if (stateChangeTimer >= 5f)
-        // {
-        //     currentState = State.Power;
-        //     stateChangeTimer = 0f;
-        // }
+        if (playerPos == null)
+        {
+            Debug.LogWarning("Player not found!");
+            return;
+        }
 
         if (isFriendly && Vector3.Distance(playerPos, transform.position) > maxFollowDistance)
         {
@@ -135,18 +156,51 @@ public class Monster : MonoBehaviour
         {
             agent.SetDestination(playerPos);
         }
-        else
+
+        if (agent.isOnOffMeshLink && !isJumping)
         {
-            basePosition = playerPos;
-            maxPatrolDistance = maxFollowDistance;
-            currentState = State.Patrolling;
+            StartCoroutine(DoJump());
         }
+    }
+
+    protected virtual IEnumerator DoJump()
+    {
+        if (jumpDuration <= 0)
+        {
+            jumpDuration = 0.5f;
+        }
+
+        isJumping = true;
+        bool wasKinematic = rb.isKinematic;
+        rb.isKinematic = true;
+        agent.updatePosition = false;
+
+        OffMeshLinkData link = agent.currentOffMeshLinkData;
+        Vector3 startPos = transform.position;
+        Vector3 endPos = link.endPos;
+
+        float t = 0;
+        while (t < jumpDuration)
+        {
+            float normalizedTime = t / jumpDuration;
+            float height = 4 * jumpHeight * normalizedTime * (1 - normalizedTime);
+            transform.position = Vector3.Lerp(startPos, endPos, normalizedTime) + Vector3.up * height;
+            t += Time.deltaTime;
+            yield return null;
+        }
+
+        transform.position = endPos;
+        agent.CompleteOffMeshLink();
+        agent.updatePosition = true;
+        rb.isKinematic = wasKinematic;
+
+        isJumping = false;
+        Debug.Log("Jump completed");
     }
 
     /// <summary>
     /// Getter functions
     /// </summary>
-    /// <returns></returns>
     public virtual BiomesTemplate.BiomeType GetBiomeSpawn()
     {
         return spawnBiome;
@@ -165,8 +219,8 @@ public class Monster : MonoBehaviour
         if (monster == code)
         {
             MonsterTrail trail = GetComponent<MonsterTrail>();
-
-            trail.enabled = true;
+            if (trail != null)
+                trail.enabled = true;
         }
     }
 
@@ -175,8 +229,8 @@ public class Monster : MonoBehaviour
         if (monster == code)
         {
             MonsterTrail trail = GetComponent<MonsterTrail>();
-
-            trail.enabled = false;
+            if (trail != null)
+                trail.enabled = false;
         }
     }
 }
