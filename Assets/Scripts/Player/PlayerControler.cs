@@ -8,11 +8,9 @@ public class PlayerControler : MonoBehaviour
     private bool playerAction = false;
     private PlayerMovement playerMovement;
 
-    // Start is called before the first frame update
     void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
-
         GameEventsManager.instance.loreEvents.onImportantLoreEvent += ChangeAction;
     }
 
@@ -21,7 +19,6 @@ public class PlayerControler : MonoBehaviour
         GameEventsManager.instance.loreEvents.onImportantLoreEvent -= ChangeAction;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!playerAction)
