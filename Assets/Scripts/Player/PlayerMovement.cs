@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce = 2.0f;
     public bool isGrounded;
 
+    [HideInInspector] public bool isOnIce = false;
+
     private Vector3 movement;
     private Rigidbody rb;
     private bool isRuning = false;
@@ -20,6 +22,12 @@ public class PlayerMovement : MonoBehaviour
     {
         isGrounded = true;
         rb = GetComponent<Rigidbody>();
+    }
+
+    void Update()
+    {
+        float targetDrag = isOnIce ? 0.5f : 3f;
+        rb.linearDamping = Mathf.Lerp(rb.linearDamping, targetDrag, Time.deltaTime * 3f);
     }
 
     public void HandleMovement(Transform cameraTransform)
@@ -48,7 +56,11 @@ public class PlayerMovement : MonoBehaviour
 
         movement = (forward * vertical + right * horizontal).normalized * moveSpeed;
 
-        rb.linearVelocity = new Vector3(movement.x, rb.linearVelocity.y, movement.z);
+        Vector3 currentVelocity = rb.linearVelocity;
+        Vector3 targetVelocity = new Vector3(movement.x, currentVelocity.y, movement.z);
+        float inertia = isOnIce ? 0.05f : 0.2f;
+
+        rb.linearVelocity = Vector3.Lerp(currentVelocity, targetVelocity, inertia);
     }
 
     public void HandleJump()
@@ -64,7 +76,7 @@ public class PlayerMovement : MonoBehaviour
     {
         isGrounded = true;
     }
-    
+
     void OnCollisionExit()
     {
         isGrounded = false;
