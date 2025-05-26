@@ -4227,7 +4227,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d714da28756b09f4594a100514b37adc, type: 2}
+  - {fileID: 2100000, guid: 71d42e8f1661845158f071ff167901a4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5297,13 +5297,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 916230329}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: 0.09641546, y: 0.5960793, z: -0.51750827, w: 0.6062827}
+  m_LocalPosition: {x: 0, y: 62.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 47.211, y: 66.508, z: -48.987}
 --- !u!114 &916230332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5378,11 +5378,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6554180430892298285, guid: fdfac808da999d14db871e0d70135782, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 30.390705
+      value: 9.3
       objectReference: {fileID: 0}
     - target: {fileID: 6554180430892298285, guid: fdfac808da999d14db871e0d70135782, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -20.088888
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 6554180430892298285, guid: fdfac808da999d14db871e0d70135782, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5419,6 +5419,14 @@ PrefabInstance:
     - target: {fileID: 6556572534306204549, guid: fdfac808da999d14db871e0d70135782, type: 3}
       propertyPath: m_Name
       value: First person controller full
+      objectReference: {fileID: 0}
+    - target: {fileID: 6556572534306204603, guid: fdfac808da999d14db871e0d70135782, type: 3}
+      propertyPath: _JumpHeight
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6556572534306204603, guid: fdfac808da999d14db871e0d70135782, type: 3}
+      propertyPath: _MovementSpeed
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6957,7 +6965,7 @@ GameObject:
   - component: {fileID: 1227532561}
   - component: {fileID: 1227532560}
   m_Layer: 0
-  m_Name: r
+  m_Name: Bolognese sauce
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7046,13 +7054,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227532559}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.260781, z: -0, w: 0.965398}
-  m_LocalPosition: {x: 131.6862, y: 7.3991323, z: -81.5}
-  m_LocalScale: {x: 33.75666, y: 33.75666, z: 33.75666}
+  m_LocalRotation: {x: -0, y: -0.31003067, z: -0, w: 0.95072657}
+  m_LocalPosition: {x: 167.1, y: -3.1, z: -105.5}
+  m_LocalScale: {x: 49.571655, y: 33.75666, z: 33.75666}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -30.233, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -36.122, z: 0}
 --- !u!1001 &1269308946
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7876,7 +7884,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -9498,7 +9506,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d714da28756b09f4594a100514b37adc, type: 2}
+  - {fileID: 2100000, guid: 71d42e8f1661845158f071ff167901a4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9980,7 +9988,7 @@ Transform:
   m_GameObject: {fileID: 1847328420}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.66, z: 0}
+  m_LocalPosition: {x: 0, y: -66, z: 0}
   m_LocalScale: {x: 110, y: 120, z: 80}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10554,7 +10562,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d714da28756b09f4594a100514b37adc, type: 2}
+  - {fileID: 2100000, guid: 71d42e8f1661845158f071ff167901a4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
