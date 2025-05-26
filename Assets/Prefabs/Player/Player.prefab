@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 6994461169371079434}
   - component: {fileID: 3223538669632417265}
   - component: {fileID: 2368101365595873415}
-  - component: {fileID: 9114607426741644914}
   - component: {fileID: 1980197981203724770}
   - component: {fileID: 1459714690008989442}
+  - component: {fileID: 2950386666696465290}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -31,8 +31,8 @@ Transform:
   m_GameObject: {fileID: 91383399078053157}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.2, y: 1.55, z: -11.75}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 1.51, z: 0}
+  m_LocalScale: {x: 0.5, y: 1, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3633950098156635324}
@@ -114,19 +114,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &9114607426741644914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 91383399078053157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd947b12696537c4794f86714d203e0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  appleCountUI: {fileID: 0}
 --- !u!114 &1980197981203724770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,6 +127,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  jump: {x: 0, y: 3, z: 0}
+  jumpForce: 2
+  isGrounded: 0
+  isOnIce: 0
 --- !u!54 &1459714690008989442
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -150,7 +141,7 @@ Rigidbody:
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0
+  m_AngularDrag: 3
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -162,11 +153,23 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &2950386666696465290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91383399078053157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58a2f5637e3d33499a5437dbb9f41e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1171993079941591676
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,6 +320,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b635574f46eb23408ca541014bf8932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 500
   playerBody: {fileID: 7947214128399276129}
   playerMovement: {fileID: 1980197981203724770}
