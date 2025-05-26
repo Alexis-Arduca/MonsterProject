@@ -40,17 +40,6 @@ public class PlayerMovement : MonoBehaviour
         forward.y = 0f;
         right.y = 0f;
 
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            isRuning = true;
-            moveSpeed = 10;
-        }
-        else if (isRuning == true)
-        {
-            isRuning = false;
-            moveSpeed = 5;
-        }
-
         forward.Normalize();
         right.Normalize();
 
@@ -63,9 +52,24 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = Vector3.Lerp(currentVelocity, targetVelocity, inertia);
     }
 
+    public void HandleSprint()
+    {
+        isRuning = !isRuning;
+
+        if (moveSpeed == 5)
+        {
+            moveSpeed = 10;
+        }
+        else
+        {
+            moveSpeed = 5;
+        }
+    }
+
     public void HandleJump()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        Debug.Log("Prout");
+        if (isGrounded)
         {
             rb.AddForce(jump * jumpForce, ForceMode.Impulse);
             isGrounded = false;

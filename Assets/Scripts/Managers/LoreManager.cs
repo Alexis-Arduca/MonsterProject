@@ -7,11 +7,12 @@ public class LoreManager : MonoBehaviour
     public List<string> loreToRead;
     private int currentIndex;
     private TypewriterEffect twe;
-    private ReadTextFile rtf = new ReadTextFile();
+    private ReadTextFile rtf;
 
     void Start()
     {
         currentIndex = 0;
+        rtf = new ReadTextFile();
         twe = GetComponent<TypewriterEffect>();
 
         GameEventsManager.instance.biomeEvents.onFireBiomeEnter += EnterBiomeStory;
