@@ -6,6 +6,9 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Move")]
     public float moveSpeed;
+    private float baseMoveSpeed;
+    private float effectSpeedMultiplier = 1f;
+    private bool isSprinting = false;
 
     [Header("Jump")]
     public Vector3 jump;
@@ -16,18 +19,24 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 movement;
     private Rigidbody rb;
-    private bool isRuning = false;
 
     void Start()
     {
+        baseMoveSpeed = moveSpeed;
         isGrounded = true;
         rb = GetComponent<Rigidbody>();
+
+        GameEventsManager.instance.edibleEvents.onEat += EatInteraction;
+        GameEventsManager.instance.edibleEvents.onDrink += DrinkInteraction;
+        GameEventsManager.instance.edibleEvents.onLick += LickInteraction;
     }
 
     void Update()
     {
         float targetDrag = (isGrounded || isOnIce) ? (isOnIce ? 0.5f : 3f) : 0f;
         rb.linearDamping = Mathf.Lerp(rb.linearDamping, targetDrag, Time.deltaTime * 3f);
+
+        moveSpeed = baseMoveSpeed * effectSpeedMultiplier * (isSprinting ? 2f : 1f);
     }
 
     public void HandleMovement(Transform cameraTransform)
@@ -52,18 +61,47 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = Vector3.Lerp(currentVelocity, targetVelocity, inertia);
     }
 
+    public void EatInteraction()
+    {
+        effectSpeedMultiplier = 2f;
+        StartCoroutine(ResetSpeedEffect(10f));
+    }
+
+    public void DrinkInteraction()
+    {
+        jumpForce = 3.0f;
+        StartCoroutine(ResetJumpEffect(5f));
+    }
+
+    public void LickInteraction()
+    {
+        effectSpeedMultiplier = 0.5f;
+        jumpForce = 1.0f;
+        StartCoroutine(ResetLickEffect(5f));
+    }
+
+    private IEnumerator ResetSpeedEffect(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        effectSpeedMultiplier = 1f;
+    }
+
+    private IEnumerator ResetJumpEffect(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        jumpForce = 2.0f;
+    }
+
+    private IEnumerator ResetLickEffect(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        effectSpeedMultiplier = 1f;
+        jumpForce = 2.0f;
+    }
+
     public void HandleSprint()
     {
-        isRuning = !isRuning;
-
-        if (moveSpeed == 5)
-        {
-            moveSpeed = 10;
-        }
-        else
-        {
-            moveSpeed = 5;
-        }
+        isSprinting = !isSprinting;
     }
 
     public void HandleJump()

@@ -6,6 +6,7 @@ public class PlayerControler : MonoBehaviour
     private bool playerAction = false;
     private PlayerMovement playerMovement;
     public PlayerControls controls;
+    private EdibleHandler currentEdible;
 
     void Start()
     {
@@ -21,6 +22,10 @@ public class PlayerControler : MonoBehaviour
         
         controls.Gameplay.Sprint.performed += ctx => playerMovement.HandleSprint();
         controls.Gameplay.Sprint.canceled += ctx => playerMovement.HandleSprint();
+        controls.Gameplay.Action.performed += ctx => {
+            if (currentEdible != null && currentEdible.GetInteraction()) currentEdible.InteractWith();
+        };
+
     }
 
     void OnDisable()
@@ -39,5 +44,23 @@ public class PlayerControler : MonoBehaviour
     private void ChangeAction()
     {
         playerAction = !playerAction;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.TryGetComponent<EdibleHandler>(out var edible))
+        {
+            currentEdible = edible;
+            edible.SetCanInteract(true);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.TryGetComponent<EdibleHandler>(out var edible) && edible == currentEdible)
+        {
+            edible.SetCanInteract(false);
+            currentEdible = null;
+        }
     }
 }

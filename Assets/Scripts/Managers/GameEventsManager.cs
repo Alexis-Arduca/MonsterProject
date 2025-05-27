@@ -7,6 +7,7 @@ public class GameEventsManager : MonoBehaviour
     public TrailEvents trailEvents;
     public BiomeEvents biomeEvents;
     public LoreEvents loreEvents;
+    public EdibleEvents edibleEvents;
 
     private void Awake()
     {
@@ -20,5 +21,6 @@ public class GameEventsManager : MonoBehaviour
         trailEvents = new TrailEvents();
         biomeEvents = new BiomeEvents();
         loreEvents = new LoreEvents();
+        edibleEvents = new EdibleEvents();
     }
 }

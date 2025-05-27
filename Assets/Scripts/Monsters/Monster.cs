@@ -51,7 +51,7 @@ public class Monster : MonoBehaviour
         {
             Debug.LogWarning($"No Rigidbody found on {gameObject.name}. Adding one.");
             rb = gameObject.AddComponent<Rigidbody>();
-            rb.isKinematic = true; // Par défaut kinematic pour éviter les conflits avec NavMeshAgent
+            rb.isKinematic = true;
             rb.useGravity = false;
         }
 
@@ -59,11 +59,11 @@ public class Monster : MonoBehaviour
         if (agent == null)
         {
             Debug.LogError($"No NavMeshAgent found on {gameObject.name}. Please add one.");
-            enabled = false; // Désactiver le script si pas d'agent
+            enabled = false;
             return;
         }
 
-        agent.autoTraverseOffMeshLink = false; // Désactiver la traversée automatique des OffMeshLinks
+        agent.autoTraverseOffMeshLink = false;
 
         currentState = State.Following;
         basePosition = transform.position;
