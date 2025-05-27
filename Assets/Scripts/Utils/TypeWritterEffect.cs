@@ -9,7 +9,7 @@ public class TypewriterEffect : MonoBehaviour
     public float moveDuration = 2f;
     public float moveDistance = 50f;
 
-    private string currentText = "";
+    // private string currentText = "";
 
     public IEnumerator ShowText(string msg)
     {

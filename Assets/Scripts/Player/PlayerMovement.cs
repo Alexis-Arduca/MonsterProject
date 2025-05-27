@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isOnIce = false;
     private Vector3 movement;
     private Rigidbody rb;
+    public AudioClip jumpClip;
 
     [Header("ReadOnly Value")]
     private readonly float minDrag = 0.5f;
@@ -140,6 +141,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(jump * jumpForce, ForceMode.Impulse);
             isGrounded = false;
+            AudioSource.PlayClipAtPoint(jumpClip, transform.position);
         }
     }
 

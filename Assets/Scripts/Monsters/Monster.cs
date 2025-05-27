@@ -32,7 +32,6 @@ public class Monster : MonoBehaviour
     [SerializeField] protected float maxPatrolDistance = 5f;
     private Vector3 basePosition;
     private float patrolTimer;
-    private float stateChangeTimer = 0f;
     private Vector3 patrolDirection;
 
     [Header("Follow")]

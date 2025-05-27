@@ -70,7 +70,6 @@ public class CameraZoom : MonoBehaviour
                 mouseY = lookInput.y * gamepadSensitivity * Time.deltaTime;
             }
 
-
             xRotation -= mouseY;
             xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 

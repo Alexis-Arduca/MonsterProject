@@ -9,12 +9,9 @@ public class BiomeCameraTravelling : MonoBehaviour
     public Transform iceBiomeFocus;
     public Transform playerCameraTarget;
     public float travelDuration = 3f;
-    private bool biomeInit;
 
     void Start()
     {
-        biomeInit = false;
-
         GameEventsManager.instance.biomeEvents.onFireBiomeEnter += FireBiomeTravelling;
         GameEventsManager.instance.biomeEvents.onThunderBiomeEnter += ThunderBiomeTravelling;
         GameEventsManager.instance.biomeEvents.onIceBiomeEnter += IceBiomeTravelling;
