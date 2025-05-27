@@ -2,15 +2,26 @@ using UnityEngine;
 
 public class PondController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    // <summary>
+    // Set the position of the empty level.
+    // This is used to ensure the water level is below the pond.
+    // </summary>
+    [SerializeField] private float emptyLevelY;
+    [SerializeField] private float drinkValue;
+
+    private void Start()
     {
-        
+        drinkValue = 0.1f;
+        emptyLevelY = transform.position.y - drinkValue * 3;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void LowerWaterLevel()
     {
-        
+        transform.position -= new Vector3(0, drinkValue, 0); // Lower the water level by 1 unit
+    }
+
+    public bool IsWaterLevelEmpty()
+    {
+        return transform.position.y <= emptyLevelY; // Check if the water level is below the empty level
     }
 }

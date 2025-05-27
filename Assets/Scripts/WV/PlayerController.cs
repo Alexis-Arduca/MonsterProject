@@ -10,25 +10,29 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [Header("UI")] public TextMeshProUGUI interactionText;
-
-    private const float MoveSpeed = 5f;
-    private Vector3 _moveDirection;
-
-    private Rigidbody _rb;
-    private Camera _camera;
-
-    private const float InteractDistance = 2f;
-    private RaycastHit _hit;
-    private PickableController _pickableController;
-    private MonsterController _monsterController;
+    [Header("Audio")] public AudioClip[] burpSounds;
 
     [Header("Camera")] [SerializeField] [Range(0, 10)]
     private float mouseSensitivity = 2f;
+
+    private const float MoveSpeed = 5f;
+    private const float InteractDistance = 2f;
+
+    private Rigidbody _rb;
+    private Camera _camera;
+    private Vector3 _moveDirection;
+    private RaycastHit _hit;
+    private AudioSource _audioSource;
+
+    private PickableController _pickableController;
+    private MonsterController _monsterController;
+    private WallPondController _wallPondController;
 
     private void Start()
     {
         _rb = GetComponent<Rigidbody>();
         _camera = GetComponentInChildren<Camera>();
+        _audioSource = GetComponent<AudioSource>();
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -58,6 +62,10 @@ public class PlayerController : MonoBehaviour
                 interactionText.gameObject.SetActive(false);
                 HandleItem(monsterController);
             }
+            else if (_hit.collider.TryGetComponent(out WallPondController wallPondController) && _pickableController == null)
+            {
+                HandleDrinkPond(wallPondController);
+            }
             else
             {
                 interactionText.gameObject.SetActive(false);
@@ -80,6 +88,43 @@ public class PlayerController : MonoBehaviour
             {
                 HandleDrop();
             }
+        }
+    }
+
+    private void HandleDrinkPond(WallPondController wallPondController)
+    {
+        _wallPondController = wallPondController;
+        switch (_wallPondController.pondController.IsWaterLevelEmpty())
+        {
+            case true:
+                interactionText.gameObject.SetActive(true);
+                interactionText.text = "The pond is empty.";
+                break;
+            case false:
+                interactionText.gameObject.SetActive(true);
+                interactionText.text = "Press E to drink water";
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    _wallPondController.Drink();
+                    RandomBurp();
+                }
+                break;
+        }
+    }
+
+    // <summary>
+    // Plays a random burp sound from the audio source.
+    // Modify this method when using other audio libraries or systems.
+    // </summary>
+
+    private void RandomBurp()
+    {
+        if (burpSounds.Length == 0) return;
+
+        int randomIndex = Random.Range(0, burpSounds.Length);
+        if (_audioSource != null)
+        {
+            _audioSource.PlayOneShot(burpSounds[randomIndex]);
         }
     }
 
