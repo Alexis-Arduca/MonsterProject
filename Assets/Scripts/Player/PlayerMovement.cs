@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 currentVelocity = rb.linearVelocity;
         Vector3 targetVelocity = new Vector3(movement.x, currentVelocity.y, movement.z);
-        float inertia = isOnIce ? 0.05f : 0.2f;
+        float inertia = isOnIce ? 0.01f : 0.2f;
 
         rb.linearVelocity = Vector3.Lerp(currentVelocity, targetVelocity, inertia);
     }
