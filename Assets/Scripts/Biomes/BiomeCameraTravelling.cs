@@ -27,6 +27,9 @@ public class BiomeCameraTravelling : MonoBehaviour
         GameEventsManager.instance.biomeEvents.onIceBiomeEnter -= IceBiomeTravelling;
     }
 
+    /// <summary>
+    /// Init every parameters for the travelling
+    /// </summary>
     public void InitializeBiomes()
     {
         GameObject fireBiome = GameObject.Find("FireBiome(Clone)");
@@ -53,6 +56,12 @@ public class BiomeCameraTravelling : MonoBehaviour
         StartCoroutine(DoCameraTravel(iceBiomeFocus));
     }
 
+    /// <summary>
+    /// Do the camera travel. Basically will take the camera and put it in the top of the world based 
+    /// on a gameobject create by the biome generation
+    /// </summary>
+    /// <param name="biomeTransform"></param>
+    /// <returns></returns>
     private IEnumerator DoCameraTravel(Transform biomeTransform)
     {
         GameEventsManager.instance.loreEvents.OnImportantLoreEvent();

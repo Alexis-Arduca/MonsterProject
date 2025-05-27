@@ -13,9 +13,14 @@ public class Biomes : MonoBehaviour
     private int monsterNumber;
     private bool hasBeenTriggered = false;
 
+    // Each value need a name and put it in the top of the class as a parameter
+    private readonly float sizeMultiplier = 10f;
+    private readonly float topViewRotation = 40f;
+    private readonly int maxAttempts = 500;
+
     void Start()
     {
-        Bounds bounds = GetComponent<Renderer>()?.bounds ?? new Bounds(transform.position, Vector3.one * 10f);
+        Bounds bounds = GetComponent<Renderer>()?.bounds ?? new Bounds(transform.position, Vector3.one * sizeMultiplier);
 
         if (gameObject.GetComponent<BiomesTemplate>().biomeType != BiomesTemplate.BiomeType.Lobby)
         {
@@ -97,7 +102,7 @@ public class Biomes : MonoBehaviour
         bool valid = false;
         int attempts = 0;
 
-        while (!valid && attempts < 500)
+        while (!valid && attempts < maxAttempts)
         {
             float radius = spawnDistance * 0.75f;
             float angle = Random.Range(0f, Mathf.PI * 2f);
@@ -122,7 +127,7 @@ public class Biomes : MonoBehaviour
                 break;
             }
             foreach (Vector3 p in existingPositions)
-            {
+            {   
                 if (Vector2.Distance(new Vector2(pos.x, pos.z), new Vector2(p.x, p.z)) < spawnDistance)
                 {
                     valid = false;
@@ -149,7 +154,7 @@ public class Biomes : MonoBehaviour
     /// <returns></returns>
     private Vector3 GetTopViewPosition(Transform biomeTransform)
     {
-        return biomeTransform.position + Vector3.up * 40f;
+        return biomeTransform.position + Vector3.up * topViewRotation;
     }
 
     private Quaternion GetTopViewRotation()

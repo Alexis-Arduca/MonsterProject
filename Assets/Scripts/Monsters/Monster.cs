@@ -163,6 +163,10 @@ public class Monster : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Handle monster jump based on NavMeshLink. Use for "platformer" and when he is friendly (follow the player)
+    /// </summary>
+    /// <returns></returns>
     protected virtual IEnumerator DoJump()
     {
         if (jumpDuration <= 0)
