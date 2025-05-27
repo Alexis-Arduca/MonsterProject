@@ -145,12 +145,21 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void OnCollisionStay()
+    void OnCollisionStay(Collision collision)
     {
-        isGrounded = true;
+        foreach (ContactPoint contact in collision.contacts)
+        {
+            if (contact.normal.y > 0.5f)
+            {
+                isGrounded = true;
+                return;
+            }
+        }
+
+        isGrounded = false;
     }
 
-    void OnCollisionExit()
+    void OnCollisionExit(Collision collision)
     {
         isGrounded = false;
     }
