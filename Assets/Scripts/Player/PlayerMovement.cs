@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        float targetDrag = isOnIce ? 0.5f : 3f;
+        float targetDrag = (isGrounded || isOnIce) ? (isOnIce ? 0.5f : 3f) : 0f;
         rb.linearDamping = Mathf.Lerp(rb.linearDamping, targetDrag, Time.deltaTime * 3f);
     }
 
@@ -68,7 +68,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void HandleJump()
     {
-        Debug.Log("Prout");
         if (isGrounded)
         {
             rb.AddForce(jump * jumpForce, ForceMode.Impulse);

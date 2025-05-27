@@ -188,6 +188,7 @@ GameObject:
   - component: {fileID: 207435148}
   - component: {fileID: 207435147}
   - component: {fileID: 207435150}
+  - component: {fileID: 207435151}
   m_Layer: 0
   m_Name: LoreManager
   m_TagString: Untagged
@@ -258,6 +259,18 @@ MonoBehaviour:
   iceBiomeFocus: {fileID: 0}
   playerCameraTarget: {fileID: 1694914875}
   travelDuration: 3
+--- !u!114 &207435151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207435146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85da1ea08eb4f454cab1cb2ce9a23e23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!20 &334538017 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 5933842675207903196, guid: 2af6ec18dfb288f4c8dfd202ceaac66a, type: 3}
