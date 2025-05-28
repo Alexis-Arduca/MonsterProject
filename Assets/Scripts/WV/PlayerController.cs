@@ -49,6 +49,12 @@ public class PlayerController : MonoBehaviour
         HandleRaycast();
     }
 
+    // <summary>
+    // Handles the raycast to detect interactions with pickable items, monsters, and ponds.
+    // It checks if the player can pick up items, interact with monsters, or drink from ponds.
+    // If no valid interaction is detected, it hides the interaction text and handles dropping items if applicable.
+    // </summary>
+
     private void HandleRaycast()
     {
         if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out _hit, InteractDistance))
@@ -64,7 +70,7 @@ public class PlayerController : MonoBehaviour
             }
             else if (_hit.collider.TryGetComponent(out WallPondController wallPondController) && _pickableController == null)
             {
-                HandleDrinkPond(wallPondController);
+                HandleDrinkPond(wallPondController); // The player can't drink from the pond if they are holding an item
             }
             else
             {
