@@ -198,7 +198,6 @@ public class Monster : MonoBehaviour
         rb.isKinematic = wasKinematic;
 
         isJumping = false;
-        Debug.Log("Jump completed");
     }
 
     /// <summary>
