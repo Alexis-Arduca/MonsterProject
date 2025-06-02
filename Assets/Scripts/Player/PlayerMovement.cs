@@ -5,19 +5,28 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Move")]
-    public float moveSpeed;
+    public float moveSpeed = 5f;
     private float baseMoveSpeed;
     private float effectSpeedMultiplier = 1f;
     private bool isSprinting = false;
 
     [Header("Jump")]
-    public Vector3 jump;
-    public float jumpForce = 2.0f;
+    public float jumpForce = 10.0f;
+    public float fallMultiplier = 2.5f;
+    private readonly float fallReducer = 1f;
     public bool isGrounded;
     public bool isOnIce = false;
     private Vector3 movement;
     private Rigidbody rb;
     public AudioClip jumpClip;
+
+    [Header("Boost")]
+    private float jumpBaseValue;
+    public float jumpNerf = 7.0f;
+    public float jumpUpgrade = 13.0f;
+    private float speedMultiplierBaseValue;
+    public float speedMultiplierNerf = 0.5f;
+    public float speedMultiplierUpgrade = 2f;
 
     [Header("ReadOnly Value")]
     private readonly float minDrag = 0.5f;
@@ -25,10 +34,13 @@ public class PlayerMovement : MonoBehaviour
     private readonly float minSpeedMultiplier = 1f;
     private readonly float maxSpeedMultiplier = 2f;
     private readonly float minInertiaOnIce = 0.01f;
-    private readonly float maxIntertiaOnIce = 0.2f;
+    private readonly float maxInertiaOnIce = 0.2f;
 
     void Start()
     {
+        jumpBaseValue = jumpForce;
+        speedMultiplierBaseValue = effectSpeedMultiplier;
+
         baseMoveSpeed = moveSpeed;
         isGrounded = true;
         rb = GetComponent<Rigidbody>();
@@ -44,12 +56,13 @@ public class PlayerMovement : MonoBehaviour
         rb.linearDamping = Mathf.Lerp(rb.linearDamping, targetDrag, Time.deltaTime * maxDrag);
 
         moveSpeed = baseMoveSpeed * effectSpeedMultiplier * (isSprinting ? maxSpeedMultiplier : minSpeedMultiplier);
+
+        if (!isGrounded && rb.linearVelocity.y < 0)
+        {
+            rb.linearVelocity += Vector3.up * Physics.gravity.y * (fallMultiplier - fallReducer) * Time.deltaTime;
+        }
     }
 
-    /// <summary>
-    /// Handle player movement based on some parameters
-    /// </summary>
-    /// <param name="cameraTransform"></param>
     public void HandleMovement(Transform cameraTransform)
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
@@ -66,80 +79,60 @@ public class PlayerMovement : MonoBehaviour
         movement = (forward * vertical + right * horizontal).normalized * moveSpeed;
 
         Vector3 currentVelocity = rb.linearVelocity;
-        Vector3 targetVelocity = new Vector3(movement.x, currentVelocity.y, movement.z);
-        float inertia = isOnIce ? minInertiaOnIce : maxIntertiaOnIce;
+        Vector3 targetVelocity = new Vector3(movement.x, rb.linearVelocity.y, movement.z);
+        float inertia = isOnIce ? minInertiaOnIce : maxInertiaOnIce;
 
         rb.linearVelocity = Vector3.Lerp(currentVelocity, targetVelocity, inertia);
     }
 
-    /// <summary>
-    /// Handle Eat interaction and buff (speed multiplier)
-    /// </summary>
     public void EatInteraction()
     {
-        effectSpeedMultiplier = 2f;
+        effectSpeedMultiplier = speedMultiplierUpgrade;
         StartCoroutine(ResetSpeedEffect(10f));
     }
 
-    /// <summary>
-    /// Handle Drink interaction and buff (jump upgrade)
-    /// </summary>
     public void DrinkInteraction()
     {
-        jumpForce = 3.0f;
+        jumpForce = jumpUpgrade;
         StartCoroutine(ResetJumpEffect(5f));
     }
 
-    /// <summary>
-    /// Handle Lick interaction and nerf (slow the player and reduce jump)
-    /// </summary>
     public void LickInteraction()
     {
-        effectSpeedMultiplier = 0.5f;
-        jumpForce = 1.0f;
+        effectSpeedMultiplier = speedMultiplierNerf;
+        jumpForce = jumpNerf;
         StartCoroutine(ResetLickEffect(5f));
     }
 
-    /// <summary>
-    /// Next three functions are just use to reset the stats after a moment (usage of Coroutine)
-    /// </summary>
-    /// <param name="duration"></param>
-    /// <returns></returns>
     private IEnumerator ResetSpeedEffect(float duration)
     {
         yield return new WaitForSeconds(duration);
-        effectSpeedMultiplier = 1f;
+        effectSpeedMultiplier = speedMultiplierBaseValue;
     }
 
     private IEnumerator ResetJumpEffect(float duration)
     {
         yield return new WaitForSeconds(duration);
-        jumpForce = 2.0f;
+        jumpForce = jumpBaseValue;
     }
 
     private IEnumerator ResetLickEffect(float duration)
     {
         yield return new WaitForSeconds(duration);
-        effectSpeedMultiplier = 1f;
-        jumpForce = 2.0f;
+        effectSpeedMultiplier = speedMultiplierBaseValue;
+        jumpForce = jumpBaseValue;
     }
 
-    /// <summary>
-    /// Just handle the sprint (simple to understand)
-    /// </summary>
     public void HandleSprint()
     {
         isSprinting = !isSprinting;
     }
 
-    /// <summary>
-    /// Just handle the jump
-    /// </summary>
     public void HandleJump()
     {
         if (isGrounded)
         {
-            rb.AddForce(jump * jumpForce, ForceMode.Impulse);
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
             // AudioSource.PlayClipAtPoint(jumpClip, transform.position);
         }
@@ -155,8 +148,6 @@ public class PlayerMovement : MonoBehaviour
                 return;
             }
         }
-
-        isGrounded = false;
     }
 
     void OnCollisionExit(Collision collision)
