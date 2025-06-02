@@ -6335,14 +6335,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 1980197981203724770, guid: 2af6ec18dfb288f4c8dfd202ceaac66a, type: 3}
-      propertyPath: jumpClip
-      value: 
-      objectReference: {fileID: 8300000, guid: f3d589c0e945a79489cb8f63e95dbe99, type: 3}
-    - target: {fileID: 2368101365595873415, guid: 2af6ec18dfb288f4c8dfd202ceaac66a, type: 3}
-      propertyPath: m_ProvidesContacts
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7947214128399276129, guid: 2af6ec18dfb288f4c8dfd202ceaac66a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

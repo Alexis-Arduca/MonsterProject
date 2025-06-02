@@ -24,7 +24,7 @@ public class ConfettiArea : MonoBehaviour
             if (movement > 0.01f && spawnTimer <= 0f)
             {
                 Vector3 playerPos = player.position;
-                playerPos.y = 0.1f;
+                playerPos.y = playerPos.y - 0.5f;
 
                 ParticleSystem confetti = Instantiate(confettiPrefab, playerPos, Quaternion.identity);
                 confetti.Play();

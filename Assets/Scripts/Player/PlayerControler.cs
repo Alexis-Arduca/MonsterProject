@@ -25,7 +25,7 @@ public class PlayerControler : MonoBehaviour
         controls.Gameplay.Action.performed += ctx => {
             if (currentEdible != null && currentEdible.GetInteraction()) currentEdible.InteractWith();
         };
-
+        controls.Gameplay.Debug.performed += ctx => BackOnSpawn();
     }
 
     void OnDisable()
@@ -44,6 +44,11 @@ public class PlayerControler : MonoBehaviour
     private void ChangeAction()
     {
         playerAction = !playerAction;
+    }
+
+    private void BackOnSpawn()
+    {
+        this.transform.position = new Vector3(-2.4f, 2.74f, 14.3f);
     }
 
     private void OnTriggerEnter(Collider other)

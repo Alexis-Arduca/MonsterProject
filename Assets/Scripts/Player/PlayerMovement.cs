@@ -141,7 +141,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(jump * jumpForce, ForceMode.Impulse);
             isGrounded = false;
-            AudioSource.PlayClipAtPoint(jumpClip, transform.position);
+            // AudioSource.PlayClipAtPoint(jumpClip, transform.position);
         }
     }
 
