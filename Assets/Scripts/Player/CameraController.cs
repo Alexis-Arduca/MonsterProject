@@ -11,8 +11,8 @@ public class CameraZoom : MonoBehaviour
 
     private PlayerControls controls;
     private Vector2 lookInput;
-    private readonly float mouseSensitivity = 0.5f;
-    private readonly float gamepadSensitivity = 450f;
+    public float mouseSensitivity = 0.5f;
+    public float gamepadSensitivity = 300f;
 
     void Start()
     {
