@@ -64,7 +64,7 @@ public class Monster : MonoBehaviour
 
         agent.autoTraverseOffMeshLink = false;
 
-        currentState = State.Following;
+        currentState = State.Patrolling;
         basePosition = transform.position;
 
         GameEventsManager.instance.trailEvents.onItemPickup += ActivateTrail;
