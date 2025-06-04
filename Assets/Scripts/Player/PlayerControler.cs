@@ -24,6 +24,7 @@ public class PlayerControler : MonoBehaviour
         controls.Gameplay.Sprint.canceled += ctx => playerMovement.HandleSprint();
         controls.Gameplay.Action.performed += ctx => {
             if (currentEdible != null && currentEdible.GetInteraction()) currentEdible.InteractWith();
+            else Debug.LogError("No edible to interact with or interaction not allowed.");
         };
         controls.Gameplay.Debug.performed += ctx => BackOnSpawn();
     }

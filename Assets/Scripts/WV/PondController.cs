@@ -1,7 +1,6 @@
 using UnityEngine;
 
 // <summary>
-// Attached to the Pond Prefab.
 // This script is responsible for controlling the water level of the pond.
 // It handles lowering the water level and checking if the water level is empty.
 // </summary>
