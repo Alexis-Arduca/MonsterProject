@@ -3,6 +3,7 @@ using UnityEngine;
 public class EdibleHandler : MonoBehaviour
 {
     private bool canInteract;
+    protected Vector3 PlayerPosition;
 
     void Start()
     {
@@ -28,6 +29,7 @@ public class EdibleHandler : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            PlayerPosition = collision.transform.position;
             canInteract = true;
         }
     }
@@ -36,6 +38,7 @@ public class EdibleHandler : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            PlayerPosition = Vector3.zero; // Reset player position
             canInteract = false;
         }
     }

@@ -1932,7 +1932,7 @@ GameObject:
   m_Component:
   - component: {fileID: 268010865}
   - component: {fileID: 268010866}
-  - component: {fileID: 268010869}
+  - component: {fileID: 268010867}
   m_Layer: 0
   m_Name: InvisibleWall (4)
   m_TagString: Untagged
@@ -1949,11 +1949,11 @@ Transform:
   m_GameObject: {fileID: 268010864}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.66680765, z: -0, w: -0.74522996}
-  m_LocalPosition: {x: -0.2208, y: 0.5889, z: 0.1516}
-  m_LocalScale: {x: 0.01, y: 0.1, z: 0.2698595}
+  m_LocalPosition: {x: -112.37274, y: 0, z: 6.8101044}
+  m_LocalScale: {x: 1.8681359, y: 11.291274, z: 44.46132}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1064247299}
+  m_Father: {fileID: 1622547696}
   m_LocalEulerAnglesHint: {x: 0, y: 276.358, z: 0}
 --- !u!65 &268010866
 BoxCollider:
@@ -1976,7 +1976,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &268010869
+--- !u!114 &268010867
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1988,7 +1988,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8714cbbd1d95e144cb78f3ccf42488f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: []
+  clip:
+  - {fileID: 8300000, guid: 509ca0c0aaa2e7c4994ddd9043070ae8, type: 3}
+  - {fileID: 8300000, guid: b4163b29c5ab2fd429d62c3353173b4c, type: 3}
+  - {fileID: 8300000, guid: 14f54e4d365c50c4ebc4c6ac4e3c66ee, type: 3}
 --- !u!1 &279795707
 GameObject:
   m_ObjectHideFlags: 0
@@ -4783,7 +4786,7 @@ GameObject:
   m_Component:
   - component: {fileID: 632215385}
   - component: {fileID: 632215386}
-  - component: {fileID: 632215389}
+  - component: {fileID: 632215387}
   m_Layer: 0
   m_Name: InvisibleWall
   m_TagString: Untagged
@@ -4800,11 +4803,11 @@ Transform:
   m_GameObject: {fileID: 632215384}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.32605016, z: -0, w: 0.9453525}
-  m_LocalPosition: {x: 0.3251, y: 0.5889, z: -0.10650004}
-  m_LocalScale: {x: 0.01, y: 0.1, z: 0.3859292}
+  m_LocalPosition: {x: -22.583103, y: 0, z: -41.478027}
+  m_LocalScale: {x: 1.7307277, y: 11.291274, z: 68.88761}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1064247299}
+  m_Father: {fileID: 1622547696}
   m_LocalEulerAnglesHint: {x: 0, y: 38.058, z: 0}
 --- !u!65 &632215386
 BoxCollider:
@@ -4827,7 +4830,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &632215389
+--- !u!114 &632215387
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4839,7 +4842,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8714cbbd1d95e144cb78f3ccf42488f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: []
+  clip:
+  - {fileID: 8300000, guid: 509ca0c0aaa2e7c4994ddd9043070ae8, type: 3}
+  - {fileID: 8300000, guid: b4163b29c5ab2fd429d62c3353173b4c, type: 3}
+  - {fileID: 8300000, guid: 14f54e4d365c50c4ebc4c6ac4e3c66ee, type: 3}
 --- !u!1001 &638291424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5674,7 +5680,7 @@ GameObject:
   m_Component:
   - component: {fileID: 688969622}
   - component: {fileID: 688969623}
-  - component: {fileID: 688969626}
+  - component: {fileID: 688969624}
   m_Layer: 0
   m_Name: InvisibleWall (6)
   m_TagString: Untagged
@@ -5691,11 +5697,11 @@ Transform:
   m_GameObject: {fileID: 688969621}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.54861456, z: -0, w: -0.8360754}
-  m_LocalPosition: {x: 0.3634, y: 0.5889, z: 0.2434}
-  m_LocalScale: {x: 0.01, y: 0.1, z: 0.25123015}
+  m_LocalPosition: {x: -16.283516, y: 0, z: 23.985031}
+  m_LocalScale: {x: 1.8350835, y: 11.291274, z: 42.222347}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1064247299}
+  m_Father: {fileID: 1622547696}
   m_LocalEulerAnglesHint: {x: 0, y: 293.456, z: 0}
 --- !u!65 &688969623
 BoxCollider:
@@ -5718,7 +5724,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &688969626
+--- !u!114 &688969624
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5730,7 +5736,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8714cbbd1d95e144cb78f3ccf42488f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: []
+  clip:
+  - {fileID: 8300000, guid: 509ca0c0aaa2e7c4994ddd9043070ae8, type: 3}
+  - {fileID: 8300000, guid: b4163b29c5ab2fd429d62c3353173b4c, type: 3}
+  - {fileID: 8300000, guid: 14f54e4d365c50c4ebc4c6ac4e3c66ee, type: 3}
 --- !u!1 &730628586
 GameObject:
   m_ObjectHideFlags: 0
@@ -8582,18 +8591,11 @@ Transform:
   m_GameObject: {fileID: 1064247295}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -98.9, y: -60.7, z: 168.4}
-  m_LocalScale: {x: 164.48, y: 112.91275, z: 187.09074}
+  m_LocalPosition: {x: -93.5, y: -60, z: 166.2}
+  m_LocalScale: {x: 155.17043, y: 112.91275, z: 117.19551}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 632215385}
-  - {fileID: 1715412203}
-  - {fileID: 1852630140}
-  - {fileID: 1106194349}
-  - {fileID: 268010865}
-  - {fileID: 1831644899}
-  - {fileID: 688969622}
-  - {fileID: 2034688961}
+  - {fileID: 1622547696}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1064247300
@@ -8608,8 +8610,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9157ca887722274abfd4f5c11222bf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyLevelY: -600
-  drinkValue: 100
+  emptyLevelY: -67
+  drinkValue: 3
 --- !u!1 &1068280219 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3379836402047742272, guid: bd83c4f0580379c43a21a3c655c18073, type: 3}
@@ -9079,7 +9081,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1106194349}
   - component: {fileID: 1106194350}
-  - component: {fileID: 1106194353}
+  - component: {fileID: 1106194351}
   m_Layer: 0
   m_Name: InvisibleWall (3)
   m_TagString: Untagged
@@ -9096,11 +9098,11 @@ Transform:
   m_GameObject: {fileID: 1106194348}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.97740644, z: -0, w: -0.21136886}
-  m_LocalPosition: {x: -0.3851, y: 0.5889, z: 0.1166}
-  m_LocalScale: {x: 0.01, y: 0.1, z: 0.1104397}
+  m_LocalPosition: {x: -139.39679, y: 0, z: 0.26193237}
+  m_LocalScale: {x: 1.6834037, y: 11.291274, z: 20.235945}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1064247299}
+  m_Father: {fileID: 1622547696}
   m_LocalEulerAnglesHint: {x: 0, y: 204.405, z: 0}
 --- !u!65 &1106194350
 BoxCollider:
@@ -9123,7 +9125,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1106194353
+--- !u!114 &1106194351
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9135,7 +9137,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8714cbbd1d95e144cb78f3ccf42488f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: []
+  clip:
+  - {fileID: 8300000, guid: 509ca0c0aaa2e7c4994ddd9043070ae8, type: 3}
+  - {fileID: 8300000, guid: b4163b29c5ab2fd429d62c3353173b4c, type: 3}
+  - {fileID: 8300000, guid: 14f54e4d365c50c4ebc4c6ac4e3c66ee, type: 3}
 --- !u!1001 &1108823862
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17527,6 +17532,45 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1622547695
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1622547696}
+  m_Layer: 0
+  m_Name: Soda pond walls
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1622547696
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622547695}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.45534158, y: 0.58270055, z: 0.20267718}
+  m_LocalScale: {x: 0.006444527, y: 0.008856395, z: 0.00853275}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 632215385}
+  - {fileID: 1715412203}
+  - {fileID: 1852630140}
+  - {fileID: 1106194349}
+  - {fileID: 268010865}
+  - {fileID: 1831644899}
+  - {fileID: 688969622}
+  - {fileID: 2034688961}
+  m_Father: {fileID: 1064247299}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1640164947
 GameObject:
   m_ObjectHideFlags: 0
@@ -18174,7 +18218,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1715412203}
   - component: {fileID: 1715412204}
-  - component: {fileID: 1715412207}
+  - component: {fileID: 1715412205}
   m_Layer: 0
   m_Name: InvisibleWall (1)
   m_TagString: Untagged
@@ -18191,11 +18235,11 @@ Transform:
   m_GameObject: {fileID: 1715412202}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.63546914, z: -0, w: 0.7721263}
-  m_LocalPosition: {x: 0.0696, y: 0.5889, z: -0.2821}
-  m_LocalScale: {x: 0.01, y: 0.1, z: 0.27998537}
+  m_LocalPosition: {x: -64.60774, y: 0, z: -74.33116}
+  m_LocalScale: {x: 1.8625419, y: 11.291274, z: 41.137836}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1064247299}
+  m_Father: {fileID: 1622547696}
   m_LocalEulerAnglesHint: {x: 0, y: 78.91, z: 0}
 --- !u!65 &1715412204
 BoxCollider:
@@ -18218,7 +18262,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1715412207
+--- !u!114 &1715412205
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -18230,7 +18274,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8714cbbd1d95e144cb78f3ccf42488f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: []
+  clip:
+  - {fileID: 8300000, guid: 509ca0c0aaa2e7c4994ddd9043070ae8, type: 3}
+  - {fileID: 8300000, guid: b4163b29c5ab2fd429d62c3353173b4c, type: 3}
+  - {fileID: 8300000, guid: 14f54e4d365c50c4ebc4c6ac4e3c66ee, type: 3}
 --- !u!1 &1734525189
 GameObject:
   m_ObjectHideFlags: 0
@@ -19109,7 +19156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1831644899}
   - component: {fileID: 1831644900}
-  - component: {fileID: 1831644903}
+  - component: {fileID: 1831644901}
   m_Layer: 0
   m_Name: InvisibleWall (5)
   m_TagString: Untagged
@@ -19126,11 +19173,11 @@ Transform:
   m_GameObject: {fileID: 1831644898}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.85213625, z: -0, w: -0.5233201}
-  m_LocalPosition: {x: 0.0804, y: 0.5889, z: 0.211}
-  m_LocalScale: {x: 0.01, y: 0.1, z: 0.35561562}
+  m_LocalPosition: {x: -62.83136, y: 0, z: 17.923294}
+  m_LocalScale: {x: 1.8246583, y: 11.291274, z: 60.13642}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1064247299}
+  m_Father: {fileID: 1622547696}
   m_LocalEulerAnglesHint: {x: 0, y: 243.11, z: 0}
 --- !u!65 &1831644900
 BoxCollider:
@@ -19153,7 +19200,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1831644903
+--- !u!114 &1831644901
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -19165,7 +19212,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8714cbbd1d95e144cb78f3ccf42488f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: []
+  clip:
+  - {fileID: 8300000, guid: 509ca0c0aaa2e7c4994ddd9043070ae8, type: 3}
+  - {fileID: 8300000, guid: b4163b29c5ab2fd429d62c3353173b4c, type: 3}
+  - {fileID: 8300000, guid: 14f54e4d365c50c4ebc4c6ac4e3c66ee, type: 3}
 --- !u!1 &1837534376 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bd83c4f0580379c43a21a3c655c18073, type: 3}
@@ -19420,7 +19470,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1852630140}
   - component: {fileID: 1852630141}
-  - component: {fileID: 1852630144}
+  - component: {fileID: 1852630142}
   m_Layer: 0
   m_Name: InvisibleWall (2)
   m_TagString: Untagged
@@ -19437,11 +19487,11 @@ Transform:
   m_GameObject: {fileID: 1852630139}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.9396453, z: -0, w: 0.3421502}
-  m_LocalPosition: {x: -0.2272, y: 0.5889, z: -0.1177}
-  m_LocalScale: {x: 0.01, y: 0.1, z: 0.481975}
+  m_LocalPosition: {x: -113.4254, y: 0, z: -43.57344}
+  m_LocalScale: {x: 1.7382842, y: 11.291274, z: 85.6674}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1064247299}
+  m_Father: {fileID: 1622547696}
   m_LocalEulerAnglesHint: {x: 0, y: 139.984, z: 0}
 --- !u!65 &1852630141
 BoxCollider:
@@ -19464,7 +19514,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1852630144
+--- !u!114 &1852630142
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -19476,7 +19526,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8714cbbd1d95e144cb78f3ccf42488f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: []
+  clip:
+  - {fileID: 8300000, guid: 509ca0c0aaa2e7c4994ddd9043070ae8, type: 3}
+  - {fileID: 8300000, guid: b4163b29c5ab2fd429d62c3353173b4c, type: 3}
+  - {fileID: 8300000, guid: 14f54e4d365c50c4ebc4c6ac4e3c66ee, type: 3}
 --- !u!1 &1857843784 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1500838157198093432, guid: bd83c4f0580379c43a21a3c655c18073, type: 3}
@@ -20236,7 +20289,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2034688961}
   - component: {fileID: 2034688962}
-  - component: {fileID: 2034688965}
+  - component: {fileID: 2034688963}
   m_Layer: 0
   m_Name: InvisibleWall (7)
   m_TagString: Untagged
@@ -20253,11 +20306,11 @@ Transform:
   m_GameObject: {fileID: 2034688960}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.0109610045, z: -0, w: -0.9999399}
-  m_LocalPosition: {x: 0.4624, y: 0.5889, z: 0.1152}
-  m_LocalScale: {x: 0.01, y: 0.1, z: 0.1532477}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.6449084, y: 11.291274, z: 28.66957}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1064247299}
+  m_Father: {fileID: 1622547696}
   m_LocalEulerAnglesHint: {x: 0, y: 361.256, z: 0}
 --- !u!65 &2034688962
 BoxCollider:
@@ -20280,7 +20333,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2034688965
+--- !u!114 &2034688963
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20292,7 +20345,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8714cbbd1d95e144cb78f3ccf42488f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: []
+  clip:
+  - {fileID: 8300000, guid: 509ca0c0aaa2e7c4994ddd9043070ae8, type: 3}
+  - {fileID: 8300000, guid: b4163b29c5ab2fd429d62c3353173b4c, type: 3}
+  - {fileID: 8300000, guid: 14f54e4d365c50c4ebc4c6ac4e3c66ee, type: 3}
 --- !u!4 &2046209517 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e5f0b07bb1fb9d844936567e4dbec733, type: 3}

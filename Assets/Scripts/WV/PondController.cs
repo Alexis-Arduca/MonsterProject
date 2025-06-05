@@ -14,14 +14,13 @@ public class PondController : MonoBehaviour
     [SerializeField] private float emptyLevelY;
     [SerializeField] private float drinkValue;
 
-    private void Start()
-    {
-        drinkValue = 0.1f;
-        emptyLevelY = transform.position.y - drinkValue * 3;
-    }
-
     public void LowerWaterLevel()
     {
+        if (IsWaterLevelEmpty())
+        {
+            Debug.LogWarning("Water level is already empty. Cannot lower further.");
+            return; // Prevent lowering below the empty level
+        }
         transform.position -= new Vector3(0, drinkValue, 0); // Lower the water level by 1 unit
     }
 
