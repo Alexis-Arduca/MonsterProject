@@ -9,6 +9,7 @@ public class GameEventsManager : MonoBehaviour
     public LoreEvents loreEvents;
     public EdibleEvents edibleEvents;
     public PlaytestEvent playtestEvent;
+    public PauseEvents pauseEvents;
 
     private void Awake()
     {
@@ -24,5 +25,6 @@ public class GameEventsManager : MonoBehaviour
         loreEvents = new LoreEvents();
         edibleEvents = new EdibleEvents();
         playtestEvent = new PlaytestEvent();
+        pauseEvents = new PauseEvents();
     }
 }
