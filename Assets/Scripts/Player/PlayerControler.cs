@@ -7,6 +7,7 @@ public class PlayerControler : MonoBehaviour
     private PlayerMovement playerMovement;
     public PlayerControls controls;
     private EdibleHandler currentEdible;
+    public int playerId;
 
     void Start()
     {
@@ -44,7 +45,7 @@ public class PlayerControler : MonoBehaviour
         }
     }
 
-    private void ChangeAction()
+    public void ChangeAction()
     {
         playerAction = !playerAction;
     }

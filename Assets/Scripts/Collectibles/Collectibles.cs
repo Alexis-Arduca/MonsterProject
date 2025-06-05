@@ -11,7 +11,7 @@ public class Collectible : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            GameEventsManager.instance.trailEvents.OnItemPickup(code);
+            GameEventsManager.instance.trailEvents.OnItemPickup(code, other.gameObject);
             Destroy(gameObject);
         }
     }

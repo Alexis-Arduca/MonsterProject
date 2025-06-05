@@ -6,7 +6,6 @@ public class House : MonoBehaviour
 {
     public Image fadeImage;
     private bool isTransitioning;
-    public GameObject player;
 
     void Start()
     {
@@ -22,13 +21,13 @@ public class House : MonoBehaviour
     {
         if (other.CompareTag("Player") && !isTransitioning)
         {
-            GameEventsManager.instance.loreEvents.OnImportantLoreEvent();
-            StartCoroutine(Transition());
+            StartCoroutine(Transition(other.gameObject));
         }
     }
 
-    private IEnumerator Transition()
+    private IEnumerator Transition(GameObject player)
     {
+        player.GetComponent<PlayerControler>().ChangeAction();
         isTransitioning = true;
 
         yield return StartCoroutine(Fade(0f, 1f, 0.5f));
@@ -38,7 +37,7 @@ public class House : MonoBehaviour
         yield return StartCoroutine(Fade(1f, 0f, 0.5f));
 
         isTransitioning = false;
-        GameEventsManager.instance.loreEvents.OnImportantLoreEvent();
+        player.GetComponent<PlayerControler>().ChangeAction();
     }
 
     private IEnumerator Fade(float startAlpha, float endAlpha, float duration)

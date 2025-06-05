@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1980197981203724770}
   - component: {fileID: 1459714690008989442}
   - component: {fileID: 2950386666696465290}
+  - component: {fileID: 8651002549006127033}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -126,12 +127,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65a08369571b7e1429b825b43741c55a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jump: {x: 0, y: 3, z: 0}
-  jumpForce: 2
+  baseSpeed: 10
+  sprintMultiplier: 2
+  isSprinting: 0
+  jumpForce: 10
+  fallMultiplier: 2.5
   isGrounded: 0
   isOnIce: 0
-  jumpClip: {fileID: 8300000, guid: f3d589c0e945a79489cb8f63e95dbe99, type: 3}
+  jumpNerf: 7
+  jumpUpgrade: 13
+  speedMultiplierNerf: 0.5
+  speedMultiplierUpgrade: 2
 --- !u!54 &1459714690008989442
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -171,6 +177,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b58a2f5637e3d33499a5437dbb9f41e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerId: 0
+--- !u!114 &8651002549006127033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91383399078053157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 529b4dd49f4a64947aaab309410e9524, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Gameplay
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 5933842675207903196}
 --- !u!1 &1171993079941591676
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,3 +360,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerBody: {fileID: 7947214128399276129}
   playerMovement: {fileID: 1980197981203724770}
+  mouseSensitivity: 0.5
+  gamepadSensitivity: 300
