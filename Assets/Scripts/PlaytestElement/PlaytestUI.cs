@@ -12,7 +12,7 @@ public class PlaytestUI : MonoBehaviour
     void Start()
     {
         GameEventsManager.instance.playtestEvent.onCollect += GetCandy;
-        showCollected.text = currentGoals + "/" + maxGoals + " little candys collected";
+        showCollected.text = currentGoals + "/" + maxGoals + " candies";
     }
 
     private void OnDisable()
@@ -24,6 +24,6 @@ public class PlaytestUI : MonoBehaviour
     {
         currentGoals += 1;
 
-        showCollected.text = currentGoals + "/" + maxGoals + " little candys collected";
+        showCollected.text = currentGoals + "/" + maxGoals + " candies";
     }
 }
