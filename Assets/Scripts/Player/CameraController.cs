@@ -34,11 +34,13 @@ public class CameraZoom : MonoBehaviour
         }
 
         GameEventsManager.instance.loreEvents.onImportantLoreEvent += ChangeAction;
+        GameEventsManager.instance.pauseEvents.onPauseButtonPressed += ChangeAction;
     }
 
     void OnDisable()
     {
         GameEventsManager.instance.loreEvents.onImportantLoreEvent -= ChangeAction;
+        GameEventsManager.instance.pauseEvents.onPauseButtonPressed -= ChangeAction;
         controls.Gameplay.Disable();
     }
 

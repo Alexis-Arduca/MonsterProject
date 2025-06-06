@@ -13,7 +13,6 @@ public class MonsterTrail : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         lineRenderer = GetComponent<LineRenderer>();
-        player = GameObject.Find("Player").transform;
         path = new NavMeshPath();
     }
 
@@ -33,5 +32,10 @@ public class MonsterTrail : MonoBehaviour
                 lineRenderer.positionCount = 0;
             }
         }
+    }
+
+    public void SetPlayer(GameObject playerObject)
+    {
+        player = playerObject.transform;
     }
 }
