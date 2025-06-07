@@ -3,6 +3,7 @@ using UnityEngine;
 public class EdibleHandler : MonoBehaviour
 {
     private bool canInteract;
+    protected Vector3 PlayerPosition;
 
     void Start()
     {
@@ -24,18 +25,20 @@ public class EdibleHandler : MonoBehaviour
         return canInteract;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
+            PlayerPosition = collision.transform.position;
             canInteract = true;
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnCollisionExit(Collision other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
+            PlayerPosition = Vector3.zero; // Reset player position
             canInteract = false;
         }
     }

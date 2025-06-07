@@ -18,14 +18,17 @@ public class PlayerControler : MonoBehaviour
         GameEventsManager.instance.loreEvents.onImportantLoreEvent += ChangeAction;
         GameEventsManager.instance.pauseEvents.onPauseButtonPressed += ChangeAction;
 
-        controls.Gameplay.Jump.performed += ctx => {
+        controls.Gameplay.Jump.performed += ctx =>
+        {
             if (!playerAction) playerMovement.HandleJump();
         };
-        
+
         controls.Gameplay.Sprint.performed += ctx => playerMovement.HandleSprint();
         controls.Gameplay.Sprint.canceled += ctx => playerMovement.HandleSprint();
-        controls.Gameplay.Action.performed += ctx => {
+        controls.Gameplay.Action.performed += ctx =>
+        {
             if (currentEdible != null && currentEdible.GetInteraction()) currentEdible.InteractWith();
+
         };
         controls.Gameplay.Debug.performed += ctx => BackOnSpawn();
         controls.Gameplay.Pause.performed += ctx => GameEventsManager.instance.pauseEvents.OnPauseButtonPressed();
@@ -52,21 +55,21 @@ public class PlayerControler : MonoBehaviour
 
     private void BackOnSpawn()
     {
-        this.transform.position = new Vector3(-2.4f, 2.74f, 14.3f);
+        transform.position = new Vector3(-2.4f, 2.74f, 14.3f);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
-        if (other.TryGetComponent<EdibleHandler>(out var edible))
+        if (other.gameObject.TryGetComponent<EdibleHandler>(out var edible))
         {
             currentEdible = edible;
             edible.SetCanInteract(true);
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnCollisionExit(Collision other)
     {
-        if (other.TryGetComponent<EdibleHandler>(out var edible) && edible == currentEdible)
+        if (other.gameObject.TryGetComponent<EdibleHandler>(out var edible) && edible == currentEdible)
         {
             edible.SetCanInteract(false);
             currentEdible = null;

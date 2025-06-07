@@ -1,7 +1,6 @@
 using UnityEngine;
 
 // <summary>
-// Attached to the Pond Prefab.
 // This script is responsible for controlling the water level of the pond.
 // It handles lowering the water level and checking if the water level is empty.
 // </summary>
@@ -14,12 +13,6 @@ public class PondController : MonoBehaviour
     // </summary>
     [SerializeField] private float emptyLevelY;
     [SerializeField] private float drinkValue;
-
-    private void Start()
-    {
-        drinkValue = 0.1f;
-        emptyLevelY = transform.position.y - drinkValue * 3;
-    }
 
     public void LowerWaterLevel()
     {

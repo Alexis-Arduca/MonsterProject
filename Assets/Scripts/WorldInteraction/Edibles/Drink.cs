@@ -1,12 +1,30 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Drink : EdibleHandler
 {
-    public AudioClip clip;
+    private PondController _pondController;
+    public AudioClip[] clip;
+
+    private void Start()
+    {
+        _pondController = GetComponentInParent<PondController>();
+    }
 
     public override void InteractWith()
     {
-        // AudioSource.PlayClipAtPoint(clip, transform.position);
-        GameEventsManager.instance.edibleEvents.OnDrink();
+        if (_pondController.IsWaterLevelEmpty())
+        {
+            Debug.LogWarning("Water level is empty. Cannot drink.");
+        }
+        else
+        {
+            // Randomly select a sound clip to play
+            int randomIndex = Random.Range(0, clip.Length);
+
+            AudioSource.PlayClipAtPoint(clip[randomIndex], PlayerPosition);
+            _pondController.LowerWaterLevel();
+            GameEventsManager.instance.edibleEvents.OnDrink();
+        }
     }
 }
