@@ -57,14 +57,18 @@ public class PlayerMovement : MonoBehaviour
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
 
-        Vector3 forward = cameraTransform.forward;
-        Vector3 right = cameraTransform.right;
+        Vector3 rawForward = cameraTransform.forward;
+        Vector3 forward = Vector3.ProjectOnPlane(rawForward, Vector3.up);
 
-        forward.y = 0f;
-        right.y = 0f;
+        if (forward.magnitude < 0.1f)
+        {
+            forward = transform.forward;
+        }
 
         forward.Normalize();
-        right.Normalize();
+
+        Vector3 right = Vector3.Cross(Vector3.up, forward).normalized;
+
 
         Vector3 direction = (forward * v + right * h).normalized;
         float targetSpeed = baseSpeed * speedMultiplier * (isSprinting ? sprintMultiplier : 1f);
