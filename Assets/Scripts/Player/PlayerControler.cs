@@ -7,6 +7,7 @@ public class PlayerControler : MonoBehaviour
     private PlayerMovement playerMovement;
     public PlayerControls controls;
     private EdibleHandler currentEdible;
+    public int playerId;
 
     void Start()
     {
@@ -15,6 +16,7 @@ public class PlayerControler : MonoBehaviour
         playerMovement = GetComponent<PlayerMovement>();
 
         GameEventsManager.instance.loreEvents.onImportantLoreEvent += ChangeAction;
+        GameEventsManager.instance.pauseEvents.onPauseButtonPressed += ChangeAction;
 
         controls.Gameplay.Jump.performed += ctx =>
         {
@@ -29,11 +31,13 @@ public class PlayerControler : MonoBehaviour
 
         };
         controls.Gameplay.Debug.performed += ctx => BackOnSpawn();
+        controls.Gameplay.Pause.performed += ctx => GameEventsManager.instance.pauseEvents.OnPauseButtonPressed();
     }
 
     void OnDisable()
     {
         GameEventsManager.instance.loreEvents.onImportantLoreEvent -= ChangeAction;
+        GameEventsManager.instance.pauseEvents.onPauseButtonPressed -= ChangeAction;
     }
 
     void Update()
@@ -44,7 +48,7 @@ public class PlayerControler : MonoBehaviour
         }
     }
 
-    private void ChangeAction()
+    public void ChangeAction()
     {
         playerAction = !playerAction;
     }

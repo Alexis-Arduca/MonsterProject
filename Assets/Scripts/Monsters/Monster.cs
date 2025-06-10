@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using System.Collections.Generic;
 using System.Collections;
+using UnityEngine.InputSystem;
 
 public class Monster : MonoBehaviour
 {
@@ -64,7 +65,7 @@ public class Monster : MonoBehaviour
 
         agent.autoTraverseOffMeshLink = false;
 
-        currentState = State.Following;
+        currentState = State.Patrolling;
         basePosition = transform.position;
 
         GameEventsManager.instance.trailEvents.onItemPickup += ActivateTrail;
@@ -79,18 +80,12 @@ public class Monster : MonoBehaviour
 
     protected virtual void Update()
     {
-        if (!agent.isOnNavMesh)
-        {
-            Debug.LogWarning($"{gameObject.name} is not on a NavMesh!");
-            return;
-        }
+        if (!agent.isOnNavMesh) return;
 
-        playerPos = GameObject.Find("Player").transform.position;
-        if (playerPos == null)
-        {
-            Debug.LogWarning("Player not found!");
-            return;
-        }
+        if (PlayerInput.all.Count == 0) return;
+
+        var playerInput = PlayerInput.all[0];
+        playerPos = playerInput.transform.position;
 
         if (isFriendly && Vector3.Distance(playerPos, transform.position) > maxFollowDistance)
         {
@@ -216,13 +211,17 @@ public class Monster : MonoBehaviour
         code = newCode;
     }
 
-    protected virtual void ActivateTrail(int monster)
+    protected virtual void ActivateTrail(int monster, GameObject player)
     {
         if (monster == code)
         {
             MonsterTrail trail = GetComponent<MonsterTrail>();
+            trail.SetPlayer(player);
+
             if (trail != null)
+            {
                 trail.enabled = true;
+            }
         }
     }
 

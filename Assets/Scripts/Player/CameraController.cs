@@ -11,8 +11,8 @@ public class CameraZoom : MonoBehaviour
 
     private PlayerControls controls;
     private Vector2 lookInput;
-    private readonly float mouseSensitivity = 0.5f;
-    private readonly float gamepadSensitivity = 450f;
+    public float mouseSensitivity = 0.5f;
+    public float gamepadSensitivity = 300f;
 
     void Start()
     {
@@ -34,11 +34,13 @@ public class CameraZoom : MonoBehaviour
         }
 
         GameEventsManager.instance.loreEvents.onImportantLoreEvent += ChangeAction;
+        GameEventsManager.instance.pauseEvents.onPauseButtonPressed += ChangeAction;
     }
 
     void OnDisable()
     {
         GameEventsManager.instance.loreEvents.onImportantLoreEvent -= ChangeAction;
+        GameEventsManager.instance.pauseEvents.onPauseButtonPressed -= ChangeAction;
         controls.Gameplay.Disable();
     }
 
