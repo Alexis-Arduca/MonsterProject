@@ -178,6 +178,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerId: 0
+  mouseSensitivity: 0.5
+  gamepadSensitivity: 300
 --- !u!114 &8651002549006127033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,10 +204,44 @@ MonoBehaviour:
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e73184d7-f85c-4c59-8d12-f104333d7de7
+    m_ActionName: 'Gameplay/Jump[/XInputControllerWindows1/rightTrigger,/Keyboard/space,/Nintendo
+      Wireless Gamepad/button8]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4defdbdb-2591-498e-8261-2b269a7e17f7
+    m_ActionName: 'Gameplay/Sprint[/XInputControllerWindows1/leftTrigger,/Keyboard/leftShift,/Nintendo
+      Wireless Gamepad/button7]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b7198e97-9a72-47da-9132-1e07806b8449
+    m_ActionName: 'Gameplay/Action[/Keyboard/e,/XInputControllerWindows1/buttonEast,/Nintendo
+      Wireless Gamepad/button2]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 14d703ea-efd9-4300-9a1b-b0866d8ceb63
+    m_ActionName: 'Gameplay/Look[/XInputControllerWindows1/rightStick,/Mouse/delta]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7410863c-5264-4fbb-947b-8b6392521128
+    m_ActionName: 'Gameplay/Debug[/XInputControllerWindows1/select,/Keyboard/r,/Nintendo
+      Wireless Gamepad/button9]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9b6b7311-999f-4a55-8e00-e3c4d47caa0a
+    m_ActionName: 'Gameplay/Pause[/XInputControllerWindows1/start,/Keyboard/tab,/Nintendo
+      Wireless Gamepad/button10]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ef0c9a0d-587e-4c91-8337-c4ec1271d954
+    m_ActionName: 'Gameplay/Move[/XInputControllerWindows1/leftStick,/Nintendo Wireless
+      Gamepad/stick]'
+  m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Gameplay
+  m_DefaultActionMap: 
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 5933842675207903196}
 --- !u!1 &1171993079941591676
@@ -358,7 +394,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b635574f46eb23408ca541014bf8932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerBody: {fileID: 7947214128399276129}
-  playerMovement: {fileID: 1980197981203724770}
-  mouseSensitivity: 0.5
-  gamepadSensitivity: 300

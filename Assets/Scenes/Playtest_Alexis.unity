@@ -3225,6 +3225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 402383624}
   - component: {fileID: 402383623}
+  - component: {fileID: 402383625}
   m_Layer: 0
   m_Name: 'PlayerInputManager '
   m_TagString: Untagged
@@ -3255,11 +3256,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_JoinAction:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
       m_Name: Join
-      m_Type: 0
-      m_ExpectedControlType: 
+      m_Type: 1
+      m_ExpectedControlType: Button
       m_Id: 727b002a-239e-447e-8655-bac91d38031b
       m_Processors: 
       m_Interactions: 
@@ -3280,8 +3281,16 @@ MonoBehaviour:
         m_Groups: 
         m_Action: Join
         m_Flags: 0
+      - m_Name: 
+        m_Id: 04c20b0b-f0a4-45d7-b8a1-3fb7359c7325
+        m_Path: <HID::Nintendo Wireless Gamepad>/button10
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: -5338447247586399381, guid: 529b4dd49f4a64947aaab309410e9524, type: 3}
   m_PlayerPrefab: {fileID: 91383399078053157, guid: 2af6ec18dfb288f4c8dfd202ceaac66a, type: 3}
   m_SplitScreen: 1
   m_MaintainAspectRatioInSplitScreen: 0
@@ -3307,6 +3316,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &402383625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402383622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f41d83b2b04c5554094c63d1ba2536c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &411328542 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1500838157198093432, guid: bd83c4f0580379c43a21a3c655c18073, type: 3}
