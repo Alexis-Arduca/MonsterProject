@@ -30,6 +30,8 @@ public class PlayerMovement : MonoBehaviour
     private float minInertia = 0.01f;
     private float maxInertia = 0.2f;
 
+    private Vector2 moveInput;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -39,6 +41,13 @@ public class PlayerMovement : MonoBehaviour
         GameEventsManager.instance.edibleEvents.onEat += OnEat;
         GameEventsManager.instance.edibleEvents.onDrink += OnDrink;
         GameEventsManager.instance.edibleEvents.onLick += OnLick;
+    }
+
+    private void OnDestroy()
+    {
+        GameEventsManager.instance.edibleEvents.onEat -= OnEat;
+        GameEventsManager.instance.edibleEvents.onDrink -= OnDrink;
+        GameEventsManager.instance.edibleEvents.onLick -= OnLick;
     }
 
     private void Update()
@@ -52,21 +61,21 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void HandleMovement(Transform cameraTransform)
+    public void HandleMovement(Transform cameraTransform, Vector2 input)
     {
-        float h = Input.GetAxisRaw("Horizontal");
-        float v = Input.GetAxisRaw("Vertical");
+        Vector3 rawForward = cameraTransform.forward;
+        Vector3 forward = Vector3.ProjectOnPlane(rawForward, Vector3.up);
 
-        Vector3 forward = cameraTransform.forward;
-        Vector3 right = cameraTransform.right;
-
-        forward.y = 0f;
-        right.y = 0f;
+        if (forward.magnitude < 0.1f)
+        {
+            forward = transform.forward;
+        }
 
         forward.Normalize();
-        right.Normalize();
 
-        Vector3 direction = (forward * v + right * h).normalized;
+        Vector3 right = Vector3.Cross(Vector3.up, forward).normalized;
+
+        Vector3 direction = (forward * input.y + right * input.x).normalized;
         float targetSpeed = baseSpeed * speedMultiplier * (isSprinting ? sprintMultiplier : 1f);
         Vector3 targetVelocity = direction * targetSpeed;
         Vector3 currentVelocity = rb.linearVelocity;
@@ -76,9 +85,9 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = Vector3.Lerp(currentVelocity, finalVelocity, inertia);
     }
 
-    public void HandleSprint()
+    public void HandleSprint(bool sprinting)
     {
-        isSprinting = !isSprinting;
+        isSprinting = sprinting;
     }
 
     public void HandleJump()
