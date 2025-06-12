@@ -46,8 +46,9 @@ public class PlayerControler : MonoBehaviour
             float mouseX, mouseY;
             if (playerInput.currentControlScheme == "Keyboard")
             {
-                mouseX = lookInput.x * mouseSensitivity;
-                mouseY = lookInput.y * mouseSensitivity;
+                Vector2 mouseDelta = Mouse.current.delta.ReadValue();
+                mouseX = mouseDelta.x * mouseSensitivity;
+                mouseY = mouseDelta.y * mouseSensitivity;
             }
             else
             {
