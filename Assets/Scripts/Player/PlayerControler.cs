@@ -44,7 +44,7 @@ public class PlayerControler : MonoBehaviour
             playerMovement.HandleMovement(playerCamera.transform, moveInput);
 
             float mouseX, mouseY;
-            if (playerInput.currentControlScheme == "KeyboardMouse")
+            if (playerInput.currentControlScheme == "Keyboard")
             {
                 mouseX = lookInput.x * mouseSensitivity;
                 mouseY = lookInput.y * mouseSensitivity;

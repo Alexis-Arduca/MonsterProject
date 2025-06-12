@@ -36,7 +36,7 @@
                     "name": "Look",
                     "type": "Value",
                     "id": "14d703ea-efd9-4300-9a1b-b0866d8ceb63",
-                    "expectedControlType": "",
+                    "expectedControlType": "Delta",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -169,17 +169,6 @@
                 },
                 {
                     "name": "",
-                    "id": "e1e36c78-a352-453f-a091-f1891fbd7052",
-                    "path": "<HID::Nintendo Wireless Gamepad>/rx",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Switch",
-                    "action": "Look",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "d4ede49c-0fe2-4eaa-99e2-312f371ed9e2",
                     "path": "<Keyboard>/e",
                     "interactions": "",
@@ -298,6 +287,61 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "2D Vector",
+                    "id": "c789cd6e-2bde-4d65-a116-2c54072d7797",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "771e81f3-506a-4e68-b3a9-cbcb297929e8",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "993d229f-f2cb-495a-b460-c141928b7203",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "3a468ac0-d933-4e54-9040-d59d9eb4ee6f",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "e68d2012-3f75-4b15-a8c7-b5d54f086d0d",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 },
                 {
                     "name": "",

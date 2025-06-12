@@ -240,8 +240,8 @@ MonoBehaviour:
     m_ActionName: 'Gameplay/Move[/XInputControllerWindows1/leftStick,/Nintendo Wireless
       Gamepad/stick]'
   m_NeverAutoSwitchControlSchemes: 1
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: 
+  m_DefaultControlScheme: Gamepad
+  m_DefaultActionMap: Gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 5933842675207903196}
 --- !u!1 &1171993079941591676
@@ -254,7 +254,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3633950098156635324}
   - component: {fileID: 5933842675207903196}
-  - component: {fileID: 2985855869967888173}
   - component: {fileID: 1495813398776429551}
   - component: {fileID: 4237849149486221098}
   m_Layer: 0
@@ -330,14 +329,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &2985855869967888173
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1171993079941591676}
-  m_Enabled: 1
 --- !u!114 &1495813398776429551
 MonoBehaviour:
   m_ObjectHideFlags: 0

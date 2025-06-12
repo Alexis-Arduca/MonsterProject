@@ -16,7 +16,21 @@ public class PlayerManager : MonoBehaviour
 
         InputDevice device = playerInput.devices[0];
         string deviceName = device.name.ToLower();
-        string controlScheme = deviceName.Contains("switch") || deviceName.Contains("nintendo") ? "Switch" : "Gamepad";
+        string controlScheme;
+
+        if (deviceName.Contains("switch"))
+        {
+            controlScheme = "Switch";
+        }
+        else if (deviceName.Contains("keyboard"))
+        {
+            controlScheme = "Keyboard";
+        }
+        else
+        {
+            controlScheme = "Gamepad";
+        }
+
         Debug.Log($"Device detect : {deviceName}, Selected schema : {controlScheme}");
 
         try
