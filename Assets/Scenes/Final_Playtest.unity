@@ -11546,6 +11546,7 @@ GameObject:
   - component: {fileID: 1227532561}
   - component: {fileID: 1227532560}
   - component: {fileID: 1227532564}
+  - component: {fileID: 1227532565}
   m_Layer: 0
   m_Name: Bolognese sauce
   m_TagString: Untagged
@@ -11656,6 +11657,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 352832377}
+--- !u!65 &1227532565
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227532559}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.000001, y: 2.220446e-16, z: 10}
+  m_Center: {x: -0.00000023841858, y: 0.000000022351742, z: 0.00000047683716}
 --- !u!1 &1232546870 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1500838157198093432, guid: bd83c4f0580379c43a21a3c655c18073, type: 3}
