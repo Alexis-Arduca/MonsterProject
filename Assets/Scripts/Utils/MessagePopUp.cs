@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using TMPro;
 
@@ -7,7 +6,7 @@ public class MessagePopup : MonoBehaviour
 {
     public string popUpMessage;
     private GameObject objectPopUp;
-    private TMPro.TMP_Text messagePopUp;
+    private TMP_Text messagePopUp;
 
     // Start is called before the first frame update
     void Awake()
@@ -16,9 +15,9 @@ public class MessagePopup : MonoBehaviour
         messagePopUp = objectPopUp.GetComponent<TMP_Text>();
     }
 
-    void OnTriggerStay(Collider other)
+    void OnCollisionEnter(Collision other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
             if (objectPopUp != null)
             {
@@ -31,9 +30,9 @@ public class MessagePopup : MonoBehaviour
         }
     }
 
-    void OnTriggerExit(Collider other)
+    private void OnCollisionExit(Collision other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
             if (objectPopUp != null)
             {
