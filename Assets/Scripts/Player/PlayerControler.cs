@@ -124,7 +124,25 @@ public class PlayerControler : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.TryGetComponent<EdibleHandler>(out var edible))
+        {
+            currentEdible = edible;
+            edible.SetCanInteract(true);
+        }
+    }
+
     private void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.TryGetComponent<EdibleHandler>(out var edible) && edible == currentEdible)
+        {
+            edible.SetCanInteract(false);
+            currentEdible = null;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.TryGetComponent<EdibleHandler>(out var edible) && edible == currentEdible)
         {
