@@ -3,5 +3,5 @@ using UnityEngine.AI;
 using System.Collections.Generic;
 using System.Collections;
 
-public class Blueblue : Monster
-{}
+public class Kitty : Monster
+{ }

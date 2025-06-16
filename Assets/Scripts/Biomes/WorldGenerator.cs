@@ -39,7 +39,8 @@ public class WorldGenerator : MonoBehaviour
             biome.FillBiome(monsterToAdd, collectibleToAdd, biomeCode);
         }
 
-        HandleBiomeSpawning();
+        // HandleBiomeSpawning();
+        GameEventsManager.instance.biomeEvents.OnFillDone();
     }
 
     private void HandleBiomeSpawning()
@@ -67,7 +68,7 @@ public class WorldGenerator : MonoBehaviour
         {
             if (monster.GetBiomeSpawn() == biomeType)
             {
-                Debug.Log("Monster added !");
+                Debug.Log("Monster added: " + monster);
                 monsterToAdd.Add(monster);
             }
         }

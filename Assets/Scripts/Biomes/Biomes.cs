@@ -17,6 +17,16 @@ public class Biomes : MonoBehaviour
 
     void Start()
     {
+        GameEventsManager.instance.biomeEvents.onFillDone += GenerateBiomes;
+    }
+
+    void OnDisable()
+    {
+        GameEventsManager.instance.biomeEvents.onFillDone -= GenerateBiomes;
+    }
+
+    void GenerateBiomes()
+    {
         if (GetComponent<BiomesTemplate>().biomeType != BiomesTemplate.BiomeType.Lobby)
         {
             SpawnMonstersAndCollectibles();
@@ -51,6 +61,7 @@ public class Biomes : MonoBehaviour
         }
 
         monsterNumber = assignedMonsters.Count;
+        Debug.Log(monsterNumber);
         List<GameObject> availableSpawnPoints = new List<GameObject>(monsterSpawnpoints);
         availableSpawnPoints = availableSpawnPoints.OrderBy(x => Random.value).ToList();
 

@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6017609759255937546
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4127156848741462336}
+  - component: {fileID: 5190455265039279881}
+  m_Layer: 0
+  m_Name: WorldGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4127156848741462336
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6017609759255937546}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.35, y: 1.3, z: -3.12}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5190455265039279881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6017609759255937546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b249274776e70ec419591783e083f175, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lobby: {fileID: 8986860753588761542, guid: 00a24dc25a58e274fb15ef392c50c2b3, type: 3}
+  biomes:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  monsters:
+  - {fileID: 2561536597524332006, guid: b82258b2a99087445bcdad8627fbfa88, type: 3}
+  - {fileID: 5007867813022997115, guid: 0ca1c067bda524546a2be440d66d8789, type: 3}
+  - {fileID: 712518800813946594, guid: 23c472c5176b2c545974d3f684e617fb, type: 3}
+  - {fileID: 8317924099806583028, guid: 901dedde1db97894496e7f0e8dea77c1, type: 3}
+  - {fileID: 5422595252282130727, guid: 5eec0fc52c0ace749be812f97a401685, type: 3}
+  - {fileID: 6945488632636341159, guid: faa36c96225059244a6a7a21e922dec0, type: 3}
+  collectibles:
+  - {fileID: 3331778281727191369, guid: 24801c65e42d25b44a146fa608dee282, type: 3}
+  - {fileID: 3331778281727191369, guid: 24801c65e42d25b44a146fa608dee282, type: 3}
+  player: {fileID: 91383399078053157, guid: 2af6ec18dfb288f4c8dfd202ceaac66a, type: 3}
