@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine.InputSystem;
@@ -44,6 +45,10 @@ public class Monster : MonoBehaviour
     private float jumpDuration = 0.5f;
     private bool isJumping = false;
 
+    [Header("Bubble")]
+    public ThoughtBubbleController thoughtBubble;
+    public Image wantedItem;
+
     protected virtual void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -68,6 +73,14 @@ public class Monster : MonoBehaviour
         currentState = State.Patrolling;
         basePosition = transform.position;
 
+        // Bubble
+        thoughtBubble = GetComponent<ThoughtBubbleController>();
+        thoughtBubble.SetWantedItem(wantedItem);
+
+        thoughtBubble.ShowBubble();
+        thoughtBubble.HideText();
+        thoughtBubble.ShowItem();
+
         GameEventsManager.instance.trailEvents.onItemPickup += ActivateTrail;
         GameEventsManager.instance.trailEvents.onItemGive += DeactivateTrail;
     }
@@ -76,6 +89,22 @@ public class Monster : MonoBehaviour
     {
         GameEventsManager.instance.trailEvents.onItemPickup -= ActivateTrail;
         GameEventsManager.instance.trailEvents.onItemGive -= DeactivateTrail;
+    }
+
+    public void Interact(PickableController item)
+    {
+        if (item.icon == wantedItem)
+        {
+            thoughtBubble.HideBubble();
+            currentState = State.Following;
+            item.Destroy();
+        }
+        else
+        {
+            thoughtBubble.ShowItem();
+            thoughtBubble.HideText();
+            currentState = State.Patrolling;
+        }
     }
 
     protected virtual void Update()

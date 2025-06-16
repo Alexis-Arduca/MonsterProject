@@ -5,7 +5,6 @@ using System.Linq;
 public class WorldGenerator : MonoBehaviour
 {
     [Header("Ressources")]
-    public Biomes lobby;
     public List<Biomes> biomes;
     public List<Monster> monsters;
     public List<Collectible> collectibles;
@@ -39,7 +38,6 @@ public class WorldGenerator : MonoBehaviour
             biome.FillBiome(monsterToAdd, collectibleToAdd, biomeCode);
         }
 
-        // HandleBiomeSpawning();
         GameEventsManager.instance.biomeEvents.OnFillDone();
     }
 

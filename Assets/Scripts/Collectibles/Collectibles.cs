@@ -7,15 +7,6 @@ public class Collectible : MonoBehaviour
     [SerializeField] protected BiomesTemplate.BiomeType spawnBiome;
     private int code;
 
-    protected virtual void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            GameEventsManager.instance.trailEvents.OnItemPickup(code, other.gameObject);
-            Destroy(gameObject);
-        }
-    }
-
     /// <summary>
     /// Getter functions
     /// </summary>
