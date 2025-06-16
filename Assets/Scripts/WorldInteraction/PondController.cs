@@ -16,7 +16,20 @@ public class PondController : MonoBehaviour
 
     public void LowerWaterLevel()
     {
+        var children = new Transform[transform.childCount];
+
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            children[i] = transform.GetChild(i);
+        }
+
         transform.position -= new Vector3(0, drinkValue, 0); // Lower the water level by 1 unit
+
+        foreach (var child in children)
+        {
+            child.transform.position += new Vector3(0, drinkValue, 0); // Move the child objects up by the same amount
+        }
+
     }
 
     public bool IsWaterLevelEmpty()

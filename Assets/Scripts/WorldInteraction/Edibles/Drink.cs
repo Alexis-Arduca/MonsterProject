@@ -1,10 +1,11 @@
-using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Drink : EdibleHandler
 {
     private PondController _pondController;
     public AudioClip[] clip;
+    private static Vector3 PlayerPosition => GameObject.FindGameObjectWithTag("Player").transform.position;
 
     private void Start()
     {

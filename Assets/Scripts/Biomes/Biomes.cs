@@ -1,11 +1,10 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 
 public class Biomes : MonoBehaviour
 {
     [Header("Biome Parameters")]
-    public float spawnDistance = 5f;
-
     public List<Monster> assignedMonsters;
     public List<Collectible> assignedCollectibles;
     public List<int> codeList;
@@ -13,56 +12,56 @@ public class Biomes : MonoBehaviour
     private int monsterNumber;
     private bool hasBeenTriggered = false;
 
-    // Each value need a name and put it in the top of the class as a parameter
-    private readonly float sizeMultiplier = 10f;
+    [Header("Spawn Settings")]
     private readonly float topViewRotation = 40f;
-    private readonly int maxAttempts = 500;
 
     void Start()
     {
-        Bounds bounds = GetComponent<Renderer>()?.bounds ?? new Bounds(transform.position, Vector3.one * sizeMultiplier);
-
-        if (gameObject.GetComponent<BiomesTemplate>().biomeType != BiomesTemplate.BiomeType.Lobby)
+        if (GetComponent<BiomesTemplate>().biomeType != BiomesTemplate.BiomeType.Lobby)
         {
-            SpawnMonstersAndCollectibles(bounds);
+            SpawnMonstersAndCollectibles();
         }
     }
 
-    void Update()
-    {
-    }
-
     /// <summary>
-    /// Will fill the biome with everything he need
+    /// Fill the biome with monsters, collectibles, and codes
     /// </summary>
-    /// <param name="myMonsters"></param>
-    /// <param name="myCollectibles"></param>
-    /// <param name="myCodes"></param>
     public void FillBiome(List<Monster> myMonsters, List<Collectible> myCollectibles, List<int> myCodes)
     {
-        assignedMonsters = myMonsters;
-        assignedCollectibles = myCollectibles;
-        codeList = myCodes;
+        assignedMonsters = new List<Monster>(myMonsters);
+        assignedCollectibles = new List<Collectible>(myCollectibles);
+        codeList = new List<int>(myCodes);
     }
 
     /// <summary>
-    /// Will handle the spawn of the monsters and the collectibles.
-    /// Need to spawn each monster one time and their collectible next to them. Will also setup their shared code.
+    /// Handle the spawn of monsters and collectibles at predefined spawn points
     /// </summary>
-    /// <param name="bounds"></param>
-    private void SpawnMonstersAndCollectibles(Bounds bounds)
+    private void SpawnMonstersAndCollectibles()
     {
         if (assignedMonsters == null || assignedCollectibles == null || codeList == null)
         {
-            Debug.LogWarning("Monsters spawn cancelled: not enough data.");
+            Debug.LogWarning($"Monsters spawn cancelled for biome {name}: not enough data.");
             return;
         }
 
-        List<Vector3> usedPositions = new List<Vector3>();
+        if (monsterSpawnpoints == null || monsterSpawnpoints.Count < assignedMonsters.Count)
+        {
+            Debug.LogWarning($"Not enough monster spawn points for biome {name}. Required: {assignedMonsters.Count}, Available: {monsterSpawnpoints?.Count ?? 0}");
+            return;
+        }
+
         monsterNumber = assignedMonsters.Count;
+        List<GameObject> availableSpawnPoints = new List<GameObject>(monsterSpawnpoints);
+        availableSpawnPoints = availableSpawnPoints.OrderBy(x => Random.value).ToList();
 
         for (int i = 0; i < monsterNumber; i++)
         {
+            if (availableSpawnPoints.Count < 1)
+            {
+                Debug.LogWarning($"Ran out of spawn points for biome {name}!");
+                return;
+            }
+
             int codeIndex = Random.Range(0, codeList.Count);
             int sharedCode = codeList[codeIndex];
             codeList.RemoveAt(codeIndex);
@@ -71,87 +70,47 @@ public class Biomes : MonoBehaviour
             Monster monsterPrefab = assignedMonsters[monsterIndex];
             assignedMonsters.RemoveAt(monsterIndex);
 
+            int spawnIndex = 0;
+            GameObject monsterSpawnPoint = availableSpawnPoints[spawnIndex];
+            Vector3 monsterPos = monsterSpawnPoint.transform.position;
+            GameObject monsterObj = Instantiate(monsterPrefab.gameObject, monsterPos, Quaternion.identity);
+            monsterObj.GetComponent<Monster>().SetupCode(sharedCode);
+            availableSpawnPoints.RemoveAt(spawnIndex);
+
             int collectibleIndex = Random.Range(0, assignedCollectibles.Count);
             Collectible collectiblePrefab = assignedCollectibles[collectibleIndex];
             assignedCollectibles.RemoveAt(collectibleIndex);
 
-            int index = Random.Range(0, monsterSpawnpoints.Count);
-            Vector3 monsterPos = monsterSpawnpoints[index].transform.position;
-            monsterSpawnpoints.RemoveAt(index);
-            usedPositions.Add(monsterPos);
-            GameObject monsterObj = Instantiate(monsterPrefab.gameObject, monsterPos, Quaternion.identity);
-            monsterObj.GetComponent<Monster>().SetupCode(sharedCode);
-
-            Vector3 collectiblePos = GetNearbyValidPosition(monsterPos, usedPositions, bounds);
-            usedPositions.Add(collectiblePos);
+            Vector3 collectiblePos = GetCollectibleSpawnPosition(monsterSpawnPoint);
             GameObject collectibleObj = Instantiate(collectiblePrefab.gameObject, collectiblePos, Quaternion.identity);
             collectibleObj.GetComponent<Collectible>().SetupCode(sharedCode);
         }
     }
 
     /// <summary>
-    /// Get Valid position for collectibles
+    /// Get a spawn position for the collectible from the child spawn points of the monster's spawn point
     /// </summary>
-    /// <param name="center"></param>
-    /// <param name="existingPositions"></param>
-    /// <param name="bounds"></param>
-    /// <returns></returns>
-    private Vector3 GetNearbyValidPosition(Vector3 center, List<Vector3> existingPositions, Bounds bounds)
+    private Vector3 GetCollectibleSpawnPosition(GameObject monsterSpawnPoint)
     {
-        Vector3 pos = center;
-        bool valid = false;
-        int attempts = 0;
-
-        while (!valid && attempts < maxAttempts)
+        List<Transform> collectibleSpawnPoints = new List<Transform>();
+        foreach (Transform child in monsterSpawnPoint.transform)
         {
-            float radius = spawnDistance * 0.75f;
-            float angle = Random.Range(0f, Mathf.PI * 2f);
-            float distance = Random.Range(1f, radius);
-
-            pos = new Vector3(
-                center.x + Mathf.Cos(angle) * distance,
-                center.y,
-                center.z + Mathf.Sin(angle) * distance
-            );
-
-            Vector3 checkPos = new Vector3(pos.x, bounds.center.y, pos.z);
-            if (!bounds.Contains(checkPos))
-            {
-                attempts++;
-                continue;
-            }
-
-            valid = true;
-            if (valid == true)
-            {
-                break;
-            }
-            foreach (Vector3 p in existingPositions)
-            {   
-                if (Vector2.Distance(new Vector2(pos.x, pos.z), new Vector2(p.x, p.z)) < spawnDistance)
-                {
-                    valid = false;
-                    break;
-                }
-            }
-
-            attempts++;
+            collectibleSpawnPoints.Add(child);
         }
 
-        if (!valid)
+        if (collectibleSpawnPoints.Count > 0)
         {
-            Debug.LogWarning("Failed to find nearby valid position for collectible, fallback to monster position.");
-            pos = center;
+            int randomIndex = Random.Range(0, collectibleSpawnPoints.Count);
+            return collectibleSpawnPoints[randomIndex].position;
         }
 
-        return pos;
+        Debug.LogWarning($"No collectible spawn points found as children of {monsterSpawnPoint.name} in biome {name}. Falling back to monster position.");
+        return monsterSpawnPoint.transform.position;
     }
 
     /// <summary>
     /// Handle Camera travelling when entering a biome
     /// </summary>
-    /// <param name="biomeTransform"></param>
-    /// <returns></returns>
     private Vector3 GetTopViewPosition(Transform biomeTransform)
     {
         return biomeTransform.position + Vector3.up * topViewRotation;
@@ -162,35 +121,37 @@ public class Biomes : MonoBehaviour
         return Quaternion.Euler(90f, 0f, 0f);
     }
 
-
     /// <summary>
     /// Reset the Biome. Use for Unity Editor
     /// </summary>
     public void ClearBiome()
     {
-        Debug.Log("DESTROY EVERY MONSTERS AND COLLECTIBLES !");
+        Debug.Log($"Clearing biome {name}!");
 
-        Monster[] monsters = Object.FindObjectsByType<Monster>(FindObjectsSortMode.None);
+        Monster[] monsters = GetComponentsInChildren<Monster>();
         foreach (var monster in monsters)
         {
             DestroyImmediate(monster.gameObject);
         }
 
-        Collectible[] collectibles = Object.FindObjectsByType<Collectible>(FindObjectsSortMode.None);
+        Collectible[] collectibles = GetComponentsInChildren<Collectible>();
         foreach (var collectible in collectibles)
         {
             DestroyImmediate(collectible.gameObject);
         }
+
+        assignedMonsters?.Clear();
+        assignedCollectibles?.Clear();
+        codeList?.Clear();
     }
-    
+
     /// <summary>
     /// Collision to check if we enter in a biome
     /// </summary>
-    /// <param name="other"></param>
     protected virtual void OnTriggerEnter(Collider other)
     {
         if (hasBeenTriggered) { return; }
-    
+
         if (other.CompareTag("Player") && GetComponent<BiomesTemplate>().biomeType != BiomesTemplate.BiomeType.Lobby)
         {
             hasBeenTriggered = true;

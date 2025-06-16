@@ -28,8 +28,6 @@ public class WorldGenerator : MonoBehaviour
     /// </summary>
     private void StartGeneration()
     {
-        List<Biomes> biomesToSpawn = new List<Biomes>();
-
         foreach (Biomes biome in biomes)
         {
             BiomesTemplate.BiomeType biomeType = biome.GetComponent<BiomesTemplate>().biomeType;
@@ -39,16 +37,13 @@ public class WorldGenerator : MonoBehaviour
             List<int> biomeCode = AddCodes(monsterToAdd.Count);
 
             biome.FillBiome(monsterToAdd, collectibleToAdd, biomeCode);
-            biomesToSpawn.Add(biome);
         }
 
-        HandleBiomeSpawning(biomesToSpawn);
+        HandleBiomeSpawning();
     }
 
-    private void HandleBiomeSpawning(List<Biomes> biomesToSpawn)
+    private void HandleBiomeSpawning()
     {
-        Instantiate(lobby, Vector3.zero, Quaternion.identity);
-
         List<Vector3> positions = new List<Vector3>
         {
             new Vector3(0, 0, 25),
@@ -56,14 +51,7 @@ public class WorldGenerator : MonoBehaviour
             new Vector3(25, 0, -25)
         };
 
-        List<Biomes> shuffledBiomes = biomesToSpawn.OrderBy(x => Random.value).ToList();
-
-        for (int i = 0; i < shuffledBiomes.Count; i++)
-        {
-            Instantiate(shuffledBiomes[i], positions[i], Quaternion.identity);
-        }
-
-        GameObject.Find("LoreManager").GetComponent<BiomeCameraTravelling>().InitializeBiomes();
+        //  GameObject.Find("LoreManager").GetComponent<BiomeCameraTravelling>().InitializeBiomes();
     }
 
     /// <summary>
