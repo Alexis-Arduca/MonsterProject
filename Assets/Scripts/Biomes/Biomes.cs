@@ -15,7 +15,7 @@ public class Biomes : MonoBehaviour
     [Header("Spawn Settings")]
     private readonly float topViewRotation = 40f;
 
-    void Start()
+    void Awake()
     {
         GameEventsManager.instance.biomeEvents.onFillDone += GenerateBiomes;
     }
@@ -27,6 +27,7 @@ public class Biomes : MonoBehaviour
 
     void GenerateBiomes()
     {
+        Debug.Log("Start biomes Generation");
         if (GetComponent<BiomesTemplate>().biomeType != BiomesTemplate.BiomeType.Lobby)
         {
             SpawnMonstersAndCollectibles();

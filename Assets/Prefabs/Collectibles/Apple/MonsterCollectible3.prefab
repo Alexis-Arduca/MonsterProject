@@ -186,4 +186,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Meatball
-  spawnBiome: 0
+  spawnBiome: 1

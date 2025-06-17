@@ -8099,6 +8099,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 1042963353}
     m_Modifications:
     - target: {fileID: 1882156667052452538, guid: 804833b826aa2a8418df344ccab31f8d, type: 3}
+      propertyPath: codeList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882156667052452538, guid: 804833b826aa2a8418df344ccab31f8d, type: 3}
+      propertyPath: assignedMonsters.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882156667052452538, guid: 804833b826aa2a8418df344ccab31f8d, type: 3}
       propertyPath: monsterSpawnpoints.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -9627,8 +9635,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 1042963353}
     m_Modifications:
     - target: {fileID: 1882156667052452538, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
+      propertyPath: codeList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882156667052452538, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
+      propertyPath: assignedMonsters.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882156667052452538, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
       propertyPath: monsterSpawnpoints.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882156667052452538, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
+      propertyPath: assignedCollectibles.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1882156667052452538, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
       propertyPath: 'monsterSpawnpoints.Array.data[1]'
@@ -28619,9 +28639,9 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1328297171}
   - {fileID: 3702354720283115872}
   - {fileID: 1265004842}
-  - {fileID: 1328297171}
   - {fileID: 268300161}
   - {fileID: 1690440403}
   - {fileID: 1323637919}

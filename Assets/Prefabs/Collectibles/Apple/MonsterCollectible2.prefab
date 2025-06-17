@@ -186,4 +186,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Iceball
-  spawnBiome: 0
+  spawnBiome: 3
