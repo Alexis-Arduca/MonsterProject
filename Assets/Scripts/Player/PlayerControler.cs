@@ -75,21 +75,21 @@ public class PlayerControler : MonoBehaviour
     {
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out _hit, InteractDistance))
         {
-            if (_hit.collider.TryGetComponent(out PickableController pickableController))
-            {
-                HandlePickup(pickableController);
-            }
-            else if (_hit.collider.TryGetComponent(out MonsterController monsterController) && _pickableController != null)
-            {
-                HandleItem(monsterController);
-            }
-            else
-            {
-                if (_pickableController != null)
-                {
-                    HandleDrop();
-                }
-            }
+            // if (_hit.collider.TryGetComponent(out PickableController pickableController))
+            // {
+            //     HandlePickup(pickableController);
+            // }
+            // else if (_hit.collider.TryGetComponent(out MonsterController monsterController) && _pickableController != null)
+            // {
+            //     HandleItem(monsterController);
+            // }
+            // else
+            // {
+            //     if (_pickableController != null)
+            //     {
+            //         HandleDrop();
+            //     }
+            // }
         }
         else
         {
@@ -98,11 +98,35 @@ public class PlayerControler : MonoBehaviour
                 _monsterController.thoughtBubble.HideText();
                 _monsterController.thoughtBubble.ShowItem();
             }
+        }
+    }
 
-            if (_pickableController != null)
+    public void OnAction(InputValue value)
+    {
+        if (currentEdible != null && currentEdible.GetInteraction())
+        {
+            currentEdible.InteractWith();
+            return;
+        }
+
+        if (_hit.collider != null)
+        {
+            if (_hit.collider.TryGetComponent(out PickableController pickableController))
+            {
+                HandlePickup(pickableController);
+            }
+            else if (_hit.collider.TryGetComponent(out MonsterController monsterController) && _pickableController != null)
+            {
+                HandleItem(monsterController);
+            }
+            else if (_pickableController != null)
             {
                 HandleDrop();
             }
+        }
+        else if (_pickableController != null)
+        {
+            HandleDrop();
         }
     }
 
@@ -123,14 +147,6 @@ public class PlayerControler : MonoBehaviour
     {
         bool isSprinting = value.Get<float>() > 0.5f;
         playerMovement.HandleSprint(isSprinting);
-    }
-
-    public void OnAction(InputValue value)
-    {
-        if (currentEdible != null && currentEdible.GetInteraction())
-        {
-            currentEdible.InteractWith();
-        }
     }
 
     public void OnDebug(InputValue value)
@@ -158,37 +174,28 @@ public class PlayerControler : MonoBehaviour
         transform.position = new Vector3(-2.4f, 2.74f, 14.3f);
     }
 
+    private void HandlePickup(PickableController pickableController)
+    {
+        _pickableController = pickableController;
+        _pickableController.Pickup(playerCamera.transform, this.gameObject);
+    }
+
     private void HandleDrop()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            _pickableController.Drop();
-            _pickableController = null;
-        }
+        _pickableController.Drop();
+        _pickableController = null;
     }
 
     private void HandleItem(MonsterController monsterController)
     {
         _monsterController = monsterController;
-        if (Vector3.Distance(_hit.transform.position, transform.position) <= InteractDistance + .6f)
+
+        if (Vector3.Distance(_hit.transform.position, transform.position) <= InteractDistance + 0.6f)
         {
             _monsterController.thoughtBubble.HideItem();
             _monsterController.thoughtBubble.ShowText();
-        }
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
             _monsterController.Interact(_pickableController);
             _pickableController = null;
-        }
-    }
-
-    private void HandlePickup(PickableController pickableController)
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            _pickableController = pickableController;
-            _pickableController.Pickup(playerCamera.transform);
         }
     }
 

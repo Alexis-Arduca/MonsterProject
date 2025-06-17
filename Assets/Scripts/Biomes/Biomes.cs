@@ -27,7 +27,7 @@ public class Biomes : MonoBehaviour
 
     void GenerateBiomes()
     {
-        Debug.Log("Start biomes Generation");
+        Debug.Log("======> Start biomes Generation");
         if (GetComponent<BiomesTemplate>().biomeType != BiomesTemplate.BiomeType.Lobby)
         {
             SpawnMonstersAndCollectibles();
@@ -62,7 +62,6 @@ public class Biomes : MonoBehaviour
         }
 
         monsterNumber = assignedMonsters.Count;
-        Debug.Log(monsterNumber);
         List<GameObject> availableSpawnPoints = new List<GameObject>(monsterSpawnpoints);
         availableSpawnPoints = availableSpawnPoints.OrderBy(x => Random.value).ToList();
 
@@ -70,7 +69,6 @@ public class Biomes : MonoBehaviour
         {
             if (availableSpawnPoints.Count < 1)
             {
-                Debug.LogWarning($"Ran out of spawn points for biome {name}!");
                 return;
             }
 

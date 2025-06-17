@@ -49,7 +49,7 @@ public class Monster : MonoBehaviour
     public ThoughtBubbleController thoughtBubble;
     public Image wantedItem;
 
-    protected virtual void Start()
+    protected virtual void Awake()
     {
         rb = GetComponent<Rigidbody>();
         if (rb == null)
@@ -73,22 +73,23 @@ public class Monster : MonoBehaviour
         currentState = State.Patrolling;
         basePosition = transform.position;
 
+        GameEventsManager.instance.trailEvents.onItemPickup += ActivateTrail;
+        // GameEventsManager.instance.trailEvents.onItemGive += DeactivateTrail;
+        GameEventsManager.instance.trailEvents.onItemRelease += DeactivateTrail;
+
         // Bubble
-        thoughtBubble = GetComponent<ThoughtBubbleController>();
         thoughtBubble.SetWantedItem(wantedItem);
 
         thoughtBubble.ShowBubble();
         thoughtBubble.HideText();
         thoughtBubble.ShowItem();
-
-        GameEventsManager.instance.trailEvents.onItemPickup += ActivateTrail;
-        GameEventsManager.instance.trailEvents.onItemGive += DeactivateTrail;
     }
 
     protected virtual void OnDisable()
     {
         GameEventsManager.instance.trailEvents.onItemPickup -= ActivateTrail;
-        GameEventsManager.instance.trailEvents.onItemGive -= DeactivateTrail;
+        // GameEventsManager.instance.trailEvents.onItemGive -= DeactivateTrail;
+        GameEventsManager.instance.trailEvents.onItemRelease -= DeactivateTrail;
     }
 
     public void Interact(PickableController item)
@@ -242,6 +243,7 @@ public class Monster : MonoBehaviour
 
     protected virtual void ActivateTrail(int monster, GameObject player)
     {
+        Debug.Log("Code: " + code + " | Monster: " + monster);
         if (monster == code)
         {
             MonsterTrail trail = GetComponent<MonsterTrail>();
@@ -260,7 +262,9 @@ public class Monster : MonoBehaviour
         {
             MonsterTrail trail = GetComponent<MonsterTrail>();
             if (trail != null)
+            {
                 trail.enabled = false;
+            }
         }
     }
 }

@@ -20,7 +20,7 @@ public class PickableController : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
     }
 
-    public void Pickup(Transform cameraT)
+    public void Pickup(Transform cameraT, GameObject player)
     {
         if (_rb != null)
         {
@@ -29,6 +29,8 @@ public class PickableController : MonoBehaviour
         }
         transform.SetParent(cameraT, true);
         transform.localPosition = new Vector3(.5f, 0, 1);
+
+        GameEventsManager.instance.trailEvents.OnItemPickup(GetComponent<Collectible>().GetCode(), player);
     }
 
     public void Drop()
@@ -39,6 +41,7 @@ public class PickableController : MonoBehaviour
             _rb.useGravity = true;
         }
         transform.SetParent(null, true);
+        GameEventsManager.instance.trailEvents.OnItemRelease(GetComponent<Collectible>().GetCode());
     }
 
     public void Destroy()

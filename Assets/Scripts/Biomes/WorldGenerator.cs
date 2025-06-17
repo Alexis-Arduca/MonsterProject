@@ -66,7 +66,6 @@ public class WorldGenerator : MonoBehaviour
         {
             if (monster.GetBiomeSpawn() == biomeType)
             {
-                Debug.Log("Monster added: " + monster);
                 monsterToAdd.Add(monster);
             }
         }
@@ -87,7 +86,6 @@ public class WorldGenerator : MonoBehaviour
         {
             if (collectible.GetBiomeSpawn() == biomeType)
             {
-                Debug.Log("Collectible added !");
                 collectibleToAdd.Add(collectible);
             }
         }

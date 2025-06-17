@@ -23,4 +23,9 @@ public class Collectible : MonoBehaviour
     {
         code = newCode;
     }
+
+    public virtual int GetCode()
+    {
+        return code;
+    }
 }
