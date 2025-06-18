@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Yoshi\\Documents\\GitHub\\MonsterProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C906DB16-1408-4BB1-C3C7-4744CA28E45F}|Assembly-CSharp.csproj|C:\\Users\\Yoshi\\Documents\\GitHub\\MonsterProject\\assets\\scripts\\playtestelement\\playtestui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C906DB16-1408-4BB1-C3C7-4744CA28E45F}|Assembly-CSharp.csproj|c:\\users\\yoshi\\documents\\github\\monsterproject\\assets\\scripts\\playtestelement\\playtestcollectibles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C906DB16-1408-4BB1-C3C7-4744CA28E45F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playtestelement\\playtestcollectibles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C906DB16-1408-4BB1-C3C7-4744CA28E45F}|Assembly-CSharp.csproj|c:\\users\\yoshi\\documents\\github\\monsterproject\\assets\\scripts\\player\\playercontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C906DB16-1408-4BB1-C3C7-4744CA28E45F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playercontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C906DB16-1408-4BB1-C3C7-4744CA28E45F}|Assembly-CSharp.csproj|c:\\users\\yoshi\\documents\\github\\monsterproject\\assets\\scripts\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C906DB16-1408-4BB1-C3C7-4744CA28E45F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C906DB16-1408-4BB1-C3C7-4744CA28E45F}|Assembly-CSharp.csproj|c:\\users\\yoshi\\documents\\github\\monsterproject\\assets\\scripts\\playtestelement\\playtestui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C906DB16-1408-4BB1-C3C7-4744CA28E45F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playtestelement\\playtestui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C906DB16-1408-4BB1-C3C7-4744CA28E45F}|Assembly-CSharp.csproj|c:\\users\\yoshi\\documents\\github\\monsterproject\\assets\\scripts\\tolevelscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C906DB16-1408-4BB1-C3C7-4744CA28E45F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tolevelscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C906DB16-1408-4BB1-C3C7-4744CA28E45F}|Assembly-CSharp.csproj|c:\\users\\yoshi\\documents\\github\\monsterproject\\assets\\scripts\\scoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C906DB16-1408-4BB1-C3C7-4744CA28E45F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ToLevelScript.cs",
-              "DocumentMoniker": "C:\\Users\\Yoshi\\Documents\\GitHub\\MonsterProject\\Assets\\Scripts\\ToLevelScript.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\ToLevelScript.cs",
-              "ToolTip": "C:\\Users\\Yoshi\\Documents\\GitHub\\MonsterProject\\Assets\\Scripts\\ToLevelScript.cs",
-              "RelativeToolTip": "Assets\\Scripts\\ToLevelScript.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAKAAAA",
+              "DocumentIndex": 0,
+              "Title": "PlaytestCollectibles.cs",
+              "DocumentMoniker": "C:\\Users\\Yoshi\\Documents\\GitHub\\MonsterProject\\Assets\\Scripts\\PlaytestElement\\PlaytestCollectibles.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlaytestElement\\PlaytestCollectibles.cs",
+              "ToolTip": "C:\\Users\\Yoshi\\Documents\\GitHub\\MonsterProject\\Assets\\Scripts\\PlaytestElement\\PlaytestCollectibles.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlaytestElement\\PlaytestCollectibles.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T09:02:25.806Z",
+              "WhenOpened": "2025-06-17T13:50:08.917Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "PlaytestUI.cs",
               "DocumentMoniker": "C:\\Users\\Yoshi\\Documents\\GitHub\\MonsterProject\\Assets\\Scripts\\PlaytestElement\\PlaytestUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlaytestElement\\PlaytestUI.cs",
               "ToolTip": "C:\\Users\\Yoshi\\Documents\\GitHub\\MonsterProject\\Assets\\Scripts\\PlaytestElement\\PlaytestUI.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlaytestElement\\PlaytestUI.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAABGAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAswB0AAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T09:02:24.696Z",
+              "WhenOpened": "2025-06-17T13:04:27.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "scoreManager.cs",
+              "DocumentMoniker": "C:\\Users\\Yoshi\\Documents\\GitHub\\MonsterProject\\Assets\\Scripts\\scoreManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\scoreManager.cs",
+              "ToolTip": "C:\\Users\\Yoshi\\Documents\\GitHub\\MonsterProject\\Assets\\Scripts\\scoreManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\scoreManager.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAxwBkAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T12:37:27.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PlayerMovement.cs",
+              "DocumentMoniker": "C:\\Users\\Yoshi\\Documents\\GitHub\\MonsterProject\\Assets\\Scripts\\Player\\PlayerMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerMovement.cs",
+              "ToolTip": "C:\\Users\\Yoshi\\Documents\\GitHub\\MonsterProject\\Assets\\Scripts\\Player\\PlayerMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerMovement.cs",
+              "ViewState": "AQIAAHoAAAAAAAAAAAAUwAAAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T13:03:33.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlayerControler.cs",
+              "DocumentMoniker": "C:\\Users\\Yoshi\\Documents\\GitHub\\MonsterProject\\Assets\\Scripts\\Player\\PlayerControler.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerControler.cs",
+              "ToolTip": "C:\\Users\\Yoshi\\Documents\\GitHub\\MonsterProject\\Assets\\Scripts\\Player\\PlayerControler.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerControler.cs",
+              "ViewState": "AQIAALIAAAAAAAAAAAASwN0AAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T13:03:40.615Z",
               "EditorCaption": ""
             }
           ]

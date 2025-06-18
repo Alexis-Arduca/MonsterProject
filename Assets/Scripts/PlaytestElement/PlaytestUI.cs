@@ -15,7 +15,7 @@ public class PlaytestUI : MonoBehaviour
         GameObject collectibles = GameObject.Find("Collectibles");
 
         maxGoals = collectibles.transform.childCount;
-        showCollected.text = currentGoals + "/" + maxGoals + " candies";
+        showCollected.text = currentGoals + "/" + maxGoals;
     }
 
     private void OnDisable()
@@ -27,6 +27,6 @@ public class PlaytestUI : MonoBehaviour
     {
         currentGoals += 1;
 
-        showCollected.text = currentGoals + "/" + maxGoals + " candies";
+        showCollected.text = currentGoals + "/" + maxGoals;
     }
 }
