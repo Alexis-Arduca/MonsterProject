@@ -61,6 +61,7 @@ public class PlayerManager : MonoBehaviour
         }
 
         playerInput.transform.position = GetSpawnPosition(playerInput.playerIndex);
+        playerInput.transform.rotation = Quaternion.Euler(0f, 171f, 0f);
         Debug.Log($"Player {playerInput.playerIndex} spawn at {playerInput.transform.position}");
     }
 
@@ -68,10 +69,9 @@ public class PlayerManager : MonoBehaviour
     {
         Vector3[] spawnPoints = new Vector3[]
         {
-            new Vector3(-2, 2, 0),
-            new Vector3(2, 2, 0),
-            new Vector3(-2, 2, 2),
-            new Vector3(2, 2, 2)
+            new Vector3(-7.3f, 2, 25.68f),
+            new Vector3(-7.3f, 2, 25.68f),
+
         };
         return spawnPoints[playerIndex % spawnPoints.Length];
     }
