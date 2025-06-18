@@ -6938,6 +6938,10 @@ PrefabInstance:
       propertyPath: 'monsterSpawnpoints.Array.data[1]'
       value: 
       objectReference: {fileID: 556859066}
+    - target: {fileID: 1949882644217538133, guid: f33d4348e598664469ab858890388f2f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -14.65
+      objectReference: {fileID: 0}
     - target: {fileID: 3652750310351175488, guid: f33d4348e598664469ab858890388f2f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.66
@@ -6981,6 +6985,10 @@ PrefabInstance:
     - target: {fileID: 5013860845908494421, guid: f33d4348e598664469ab858890388f2f, type: 3}
       propertyPath: m_Name
       value: IceBiome
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519996732651866083, guid: f33d4348e598664469ab858890388f2f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24457,6 +24465,7 @@ GameObject:
   - component: {fileID: 916230331}
   - component: {fileID: 916230330}
   - component: {fileID: 916230332}
+  - component: {fileID: 916230333}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -24567,6 +24576,19 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!114 &916230333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916230329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c32029b77177c54abcc0b005a90a25a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!1 &926891609 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: db912d5a3a061ff4583c69d782d221e0, type: 3}

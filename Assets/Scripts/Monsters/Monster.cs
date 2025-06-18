@@ -243,7 +243,6 @@ public class Monster : MonoBehaviour
 
     protected virtual void ActivateTrail(int monster, GameObject player)
     {
-        Debug.Log("Code: " + code + " | Monster: " + monster);
         if (monster == code)
         {
             MonsterTrail trail = GetComponent<MonsterTrail>();
