@@ -20,6 +20,9 @@ public class PlayerControler : MonoBehaviour
     private RaycastHit _hit;
     private PickableController _pickableController;
     private MonsterController _monsterController;
+    private readonly float cameraMaxRotationY = 50f;
+    private readonly float cameraMinRotationY = -50f;
+    private readonly Vector3 spawnPosition = new Vector3(-2.4f, 2.74f, 14.3f);
 
     void Awake()
     {
@@ -61,13 +64,13 @@ public class PlayerControler : MonoBehaviour
                 mouseX = lookInput.x * gamepadSensitivity * Time.deltaTime;
                 mouseY = lookInput.y * gamepadSensitivity * Time.deltaTime;
             }
-
             xRotation -= mouseY;
-            xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+
+            xRotation = Mathf.Clamp(xRotation, cameraMinRotationY, cameraMaxRotationY);
+
             playerCamera.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
             transform.Rotate(Vector3.up * mouseX);
         }
-
         HandleRaycast();
     }
 
@@ -171,7 +174,7 @@ public class PlayerControler : MonoBehaviour
 
     private void BackOnSpawn()
     {
-        transform.position = new Vector3(-2.4f, 2.74f, 14.3f);
+        transform.position = spawnPosition;
     }
 
     private void HandlePickup(PickableController pickableController)

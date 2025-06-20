@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     private float maxDrag = 3f;
     private float minInertia = 0.01f;
     private float maxInertia = 0.2f;
+    private readonly float effectDuration = 8f;
 
     private Vector2 moveInput;
 
@@ -102,20 +103,20 @@ public class PlayerMovement : MonoBehaviour
     public void OnEat()
     {
         speedMultiplier = speedMultiplierUpgrade;
-        StartCoroutine(ResetSpeedEffect(10f));
+        StartCoroutine(ResetSpeedEffect(effectDuration));
     }
 
     public void OnDrink()
     {
         jumpForce = jumpUpgrade;
-        StartCoroutine(ResetJumpEffect(5f));
+        StartCoroutine(ResetJumpEffect(effectDuration));
     }
 
     public void OnLick()
     {
         speedMultiplier = speedMultiplierNerf;
         jumpForce = jumpNerf;
-        StartCoroutine(ResetLickEffect(5f));
+        StartCoroutine(ResetLickEffect(effectDuration));
     }
 
     private IEnumerator ResetSpeedEffect(float duration)
