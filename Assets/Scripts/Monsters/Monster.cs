@@ -21,7 +21,7 @@ public class Monster : MonoBehaviour
     [SerializeField] protected List<ElementType> immunity = new List<ElementType>();
     [SerializeField] protected bool isFriendly = false;
     [SerializeField] protected BiomesTemplate.BiomeType spawnBiome;
-    protected State currentState;
+    [SerializeField] protected State currentState;
     protected Rigidbody rb;
     private static readonly Vector3[] directions = { Vector3.forward, Vector3.back, Vector3.left, Vector3.right };
 
