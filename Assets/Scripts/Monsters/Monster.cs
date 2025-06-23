@@ -22,6 +22,7 @@ public class Monster : MonoBehaviour
     [SerializeField] protected bool isFriendly = false;
     [SerializeField] protected BiomesTemplate.BiomeType spawnBiome;
     [SerializeField] protected State currentState;
+    private Animator monsterAnimator;
     protected Rigidbody rb;
     private static readonly Vector3[] directions = { Vector3.forward, Vector3.back, Vector3.left, Vector3.right };
 
@@ -52,6 +53,7 @@ public class Monster : MonoBehaviour
 
     protected virtual void Awake()
     {
+        monsterAnimator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         if (rb == null)
         {
@@ -140,6 +142,7 @@ public class Monster : MonoBehaviour
             thoughtBubble.ShowItem();
             thoughtBubble.HideText();
             currentState = State.Patrolling;
+            monsterAnimator.SetBool("isMoving 0", true);
         }
     }
 
@@ -148,6 +151,7 @@ public class Monster : MonoBehaviour
     /// </summary>
     protected virtual void HandlePatrolling()
     {
+        monsterAnimator.SetBool("isMoving 0", true);
         Vector3 nextPosition = rb.position + patrolDirection * patrolSpeed * Time.deltaTime;
         float distanceFromBase = Vector3.Distance(basePosition, nextPosition);
 
