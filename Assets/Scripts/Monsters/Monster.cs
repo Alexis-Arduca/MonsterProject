@@ -131,9 +131,9 @@ public class Monster : MonoBehaviour
         {
             thoughtBubble.HideBubble();
             currentState = State.Following;
-            itemGive = true;
             DeactivateTrail(itemCode);
             Destroy(item);
+            itemGive = true;
         }
         else
         {
