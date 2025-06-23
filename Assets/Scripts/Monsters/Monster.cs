@@ -44,6 +44,7 @@ public class Monster : MonoBehaviour
     private float jumpHeight = 2f;
     private float jumpDuration = 0.5f;
     private bool isJumping = false;
+    private bool itemGive = false;
 
     [Header("Bubble")]
     public ThoughtBubbleController thoughtBubble;
@@ -92,22 +93,6 @@ public class Monster : MonoBehaviour
         GameEventsManager.instance.trailEvents.onItemRelease -= DeactivateTrail;
     }
 
-    public void Interact(PickableController item)
-    {
-        if (item.icon == wantedItem)
-        {
-            thoughtBubble.HideBubble();
-            currentState = State.Following;
-            item.Destroy();
-        }
-        else
-        {
-            thoughtBubble.ShowItem();
-            thoughtBubble.HideText();
-            currentState = State.Patrolling;
-        }
-    }
-
     protected virtual void Update()
     {
         if (!agent.isOnNavMesh) return;
@@ -127,6 +112,34 @@ public class Monster : MonoBehaviour
             case State.Patrolling: HandlePatrolling(); break;
             case State.Power: HandlePower(); break;
             case State.Following: HandleFollowing(); break;
+        }
+    }
+
+    protected virtual void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("MonsterCollectible") && !itemGive)
+        {
+            Interact(other.gameObject);
+        }
+    }
+
+    public void Interact(GameObject item)
+    {
+        int itemCode = item.GetComponent<Collectible>().GetCode();
+
+        if (item.GetComponent<Collectible>().GetCode() == code)
+        {
+            thoughtBubble.HideBubble();
+            currentState = State.Following;
+            itemGive = true;
+            DeactivateTrail(itemCode);
+            Destroy(item);
+        }
+        else
+        {
+            thoughtBubble.ShowItem();
+            thoughtBubble.HideText();
+            currentState = State.Patrolling;
         }
     }
 
