@@ -7034,11 +7034,6 @@ Transform:
   - {fileID: 420941648}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &204063101 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5771408151109308838, guid: 804833b826aa2a8418df344ccab31f8d, type: 3}
-  m_PrefabInstance: {fileID: 785451765}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &214741043
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7049,12 +7044,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1882156667052452538, guid: f33d4348e598664469ab858890388f2f, type: 3}
       propertyPath: monsterSpawnpoints.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1882156667052452538, guid: f33d4348e598664469ab858890388f2f, type: 3}
-      propertyPath: 'monsterSpawnpoints.Array.data[1]'
+      propertyPath: 'monsterSpawnpoints.Array.data[2]'
       value: 
-      objectReference: {fileID: 556859066}
+      objectReference: {fileID: 1366318035}
+    - target: {fileID: 1882156667052452538, guid: f33d4348e598664469ab858890388f2f, type: 3}
+      propertyPath: 'monsterSpawnpoints.Array.data[3]'
+      value: 
+      objectReference: {fileID: 564733587}
     - target: {fileID: 3652750310351175488, guid: f33d4348e598664469ab858890388f2f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.66
@@ -14665,11 +14664,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
---- !u!1 &486468283 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5857157011132318257, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
-  m_PrefabInstance: {fileID: 901039525}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &486880679 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bd83c4f0580379c43a21a3c655c18073, type: 3}
@@ -15610,9 +15604,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ca7f0c564f2e7c14dac9a7cf6ea6f74d, type: 3}
   m_PrefabInstance: {fileID: 544611303}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &556859066 stripped
+--- !u!1 &564733587 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 2675138738112276828, guid: f33d4348e598664469ab858890388f2f, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7954790498134915487, guid: f33d4348e598664469ab858890388f2f, type: 3}
   m_PrefabInstance: {fileID: 214741043}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &565594904
@@ -22134,6 +22128,11 @@ MonoBehaviour:
   m_Bidirectional: 1
   m_AutoUpdatePosition: 0
   m_Area: 0
+--- !u!1 &696510715 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8567397608387457172, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
+  m_PrefabInstance: {fileID: 901039525}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &705610982
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23246,21 +23245,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 1042963353}
     m_Modifications:
     - target: {fileID: 1882156667052452538, guid: 804833b826aa2a8418df344ccab31f8d, type: 3}
-      propertyPath: codeList.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1882156667052452538, guid: 804833b826aa2a8418df344ccab31f8d, type: 3}
-      propertyPath: assignedMonsters.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1882156667052452538, guid: 804833b826aa2a8418df344ccab31f8d, type: 3}
       propertyPath: monsterSpawnpoints.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1882156667052452538, guid: 804833b826aa2a8418df344ccab31f8d, type: 3}
-      propertyPath: 'monsterSpawnpoints.Array.data[1]'
+      propertyPath: 'monsterSpawnpoints.Array.data[2]'
       value: 
-      objectReference: {fileID: 204063101}
+      objectReference: {fileID: 1844194893}
+    - target: {fileID: 1882156667052452538, guid: 804833b826aa2a8418df344ccab31f8d, type: 3}
+      propertyPath: 'monsterSpawnpoints.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1453723149}
     - target: {fileID: 3652750310351175488, guid: 804833b826aa2a8418df344ccab31f8d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.4167843
@@ -24844,25 +24839,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 1042963353}
     m_Modifications:
     - target: {fileID: 1882156667052452538, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
-      propertyPath: codeList.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1882156667052452538, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
-      propertyPath: assignedMonsters.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1882156667052452538, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
       propertyPath: monsterSpawnpoints.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1882156667052452538, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
-      propertyPath: assignedCollectibles.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1882156667052452538, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
-      propertyPath: 'monsterSpawnpoints.Array.data[1]'
+      propertyPath: 'monsterSpawnpoints.Array.data[2]'
       value: 
-      objectReference: {fileID: 486468283}
+      objectReference: {fileID: 696510715}
+    - target: {fileID: 1882156667052452538, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
+      propertyPath: 'monsterSpawnpoints.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1198289617}
     - target: {fileID: 3652750310351175488, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.66
@@ -27215,7 +27202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ca7f0c564f2e7c14dac9a7cf6ea6f74d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 56.696003
+      value: 55.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ca7f0c564f2e7c14dac9a7cf6ea6f74d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -27270,6 +27257,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ca7f0c564f2e7c14dac9a7cf6ea6f74d, type: 3}
   m_PrefabInstance: {fileID: 1194974253}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1198289617 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3841967676972103549, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
+  m_PrefabInstance: {fileID: 901039525}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1203663951
 PrefabInstance:
@@ -28875,6 +28867,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1364652060}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1366318035 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 651801152469575660, guid: f33d4348e598664469ab858890388f2f, type: 3}
+  m_PrefabInstance: {fileID: 214741043}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1386352110
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29265,6 +29262,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1232546874}
   m_SourcePrefab: {fileID: 100100000, guid: bd83c4f0580379c43a21a3c655c18073, type: 3}
+--- !u!1 &1453723149 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 418335692042038506, guid: 804833b826aa2a8418df344ccab31f8d, type: 3}
+  m_PrefabInstance: {fileID: 785451765}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1454905320
 GameObject:
   m_ObjectHideFlags: 0
@@ -37470,6 +37472,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2540817853737639666, guid: db912d5a3a061ff4583c69d782d221e0, type: 3}
+--- !u!1 &1844194893 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1690840337285749618, guid: 804833b826aa2a8418df344ccab31f8d, type: 3}
+  m_PrefabInstance: {fileID: 785451765}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1857843784 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1500838157198093432, guid: bd83c4f0580379c43a21a3c655c18073, type: 3}
