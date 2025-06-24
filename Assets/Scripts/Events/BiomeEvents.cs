@@ -29,4 +29,13 @@ public class BiomeEvents
             onThunderBiomeEnter(file);
         }
     }
+
+    public event Action onFillDone;
+    public void OnFillDone()
+    {
+        if (onFillDone != null)
+        {
+            onFillDone();
+        }
+    }
 }

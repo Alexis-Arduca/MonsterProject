@@ -15,8 +15,19 @@ public class Biomes : MonoBehaviour
     [Header("Spawn Settings")]
     private readonly float topViewRotation = 40f;
 
-    void Start()
+    void Awake()
     {
+        GameEventsManager.instance.biomeEvents.onFillDone += GenerateBiomes;
+    }
+
+    void OnDisable()
+    {
+        GameEventsManager.instance.biomeEvents.onFillDone -= GenerateBiomes;
+    }
+
+    void GenerateBiomes()
+    {
+        Debug.Log("======> Start biomes Generation");
         if (GetComponent<BiomesTemplate>().biomeType != BiomesTemplate.BiomeType.Lobby)
         {
             SpawnMonstersAndCollectibles();
@@ -58,7 +69,6 @@ public class Biomes : MonoBehaviour
         {
             if (availableSpawnPoints.Count < 1)
             {
-                Debug.LogWarning($"Ran out of spawn points for biome {name}!");
                 return;
             }
 

@@ -16,7 +16,7 @@ public class ThoughtBubbleController : MonoBehaviour
 
     private Image _wantedItemIcon;
 
-    public TextMeshPro text;
+    public TMPro.TMP_Text text;
 
     private void Start()
     {

@@ -12,6 +12,15 @@ public class TrailEvents
         }
     }
 
+    public event Action<int> onItemRelease;
+    public void OnItemRelease(int monster)
+    {
+        if (onItemRelease != null)
+        {
+            onItemRelease(monster);
+        }
+    }
+
     public event Action<int> onItemGive;
     public void OnItemGive(int monster)
     {
