@@ -216,6 +216,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2b8c9e141e832db46b201a1090946036, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5116743688675561252}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2b8c9e141e832db46b201a1090946036, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5640809586251397794}
   m_SourcePrefab: {fileID: 100100000, guid: 2b8c9e141e832db46b201a1090946036, type: 3}
 --- !u!1 &7408625255818597767 stripped
 GameObject:
@@ -242,10 +245,16 @@ MonoBehaviour:
   immunity: 
   isFriendly: 0
   spawnBiome: 1
+  currentState: 0
   power: {fileID: 0}
   patrolSpeed: 1.5
   patrolChangeInterval: 3
   maxPatrolDistance: 5
+  pauseDurationMin: 3
+  pauseDurationMax: 6
+  sitDurationMin: 3
+  sitDurationMax: 8
+  sitChance: 0.1
   maxFollowDistance: 2
   thoughtBubble: {fileID: 6065716471788212204}
   wantedItem: {fileID: 4834988709251300096}
@@ -438,6 +447,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b8aa16e9c7baa49a40b5d72c81dd5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sampleDistance: 0.5
+  heightOffset: 0.1
+  maxPoints: 100
 --- !u!65 &5116743688675561252
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -459,6 +471,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.7876244, y: 1, z: 5.757675}
   m_Center: {x: 0.042505264, y: 0, z: 0.0064315796}
+--- !u!114 &5640809586251397794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7408625255818597767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: -1
+  OverrideMaxDistance: -1
 --- !u!4 &7898022672758361917 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2b8c9e141e832db46b201a1090946036, type: 3}

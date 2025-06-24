@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: ../Fmod/Sounds Fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638863746149299614
+  lastModified: 638863800266834109
   FileSizes:
   - Name: Desktop
-    Value: 814
+    Value: 1020
   Exists: 1
 --- !u!114 &-1088817904745414640
 MonoBehaviour:
@@ -65,18 +65,84 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: 6706877563798359977}
   - {fileID: -1088817904745414640}
+  - {fileID: 4068431386615865160}
+  - {fileID: 6600210824106453643}
+  - {fileID: 6474696360942858780}
+  - {fileID: 2018735516318041491}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4638215954474937796}
   StringsBanks:
   - {fileID: -7558951177626287699}
   cacheVersion: 131848
-  cacheTime: 638863746149299614
+  cacheTime: 638863800266834109
   SerializableEventsDict:
   - key: event:/Ambience/Room Tone
     index: 0
   - key: event:/Ambience/Wind
     index: 1
+  - key: event:/Ambience/Bubbles
+    index: 2
+  - key: event:/Ambience/Forest
+    index: 3
+  - key: event:/Music/Background music
+    index: 4
+  - key: event:/Monster sounds/Blueblue
+    index: 5
+--- !u!114 &2018735516318041491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Monster sounds/Blueblue
+  m_EditorClassIdentifier: 
+  Path: event:/Monster sounds/Blueblue
+  Guid:
+    Data1: -698625623
+    Data2: 1281730821
+    Data3: 1445943941
+    Data4: 1943515331
+  Banks:
+  - {fileID: 4638215954474937796}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10541
+--- !u!114 &4068431386615865160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Bubbles
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Bubbles
+  Guid:
+    Data1: -1178136008
+    Data2: 1291412964
+    Data3: 675249543
+    Data4: -1402836319
+  Banks:
+  - {fileID: 4638215954474937796}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 59500
 --- !u!114 &4638215954474937796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,11 +158,65 @@ MonoBehaviour:
   Path: ../Fmod/Sounds Fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638863746149269268
+  lastModified: 638863800266804502
   FileSizes:
   - Name: Desktop
-    Value: 3067136
+    Value: 7390144
   Exists: 1
+--- !u!114 &6474696360942858780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Background music
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Background music
+  Guid:
+    Data1: 1620413362
+    Data2: 1209847176
+    Data3: 508833927
+    Data4: 319163270
+  Banks:
+  - {fileID: 4638215954474937796}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 92500
+--- !u!114 &6600210824106453643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Forest
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Forest
+  Guid:
+    Data1: -1525184244
+    Data2: 1335701888
+    Data3: 1043269045
+    Data4: 1948044284
+  Banks:
+  - {fileID: 4638215954474937796}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 116000
 --- !u!114 &6706877563798359977
 MonoBehaviour:
   m_ObjectHideFlags: 0
