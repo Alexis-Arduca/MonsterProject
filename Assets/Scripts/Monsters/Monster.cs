@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 public class Monster : MonoBehaviour
 {
     public enum ElementType { Null, Fire, Ice, Electric, Psychic }
-    public enum State { Patrolling, Power, Following }
+    public enum State { Patrolling, Power, Following, Siting }
 
     [Header("Description")]
     [SerializeField] protected string monsterName;
@@ -30,17 +30,26 @@ public class Monster : MonoBehaviour
     [SerializeField] protected Power power;
 
     [Header("Patrol")]
-    [SerializeField] protected float patrolSpeed = 1.5f;
-    [SerializeField] protected float patrolChangeInterval = 3f;
-    [SerializeField] protected float maxPatrolDistance = 5f;
+    [SerializeField] protected float patrolSpeed = 2f;
+    [SerializeField] protected float patrolChangeInterval = 5f;
+    [SerializeField] protected float maxPatrolDistance = 15f;
+    [SerializeField] protected float pauseDurationMin = 3f;
+    [SerializeField] protected float pauseDurationMax = 6f;
+    [SerializeField] protected float sitDurationMin = 3f;
+    [SerializeField] protected float sitDurationMax = 8f;
+    [SerializeField] protected float sitChance = 0.1f;
     private Vector3 basePosition;
     private float patrolTimer;
     private Vector3 patrolDirection;
+    private float pauseTimer;
+    private bool isPaused;
+    private float sitTimer;
+    private bool isSiting;
+    private bool isInteract;
 
     [Header("Follow")]
     [SerializeField] protected float maxFollowDistance = 2f;
     private NavMeshAgent agent;
-    private bool isClose;
     private Vector3 playerPos;
     private float jumpHeight = 2f;
     private float jumpDuration = 0.5f;
@@ -77,12 +86,10 @@ public class Monster : MonoBehaviour
         basePosition = transform.position;
 
         GameEventsManager.instance.trailEvents.onItemPickup += ActivateTrail;
-        // GameEventsManager.instance.trailEvents.onItemGive += DeactivateTrail;
         GameEventsManager.instance.trailEvents.onItemRelease += DeactivateTrail;
 
         // Bubble
         thoughtBubble.SetWantedItem(wantedItem);
-
         thoughtBubble.ShowBubble();
         thoughtBubble.HideText();
         thoughtBubble.ShowItem();
@@ -91,7 +98,6 @@ public class Monster : MonoBehaviour
     protected virtual void OnDisable()
     {
         GameEventsManager.instance.trailEvents.onItemPickup -= ActivateTrail;
-        // GameEventsManager.instance.trailEvents.onItemGive -= DeactivateTrail;
         GameEventsManager.instance.trailEvents.onItemRelease -= DeactivateTrail;
     }
 
@@ -114,6 +120,7 @@ public class Monster : MonoBehaviour
             case State.Patrolling: HandlePatrolling(); break;
             case State.Power: HandlePower(); break;
             case State.Following: HandleFollowing(); break;
+            case State.Siting: HandleSiting(); break;
         }
     }
 
@@ -125,11 +132,30 @@ public class Monster : MonoBehaviour
         }
     }
 
+    protected virtual void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player") && !isSiting && !isJumping)
+        {
+            StartCoroutine(PlayInteractAnimation());
+        }
+    }
+
+    private IEnumerator PlayInteractAnimation()
+    {
+        isInteract = true;
+        ResetMonsterAnimation();
+        monsterAnimator.SetBool("interact", true);
+        yield return new WaitForSeconds(1.5f);
+        ResetMonsterAnimation();
+        monsterAnimator.SetBool("interact", false);
+        isInteract = false;
+    }
+
     public void Interact(GameObject item)
     {
         int itemCode = item.GetComponent<Collectible>().GetCode();
 
-        if (item.GetComponent<Collectible>().GetCode() == code)
+        if (itemCode == code)
         {
             thoughtBubble.HideBubble();
             currentState = State.Following;
@@ -142,7 +168,7 @@ public class Monster : MonoBehaviour
             thoughtBubble.ShowItem();
             thoughtBubble.HideText();
             currentState = State.Patrolling;
-            monsterAnimator.SetBool("isMoving 0", true);
+            monsterAnimator.SetBool("isMoving", true);
         }
     }
 
@@ -151,7 +177,36 @@ public class Monster : MonoBehaviour
     /// </summary>
     protected virtual void HandlePatrolling()
     {
-        monsterAnimator.SetBool("isMoving 0", true);
+        if (isInteract || isSiting) { return; }
+
+        ResetMonsterAnimation();
+
+        if (isPaused)
+        {
+            pauseTimer -= Time.deltaTime;
+            if (pauseTimer <= 0)
+            {
+                isPaused = false;
+
+                if (Random.value <= sitChance)
+                {
+                    currentState = State.Siting;
+                    isSiting = true;
+                    monsterAnimator.SetBool("isSiting", true);
+                    sitTimer = Random.Range(sitDurationMin, sitDurationMax);
+                }
+                else
+                {
+                    SetNewPatrolDirection();
+                    patrolTimer = patrolChangeInterval;
+                    monsterAnimator.SetBool("isMoving", true);
+                }
+            }
+            return;
+        }
+
+        monsterAnimator.SetBool("isMoving", true);
+
         Vector3 nextPosition = rb.position + patrolDirection * patrolSpeed * Time.deltaTime;
         float distanceFromBase = Vector3.Distance(basePosition, nextPosition);
 
@@ -169,14 +224,43 @@ public class Monster : MonoBehaviour
 
         if (patrolTimer <= 0)
         {
-            SetNewPatrolDirection();
-            patrolTimer = patrolChangeInterval;
+            isPaused = true;
+            pauseTimer = Random.Range(pauseDurationMin, pauseDurationMax);
+            monsterAnimator.SetBool("isMoving", false);
         }
     }
 
     protected virtual void SetNewPatrolDirection()
     {
         patrolDirection = directions[Random.Range(0, directions.Length)];
+    }
+
+    /// <summary>
+    /// Siting Section
+    /// </summary>
+    protected virtual void HandleSiting()
+    {
+        ResetMonsterAnimation();
+        monsterAnimator.SetBool("isSiting", true);
+
+        sitTimer -= Time.deltaTime;
+        if (sitTimer <= 0)
+        {
+            isSiting = false;
+
+            SetNewPatrolDirection();
+            patrolTimer = patrolChangeInterval;
+            monsterAnimator.SetBool("isSiting", false);
+            
+            if (isFriendly)
+            {
+                currentState = State.Following;
+            }
+            else
+            {
+                currentState = State.Patrolling;
+            }
+        }
     }
 
     /// <summary>
@@ -193,9 +277,17 @@ public class Monster : MonoBehaviour
     /// </summary>
     protected virtual void HandleFollowing()
     {
+        ResetMonsterAnimation();
+
         if (Vector3.Distance(playerPos, transform.position) > maxFollowDistance)
         {
+            monsterAnimator.SetBool("isMoving", true);
             agent.SetDestination(playerPos);
+        }
+        else
+        {
+            agent.isStopped = true;
+            monsterAnimator.SetBool("isSiting", true);
         }
 
         if (agent.isOnOffMeshLink && !isJumping)
@@ -205,9 +297,8 @@ public class Monster : MonoBehaviour
     }
 
     /// <summary>
-    /// Handle monster jump based on NavMeshLink. Use for "platformer" and when he is friendly (follow the player)
+    /// Handle monster jump based on NavMeshLink
     /// </summary>
-    /// <returns></returns>
     protected virtual IEnumerator DoJump()
     {
         if (jumpDuration <= 0)
@@ -225,6 +316,8 @@ public class Monster : MonoBehaviour
         Vector3 endPos = link.endPos;
 
         float t = 0;
+        ResetMonsterAnimation();
+        monsterAnimator.SetBool("isJumping", true);
         while (t < jumpDuration)
         {
             float normalizedTime = t / jumpDuration;
@@ -240,6 +333,18 @@ public class Monster : MonoBehaviour
         rb.isKinematic = wasKinematic;
 
         isJumping = false;
+        ResetMonsterAnimation();
+        monsterAnimator.SetBool("isMoving", true);
+    }
+
+    /// <summary>
+    /// Reset all animation states to avoid conflicts
+    /// </summary>
+    protected virtual void ResetMonsterAnimation()
+    {
+        monsterAnimator.SetBool("isMoving", false);
+        monsterAnimator.SetBool("isSiting", false);
+        monsterAnimator.SetBool("isJumping", false);
     }
 
     /// <summary>
