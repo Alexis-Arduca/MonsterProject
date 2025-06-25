@@ -13,7 +13,7 @@ public class PlaytestCollectible : MonoBehaviour
             GetComponent<MeshRenderer>().enabled = false;
             GetComponent<SphereCollider>().enabled = false;
             
-            // Score.SetActive(true);
+            Score.SetActive(true);
         }
     }
 }
