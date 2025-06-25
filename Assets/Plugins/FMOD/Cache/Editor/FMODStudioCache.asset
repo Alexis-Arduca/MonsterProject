@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8630134260269388035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Monstersounds/Lobbi
+  m_EditorClassIdentifier: 
+  Path: event:/Monstersounds/Lobbi
+  Guid:
+    Data1: -590764546
+    Data2: 1180796379
+    Data3: 695472268
+    Data4: -1664693566
+  Banks:
+  - {fileID: 4638215954474937796}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4363
 --- !u!114 &-7558951177626287699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,11 +42,92 @@ MonoBehaviour:
   Path: ../Fmod/Sounds Fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638863800266834109
+  lastModified: 638864577211302564
   FileSizes:
   - Name: Desktop
-    Value: 1020
+    Value: 1218
   Exists: 1
+--- !u!114 &-7541859440635777665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Monstersounds/Kitty
+  m_EditorClassIdentifier: 
+  Path: event:/Monstersounds/Kitty
+  Guid:
+    Data1: 627264142
+    Data2: 1269043111
+    Data3: 1265643703
+    Data4: -291716207
+  Banks:
+  - {fileID: 4638215954474937796}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4021
+--- !u!114 &-4143388990340550391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Monstersounds/Blueblue
+  m_EditorClassIdentifier: 
+  Path: event:/Monstersounds/Blueblue
+  Guid:
+    Data1: -698625623
+    Data2: 1281730821
+    Data3: 1445943941
+    Data4: 1943515331
+  Banks:
+  - {fileID: 4638215954474937796}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3000
+--- !u!114 &-1398162933438510350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Monstersounds/LWM
+  m_EditorClassIdentifier: 
+  Path: event:/Monstersounds/LWM
+  Guid:
+    Data1: -1070019508
+    Data2: 1175269687
+    Data3: 58386562
+    Data4: -667942297
+  Banks:
+  - {fileID: 4638215954474937796}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5000
 --- !u!114 &-1088817904745414640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,14 +176,19 @@ MonoBehaviour:
   - {fileID: 4068431386615865160}
   - {fileID: 6600210824106453643}
   - {fileID: 6474696360942858780}
-  - {fileID: 2018735516318041491}
+  - {fileID: -1398162933438510350}
+  - {fileID: 4788585185964913097}
+  - {fileID: -7541859440635777665}
+  - {fileID: 2190221139233120943}
+  - {fileID: -4143388990340550391}
+  - {fileID: -8630134260269388035}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4638215954474937796}
   StringsBanks:
   - {fileID: -7558951177626287699}
   cacheVersion: 131848
-  cacheTime: 638863800266834109
+  cacheTime: 638864577211302564
   SerializableEventsDict:
   - key: event:/Ambience/Room Tone
     index: 0
@@ -87,9 +200,19 @@ MonoBehaviour:
     index: 3
   - key: event:/Music/Background music
     index: 4
-  - key: event:/Monster sounds/Blueblue
+  - key: event:/Monstersounds/LWM
     index: 5
---- !u!114 &2018735516318041491
+  - key: event:/Monstersounds/Amongus
+    index: 6
+  - key: event:/Monstersounds/Kitty
+    index: 7
+  - key: event:/Monstersounds/TV
+    index: 8
+  - key: event:/Monstersounds/Blueblue
+    index: 9
+  - key: event:/Monstersounds/Lobbi
+    index: 10
+--- !u!114 &2190221139233120943
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,23 +222,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Monster sounds/Blueblue
+  m_Name: event:/Monstersounds/TV
   m_EditorClassIdentifier: 
-  Path: event:/Monster sounds/Blueblue
+  Path: event:/Monstersounds/TV
   Guid:
-    Data1: -698625623
-    Data2: 1281730821
-    Data3: 1445943941
-    Data4: 1943515331
+    Data1: 90080675
+    Data2: 1231888498
+    Data3: 906333340
+    Data4: 741480871
   Banks:
   - {fileID: 4638215954474937796}
-  IsStream: 0
+  IsStream: 1
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 10541
+  Length: 6500
 --- !u!114 &4068431386615865160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,11 +281,38 @@ MonoBehaviour:
   Path: ../Fmod/Sounds Fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638863800266804502
+  lastModified: 638864577211280401
   FileSizes:
   - Name: Desktop
-    Value: 7390144
+    Value: 8598528
   Exists: 1
+--- !u!114 &4788585185964913097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Monstersounds/Amongus
+  m_EditorClassIdentifier: 
+  Path: event:/Monstersounds/Amongus
+  Guid:
+    Data1: 2024331611
+    Data2: 1098506451
+    Data3: -1851725916
+    Data4: -1362864854
+  Banks:
+  - {fileID: 4638215954474937796}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7523
 --- !u!114 &6474696360942858780
 MonoBehaviour:
   m_ObjectHideFlags: 0

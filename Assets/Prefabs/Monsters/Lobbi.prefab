@@ -84,6 +84,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 11cf40960c2bc6d44ab2d168db629f01, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8152162967450627153}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 11cf40960c2bc6d44ab2d168db629f01, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 506738645068561593}
   m_SourcePrefab: {fileID: 100100000, guid: 11cf40960c2bc6d44ab2d168db629f01, type: 3}
 --- !u!4 &45502961105372319 stripped
 Transform:
@@ -115,10 +118,16 @@ MonoBehaviour:
   immunity: 
   isFriendly: 0
   spawnBiome: 3
+  currentState: 0
   power: {fileID: 0}
   patrolSpeed: 1.5
   patrolChangeInterval: 3
   maxPatrolDistance: 5
+  pauseDurationMin: 3
+  pauseDurationMax: 6
+  sitDurationMin: 3
+  sitDurationMax: 8
+  sitChance: 0.1
   maxFollowDistance: 2
   thoughtBubble: {fileID: 8773040230543958238}
   wantedItem: {fileID: 7995171338255209522}
@@ -311,6 +320,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b8aa16e9c7baa49a40b5d72c81dd5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sampleDistance: 0.5
+  heightOffset: 0.1
+  maxPoints: 100
 --- !u!65 &8152162967450627153
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -332,6 +344,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.7876244, y: 1, z: 5.757675}
   m_Center: {x: 0.042505264, y: 0, z: 0.0064315796}
+--- !u!114 &506738645068561593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858630754083167781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -590764546
+      Data2: 1180796379
+      Data3: 695472268
+      Data4: -1664693566
+    Path: event:/Monstersounds/Lobbi
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 10
+  OverrideMaxDistance: 15
 --- !u!1001 &7305921332325756533
 PrefabInstance:
   m_ObjectHideFlags: 0
