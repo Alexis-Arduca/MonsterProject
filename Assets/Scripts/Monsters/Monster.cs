@@ -88,11 +88,11 @@ public class Monster : MonoBehaviour
         GameEventsManager.instance.trailEvents.onItemPickup += ActivateTrail;
         GameEventsManager.instance.trailEvents.onItemRelease += DeactivateTrail;
 
-        // Bubble
-        thoughtBubble.SetWantedItem(wantedItem);
-        thoughtBubble.ShowBubble();
-        thoughtBubble.HideText();
-        thoughtBubble.ShowItem();
+        // Bubble (Deactivate for Animation test)
+        // thoughtBubble.SetWantedItem(wantedItem);
+        // thoughtBubble.ShowBubble();
+        // thoughtBubble.HideText();
+        // thoughtBubble.ShowItem();
     }
 
     protected virtual void OnDisable()
