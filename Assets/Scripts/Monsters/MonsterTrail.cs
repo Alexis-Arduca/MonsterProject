@@ -27,12 +27,10 @@ public class MonsterTrail : MonoBehaviour
     {
         if (agent.isOnNavMesh && player != null)
         {
-            // Calculer le chemin
             NavMesh.CalculatePath(transform.position, player.position, NavMesh.AllAreas, path);
 
             if (path.status == NavMeshPathStatus.PathComplete)
             {
-                // Échantillonner le chemin pour plus de points
                 Vector3[] sampledPoints = SamplePath(path, sampleDistance);
                 lineRenderer.positionCount = sampledPoints.Length;
                 lineRenderer.SetPositions(sampledPoints);

@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 public class Monster : MonoBehaviour
 {
     public enum ElementType { Null, Fire, Ice, Electric, Psychic }
-    public enum State { Patrolling, Power, Following, Siting }
+    public enum State { Patrolling, Following, Siting }
 
     [Header("Description")]
     [SerializeField] protected string monsterName;
@@ -25,9 +25,6 @@ public class Monster : MonoBehaviour
     private Animator monsterAnimator;
     protected Rigidbody rb;
     private static readonly Vector3[] directions = { Vector3.forward, Vector3.back, Vector3.left, Vector3.right };
-
-    [Header("Power")]
-    [SerializeField] protected Power power;
 
     [Header("Patrol")]
     [SerializeField] protected float patrolSpeed = 2f;
@@ -118,7 +115,6 @@ public class Monster : MonoBehaviour
         switch (currentState)
         {
             case State.Patrolling: HandlePatrolling(); break;
-            case State.Power: HandlePower(); break;
             case State.Following: HandleFollowing(); break;
             case State.Siting: HandleSiting(); break;
         }
@@ -261,15 +257,6 @@ public class Monster : MonoBehaviour
                 currentState = State.Patrolling;
             }
         }
-    }
-
-    /// <summary>
-    /// Power Section
-    /// </summary>    
-    protected virtual void HandlePower()
-    {
-        power.PowerEffect(transform.position);
-        currentState = State.Patrolling;
     }
 
     /// <summary>

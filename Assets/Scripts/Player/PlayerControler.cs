@@ -19,7 +19,6 @@ public class PlayerControler : MonoBehaviour
     private const float InteractDistance = 2f;
     private RaycastHit _hit;
     private PickableController _pickableController;
-    private MonsterController _monsterController;
     private readonly float cameraMaxRotationY = 50f;
     private readonly float cameraMinRotationY = -50f;
     private readonly Vector3 spawnPosition = new Vector3(-2.4f, 2.74f, 14.3f);
@@ -78,29 +77,7 @@ public class PlayerControler : MonoBehaviour
     {
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out _hit, InteractDistance))
         {
-            // if (_hit.collider.TryGetComponent(out PickableController pickableController))
-            // {
-            //     HandlePickup(pickableController);
-            // }
-            // else if (_hit.collider.TryGetComponent(out MonsterController monsterController) && _pickableController != null)
-            // {
-            //     HandleItem(monsterController);
-            // }
-            // else
-            // {
-            //     if (_pickableController != null)
-            //     {
-            //         HandleDrop();
-            //     }
-            // }
-        }
-        else
-        {
-            if (_monsterController != null)
-            {
-                _monsterController.thoughtBubble.HideText();
-                _monsterController.thoughtBubble.ShowItem();
-            }
+            //
         }
     }
 
@@ -117,10 +94,6 @@ public class PlayerControler : MonoBehaviour
             if (_hit.collider.TryGetComponent(out PickableController pickableController))
             {
                 HandlePickup(pickableController);
-            }
-            else if (_hit.collider.TryGetComponent(out MonsterController monsterController) && _pickableController != null)
-            {
-                HandleItem(monsterController);
             }
             else if (_pickableController != null)
             {
@@ -187,19 +160,6 @@ public class PlayerControler : MonoBehaviour
     {
         _pickableController.Drop();
         _pickableController = null;
-    }
-
-    private void HandleItem(MonsterController monsterController)
-    {
-        _monsterController = monsterController;
-
-        if (Vector3.Distance(_hit.transform.position, transform.position) <= InteractDistance + 0.6f)
-        {
-            _monsterController.thoughtBubble.HideItem();
-            _monsterController.thoughtBubble.ShowText();
-            _monsterController.Interact(_pickableController);
-            _pickableController = null;
-        }
     }
 
     private void OnCollisionEnter(Collision other)
