@@ -1,0 +1,107 @@
+fileFormatVersion: 2
+guid: f97857aa8805f664e8a12c070704e94b
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Atlas_Opaque_Mat
+    second: {fileID: 2100000, guid: ba8f2e3ed0a0d3a42bda5834b418e128, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Atlas_TwoSided_Mat
+    second: {fileID: 2100000, guid: 0eec09aedf7b7ac4393ca55dde9402e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: brances_3_Mat
+    second: {fileID: 2100000, guid: 6aef6ac09d352f44f868ad9ba2ebdb4f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dead_sylized3_Billboard_Mat
+    second: {fileID: 2100000, guid: 9e9114b6e348b1b4b8cd5cb61299da80, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: roots_3_Mat
+    second: {fileID: 2100000, guid: ce668cc37b56cbd4f85abfe5531b1feb, type: 2}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 12405, guid: 0000000000000000e000000000000000, type: 0}
+  meshSettings:
+    unitConversion: 1
+    scaleFactor: 0.3048
+  materialSettings:
+    mainColor: {r: 1, g: 1, b: 1, a: 1}
+    hueVariation: {r: 1, g: 0.5, b: 0, a: 0.1}
+    alphaClipThreshold: 0.1
+    transmissionScale: 0
+    enableHueVariation: 0
+    enableBumpMapping: 1
+    enableSubsurfaceScattering: 1
+    diffusionProfileAssetID: {x: 0, y: 0, z: 0, w: 0}
+    diffusionProfileID: 0
+  lightingSettings:
+    enableShadowCasting: 1
+    enableShadowReceiving: 1
+    enableLightProbes: 1
+    reflectionProbeEnumValue: 1
+  additionalSettings:
+    motionVectorModeEnumValue: 1
+    generateColliders: 1
+    generateRigidbody: 1
+  lODSettings:
+    enableSmoothLODTransition: 1
+    animateCrossFading: 1
+    billboardTransitionCrossFadeWidth: 0.25
+    fadeOutWidth: 0.25
+    hasBillboard: 0
+  perLODSettings:
+  - enableSettingOverride: 0
+    height: 0.5
+    castShadows: 1
+    receiveShadows: 1
+    useLightProbes: 1
+    reflectionProbeUsage: 1
+    enableBump: 1
+    enableHue: 0
+    enableSubsurface: 1
+  - enableSettingOverride: 0
+    height: 0.25
+    castShadows: 1
+    receiveShadows: 1
+    useLightProbes: 1
+    reflectionProbeUsage: 1
+    enableBump: 1
+    enableHue: 0
+    enableSubsurface: 1
+  - enableSettingOverride: 0
+    height: 0.125
+    castShadows: 1
+    receiveShadows: 1
+    useLightProbes: 1
+    reflectionProbeUsage: 1
+    enableBump: 1
+    enableHue: 0
+    enableSubsurface: 1
+  - enableSettingOverride: 1
+    height: 0.01
+    castShadows: 1
+    receiveShadows: 1
+    useLightProbes: 0
+    reflectionProbeUsage: 0
+    enableBump: 1
+    enableHue: 0
+    enableSubsurface: 1
+  windSettings:
+    enableWind: 1
+    strenghResponse: 5
+    directionResponse: 2.5
+    randomness: 0.5
+  materialVersion: 1
+  outputImporterData: {fileID: 7965120797947565359, guid: f97857aa8805f664e8a12c070704e94b, type: 3}
