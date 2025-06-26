@@ -934,13 +934,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 215294277187559967, guid: 0de0ec44833b6ef4b95d57c0a4b05038, type: 3}
+      propertyPath: isFriendly
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1726326205642730878, guid: 0de0ec44833b6ef4b95d57c0a4b05038, type: 3}
       propertyPath: m_Name
       value: Kitty
       objectReference: {fileID: 0}
     - target: {fileID: 2071361318513293252, guid: 0de0ec44833b6ef4b95d57c0a4b05038, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 24.7
+      value: 7.42
       objectReference: {fileID: 0}
     - target: {fileID: 2071361318513293252, guid: 0de0ec44833b6ef4b95d57c0a4b05038, type: 3}
       propertyPath: m_LocalPosition.y
@@ -948,7 +952,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2071361318513293252, guid: 0de0ec44833b6ef4b95d57c0a4b05038, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.51
+      value: 0.92
       objectReference: {fileID: 0}
     - target: {fileID: 2071361318513293252, guid: 0de0ec44833b6ef4b95d57c0a4b05038, type: 3}
       propertyPath: m_LocalRotation.w
@@ -993,7 +997,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 475733713360226706, guid: cc2130a19f12c6d4d8adcfe1d8fe2595, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.295482
+      value: -7.93
       objectReference: {fileID: 0}
     - target: {fileID: 475733713360226706, guid: cc2130a19f12c6d4d8adcfe1d8fe2595, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1001,7 +1005,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 475733713360226706, guid: cc2130a19f12c6d4d8adcfe1d8fe2595, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.273928
+      value: 3.91
       objectReference: {fileID: 0}
     - target: {fileID: 475733713360226706, guid: cc2130a19f12c6d4d8adcfe1d8fe2595, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1044,10 +1048,10 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1541038149}
   - {fileID: 1860753999}
   - {fileID: 740254633}
   - {fileID: 1778437941}
-  - {fileID: 1541038149}
   - {fileID: 85044267}
   - {fileID: 661068676}
   - {fileID: 4939130514981592764}

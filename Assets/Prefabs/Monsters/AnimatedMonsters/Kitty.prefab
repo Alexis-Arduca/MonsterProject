@@ -130,10 +130,9 @@ MonoBehaviour:
   element: 2
   weakness: 
   immunity: 
-  isFriendly: 1
+  isFriendly: 0
   spawnBiome: 3
   currentState: 0
-  power: {fileID: 0}
   patrolSpeed: 2
   patrolChangeInterval: 5
   maxPatrolDistance: 15
