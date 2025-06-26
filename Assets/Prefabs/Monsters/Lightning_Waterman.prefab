@@ -84,6 +84,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cbfee8d6e8b66ab4cb669b0423cac23c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3757557228494322238}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cbfee8d6e8b66ab4cb669b0423cac23c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6131438099337992752}
   m_SourcePrefab: {fileID: 100100000, guid: cbfee8d6e8b66ab4cb669b0423cac23c, type: 3}
 --- !u!1 &3723249154238381329 stripped
 GameObject:
@@ -110,10 +113,16 @@ MonoBehaviour:
   immunity: 
   isFriendly: 0
   spawnBiome: 2
+  currentState: 0
   power: {fileID: 0}
   patrolSpeed: 1.5
   patrolChangeInterval: 3
   maxPatrolDistance: 5
+  pauseDurationMin: 3
+  pauseDurationMax: 6
+  sitDurationMin: 3
+  sitDurationMax: 8
+  sitChance: 0.1
   maxFollowDistance: 2
   thoughtBubble: {fileID: 8761151566293426616}
   wantedItem: {fileID: 7971732586766030164}
@@ -306,6 +315,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b8aa16e9c7baa49a40b5d72c81dd5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sampleDistance: 0.5
+  heightOffset: 0.1
+  maxPoints: 100
 --- !u!65 &3757557228494322238
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -327,6 +339,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.7876244, y: 1, z: 5.757675}
   m_Center: {x: 0.042505264, y: 0, z: 0.0064315796}
+--- !u!114 &-6131438099337992752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3723249154238381329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1070019508
+      Data2: 1175269687
+      Data3: 58386562
+      Data4: -667942297
+    Path: event:/Monstersounds/LWM
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 10
+  OverrideMaxDistance: 15
 --- !u!4 &4098402987529381803 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cbfee8d6e8b66ab4cb669b0423cac23c, type: 3}
