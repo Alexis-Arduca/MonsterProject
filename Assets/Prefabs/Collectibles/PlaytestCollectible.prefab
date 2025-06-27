@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 7
+  player: {fileID: 0}
 --- !u!1001 &9053748620081675151
 PrefabInstance:
   m_ObjectHideFlags: 0

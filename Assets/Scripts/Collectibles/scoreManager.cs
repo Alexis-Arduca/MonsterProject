@@ -4,6 +4,8 @@ public class scoreManager : MonoBehaviour
 {
 
     [SerializeField] private float radius;
+    public GameObject player;
+
     void Start()
     {
         
@@ -12,6 +14,14 @@ public class scoreManager : MonoBehaviour
     void Update()
     {
         FindThePlayer();
+
+        GameObject player = GameObject.FindWithTag("Player");
+
+        if (player != null)
+        {
+            transform.LookAt(player.transform);
+            transform.Rotate(0, 90, 0);
+        }
     }
 
     private void FindThePlayer()
