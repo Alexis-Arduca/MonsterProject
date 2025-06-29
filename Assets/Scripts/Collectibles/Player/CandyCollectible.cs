@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class PlaytestCollectible : MonoBehaviour
 {
-    public GameObject Score;
     public GameObject Star;
 
     protected virtual void OnTriggerEnter(Collider other)
@@ -14,8 +13,6 @@ public class PlaytestCollectible : MonoBehaviour
             GetComponent<MeshRenderer>().enabled = false;
             GetComponent<SphereCollider>().enabled = false;
             Star.SetActive(false);
-            
-            Score.SetActive(true);
         }
     }
 }

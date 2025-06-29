@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\Yoshi\\Documents\\GitHub\\MonsterProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C906DB16-1408-4BB1-C3C7-4744CA28E45F}|Assembly-CSharp.csproj|c:\\users\\yoshi\\documents\\github\\monsterproject\\assets\\scripts\\collectibles\\scoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C906DB16-1408-4BB1-C3C7-4744CA28E45F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\collectibles\\scoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C906DB16-1408-4BB1-C3C7-4744CA28E45F}|Assembly-CSharp.csproj|c:\\users\\yoshi\\documents\\github\\monsterproject\\assets\\scripts\\collectibles\\player\\candycollectible.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C906DB16-1408-4BB1-C3C7-4744CA28E45F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\collectibles\\player\\candycollectible.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -23,27 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "scoreManager.cs",
-              "DocumentMoniker": "C:\\Users\\Yoshi\\Documents\\GitHub\\MonsterProject\\Assets\\Scripts\\Collectibles\\scoreManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Collectibles\\scoreManager.cs",
-              "ToolTip": "C:\\Users\\Yoshi\\Documents\\GitHub\\MonsterProject\\Assets\\Scripts\\Collectibles\\scoreManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Collectibles\\scoreManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T09:51:18.448Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "CandyCollectible.cs",
               "DocumentMoniker": "C:\\Users\\Yoshi\\Documents\\GitHub\\MonsterProject\\Assets\\Scripts\\Collectibles\\Player\\CandyCollectible.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Collectibles\\Player\\CandyCollectible.cs",
               "ToolTip": "C:\\Users\\Yoshi\\Documents\\GitHub\\MonsterProject\\Assets\\Scripts\\Collectibles\\Player\\CandyCollectible.cs",
               "RelativeToolTip": "Assets\\Scripts\\Collectibles\\Player\\CandyCollectible.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAiAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T09:33:29.65Z",
+              "WhenOpened": "2025-06-29T16:24:32.999Z",
               "EditorCaption": ""
             }
           ]
