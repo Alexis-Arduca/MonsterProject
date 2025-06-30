@@ -22635,6 +22635,11 @@ MonoBehaviour:
   initialBounceForce: 30
   bounceReduction: 0.8
   maxBounces: 5
+--- !u!1 &750509786 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6477581377144183379, guid: 52944895c85acdb41a292ddc41f358c9, type: 3}
+  m_PrefabInstance: {fileID: 845221739}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &764148771 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bd83c4f0580379c43a21a3c655c18073, type: 3}
@@ -23927,7 +23932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCount: 0
-  startMessage: {fileID: 0}
+  startMessage: {fileID: 750509786}
   cameraPresentation: {fileID: 859532822}
 --- !u!114 &859532824
 MonoBehaviour:
@@ -24416,6 +24421,18 @@ PrefabInstance:
     - target: {fileID: 5013860845908494421, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
       propertyPath: m_Name
       value: ThunderBiome
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285654702673485716, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 22.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285654702673485716, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.416
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285654702673485716, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 46.94
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25326,7 +25343,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1042963353
 Transform:
   m_ObjectHideFlags: 0
@@ -48195,41 +48212,9 @@ PrefabInstance:
       propertyPath: 'biomes.Array.data[2]'
       value: 
       objectReference: {fileID: 901039527}
-    - target: {fileID: 5190455265039279881, guid: 08f76175013c12647a186caf65d9db3f, type: 3}
-      propertyPath: collectibles.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5190455265039279881, guid: 08f76175013c12647a186caf65d9db3f, type: 3}
-      propertyPath: 'collectibles.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2327635626864916457, guid: 15e3183a129b76c41898a4fc0f84878b, type: 3}
-    - target: {fileID: 5190455265039279881, guid: 08f76175013c12647a186caf65d9db3f, type: 3}
-      propertyPath: 'collectibles.Array.data[1]'
-      value: 
-      objectReference: {fileID: 6598280673755036580, guid: 3fb7bb68ab391054e98de124f186c6e8, type: 3}
-    - target: {fileID: 5190455265039279881, guid: 08f76175013c12647a186caf65d9db3f, type: 3}
-      propertyPath: 'collectibles.Array.data[2]'
-      value: 
-      objectReference: {fileID: 2327635626864916457, guid: 15e3183a129b76c41898a4fc0f84878b, type: 3}
-    - target: {fileID: 5190455265039279881, guid: 08f76175013c12647a186caf65d9db3f, type: 3}
-      propertyPath: 'collectibles.Array.data[3]'
-      value: 
-      objectReference: {fileID: 6598280673755036580, guid: 3fb7bb68ab391054e98de124f186c6e8, type: 3}
-    - target: {fileID: 5190455265039279881, guid: 08f76175013c12647a186caf65d9db3f, type: 3}
-      propertyPath: 'collectibles.Array.data[4]'
-      value: 
-      objectReference: {fileID: 6475727440085059412, guid: a997848de52000549b58c68411ac7fbf, type: 3}
-    - target: {fileID: 5190455265039279881, guid: 08f76175013c12647a186caf65d9db3f, type: 3}
-      propertyPath: 'collectibles.Array.data[5]'
-      value: 
-      objectReference: {fileID: 6475727440085059412, guid: a997848de52000549b58c68411ac7fbf, type: 3}
     - target: {fileID: 6017609759255937546, guid: 08f76175013c12647a186caf65d9db3f, type: 3}
       propertyPath: m_Name
       value: WorldGenerator
-      objectReference: {fileID: 0}
-    - target: {fileID: 6017609759255937546, guid: 08f76175013c12647a186caf65d9db3f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
