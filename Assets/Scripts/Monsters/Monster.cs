@@ -54,7 +54,7 @@ public class Monster : MonoBehaviour
     private bool itemGive = false;
 
     [Header("Rotation")]
-    [SerializeField] protected float rotationSpeed = 5f; // Vitesse de rotation du monstre
+    [SerializeField] protected float rotationSpeed = 5f;
 
     [Header("Bubble")]
     public ThoughtBubbleController thoughtBubble;
@@ -143,6 +143,22 @@ public class Monster : MonoBehaviour
     {
         isInteract = true;
         ResetMonsterAnimation();
+
+        Vector3 directionToPlayer = (playerPos - transform.position).normalized;
+        float rotationDuration = 0.5f;
+        float t = 0;
+        Quaternion startRotation = transform.rotation;
+        Quaternion targetRotation = Quaternion.LookRotation(directionToPlayer, Vector3.up);
+
+        while (t < rotationDuration)
+        {
+            t += Time.deltaTime;
+            transform.rotation = Quaternion.Slerp(startRotation, targetRotation, t / rotationDuration);
+            yield return null;
+        }
+
+        transform.rotation = targetRotation;
+
         monsterAnimator.SetBool("interact", true);
         yield return new WaitForSeconds(1.5f);
         ResetMonsterAnimation();
@@ -204,25 +220,25 @@ public class Monster : MonoBehaviour
             return;
         }
 
-        // Activer l'animation de déplacement
         monsterAnimator.SetBool("isMoving", true);
 
-        Vector3 nextPosition = rb.position + patrolDirection * patrolSpeed * Time.deltaTime;
-        float distanceFromBase = Vector3.Distance(basePosition, nextPosition);
-
-        // Déplacer le monstre
-        if (distanceFromBase <= maxPatrolDistance)
+        if (monsterAnimator.GetBool("isMoving"))
         {
-            rb.MovePosition(nextPosition);
-        }
-        else
-        {
-            patrolDirection = (basePosition - rb.position).normalized;
-            rb.MovePosition(rb.position + patrolDirection * patrolSpeed * Time.deltaTime);
-        }
+            Vector3 nextPosition = rb.position + patrolDirection * patrolSpeed * Time.deltaTime;
+            float distanceFromBase = Vector3.Distance(basePosition, nextPosition);
 
-        // Tourner le monstre vers la direction du mouvement
-        RotateTowardsDirection(patrolDirection);
+            if (distanceFromBase <= maxPatrolDistance)
+            {
+                rb.MovePosition(nextPosition);
+            }
+            else
+            {
+                patrolDirection = (basePosition - rb.position).normalized;
+                rb.MovePosition(rb.position + patrolDirection * patrolSpeed * Time.deltaTime);
+            }
+
+            RotateTowardsDirection(patrolDirection);
+        }
 
         patrolTimer -= Time.deltaTime;
 
@@ -277,13 +293,16 @@ public class Monster : MonoBehaviour
         if (Vector3.Distance(playerPos, transform.position) > maxFollowDistance)
         {
             monsterAnimator.SetBool("isMoving", true);
-            agent.SetDestination(playerPos);
 
-            // Tourner vers la direction du mouvement (basée sur la vélocité de l'agent)
-            Vector3 moveDirection = agent.velocity.normalized;
-            if (moveDirection != Vector3.zero)
+            if (monsterAnimator.GetBool("isMoving"))
             {
-                RotateTowardsDirection(moveDirection);
+                agent.SetDestination(playerPos);
+
+                Vector3 moveDirection = agent.velocity.normalized;
+                if (moveDirection != Vector3.zero)
+                {
+                    RotateTowardsDirection(moveDirection);
+                }
             }
         }
         else
@@ -340,17 +359,18 @@ public class Monster : MonoBehaviour
     }
 
     /// <summary>
-    /// Nouvelle méthode pour gérer la rotation fluide du monstre
+    /// Gérer la rotation fluide du monstre
     /// </summary>
-    protected virtual void RotateTowardsDirection(Vector3 direction)
+    protected virtual void RotateTowardsDirection(Vector3 direction, bool forceRotation = false)
     {
-        if (direction == Vector3.zero) return; // Ne pas tourner si aucune direction
+        if (direction == Vector3.zero) return;
 
-        // Calculer la rotation cible
-        Quaternion targetRotation = Quaternion.LookRotation(direction, Vector3.up);
+        if (forceRotation || monsterAnimator.GetBool("isMoving"))
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(direction, Vector3.up);
 
-        // Appliquer une rotation fluide
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        }
     }
 
     /// <summary>
@@ -361,7 +381,7 @@ public class Monster : MonoBehaviour
         monsterAnimator.SetBool("isMoving", false);
         monsterAnimator.SetBool("isSiting", false);
         monsterAnimator.SetBool("isJumping", false);
-        monsterAnimator.SetBool("interact", false); // Ajout pour éviter des conflits avec l'animation d'interaction
+        monsterAnimator.SetBool("interact", false);
     }
 
     /// <summary>

@@ -24395,6 +24395,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1042963353}
     m_Modifications:
+    - target: {fileID: 1357928945697381172, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 1357928945697381172, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 65.16
+      objectReference: {fileID: 0}
     - target: {fileID: 1882156667052452538, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
       propertyPath: monsterSpawnpoints.Array.size
       value: 4
