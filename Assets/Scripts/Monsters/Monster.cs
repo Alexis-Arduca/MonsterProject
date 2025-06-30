@@ -53,6 +53,9 @@ public class Monster : MonoBehaviour
     private bool isJumping = false;
     private bool itemGive = false;
 
+    [Header("Rotation")]
+    [SerializeField] protected float rotationSpeed = 5f; // Vitesse de rotation du monstre
+
     [Header("Bubble")]
     public ThoughtBubbleController thoughtBubble;
     public Image wantedItem;
@@ -201,11 +204,13 @@ public class Monster : MonoBehaviour
             return;
         }
 
+        // Activer l'animation de déplacement
         monsterAnimator.SetBool("isMoving", true);
 
         Vector3 nextPosition = rb.position + patrolDirection * patrolSpeed * Time.deltaTime;
         float distanceFromBase = Vector3.Distance(basePosition, nextPosition);
 
+        // Déplacer le monstre
         if (distanceFromBase <= maxPatrolDistance)
         {
             rb.MovePosition(nextPosition);
@@ -215,6 +220,9 @@ public class Monster : MonoBehaviour
             patrolDirection = (basePosition - rb.position).normalized;
             rb.MovePosition(rb.position + patrolDirection * patrolSpeed * Time.deltaTime);
         }
+
+        // Tourner le monstre vers la direction du mouvement
+        RotateTowardsDirection(patrolDirection);
 
         patrolTimer -= Time.deltaTime;
 
@@ -247,7 +255,7 @@ public class Monster : MonoBehaviour
             SetNewPatrolDirection();
             patrolTimer = patrolChangeInterval;
             monsterAnimator.SetBool("isSiting", false);
-            
+
             if (isFriendly)
             {
                 currentState = State.Following;
@@ -270,6 +278,13 @@ public class Monster : MonoBehaviour
         {
             monsterAnimator.SetBool("isMoving", true);
             agent.SetDestination(playerPos);
+
+            // Tourner vers la direction du mouvement (basée sur la vélocité de l'agent)
+            Vector3 moveDirection = agent.velocity.normalized;
+            if (moveDirection != Vector3.zero)
+            {
+                RotateTowardsDirection(moveDirection);
+            }
         }
         else
         {
@@ -325,6 +340,20 @@ public class Monster : MonoBehaviour
     }
 
     /// <summary>
+    /// Nouvelle méthode pour gérer la rotation fluide du monstre
+    /// </summary>
+    protected virtual void RotateTowardsDirection(Vector3 direction)
+    {
+        if (direction == Vector3.zero) return; // Ne pas tourner si aucune direction
+
+        // Calculer la rotation cible
+        Quaternion targetRotation = Quaternion.LookRotation(direction, Vector3.up);
+
+        // Appliquer une rotation fluide
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+    }
+
+    /// <summary>
     /// Reset all animation states to avoid conflicts
     /// </summary>
     protected virtual void ResetMonsterAnimation()
@@ -332,6 +361,7 @@ public class Monster : MonoBehaviour
         monsterAnimator.SetBool("isMoving", false);
         monsterAnimator.SetBool("isSiting", false);
         monsterAnimator.SetBool("isJumping", false);
+        monsterAnimator.SetBool("interact", false); // Ajout pour éviter des conflits avec l'animation d'interaction
     }
 
     /// <summary>

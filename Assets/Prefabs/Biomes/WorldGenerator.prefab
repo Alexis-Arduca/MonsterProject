@@ -44,19 +44,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b249274776e70ec419591783e083f175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lobby: {fileID: 8986860753588761542, guid: 00a24dc25a58e274fb15ef392c50c2b3, type: 3}
   biomes:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   monsters:
-  - {fileID: 2561536597524332006, guid: b82258b2a99087445bcdad8627fbfa88, type: 3}
-  - {fileID: 5007867813022997115, guid: 0ca1c067bda524546a2be440d66d8789, type: 3}
-  - {fileID: 712518800813946594, guid: 23c472c5176b2c545974d3f684e617fb, type: 3}
-  - {fileID: 8317924099806583028, guid: 901dedde1db97894496e7f0e8dea77c1, type: 3}
-  - {fileID: 5422595252282130727, guid: 5eec0fc52c0ace749be812f97a401685, type: 3}
-  - {fileID: 6945488632636341159, guid: faa36c96225059244a6a7a21e922dec0, type: 3}
+  - {fileID: 5884245453650903570, guid: 42714d174f86a504f80946a0a21ae0bb, type: 3}
+  - {fileID: 2228136179817866690, guid: f8b70eca3c5d26643be60b23b489f9f2, type: 3}
+  - {fileID: 215294277187559967, guid: 0de0ec44833b6ef4b95d57c0a4b05038, type: 3}
+  - {fileID: 460759705714450279, guid: cc2130a19f12c6d4d8adcfe1d8fe2595, type: 3}
+  - {fileID: 7802867539739952534, guid: f98bd2460cede364fa344c5a740e9d10, type: 3}
+  - {fileID: 7633591458895558959, guid: d24c3f8eb3cbccb49a707a3208dd3c45, type: 3}
   collectibles:
-  - {fileID: 3331778281727191369, guid: 24801c65e42d25b44a146fa608dee282, type: 3}
-  - {fileID: 3331778281727191369, guid: 24801c65e42d25b44a146fa608dee282, type: 3}
+  - {fileID: 2327635626864916457, guid: 15e3183a129b76c41898a4fc0f84878b, type: 3}
+  - {fileID: 6598280673755036580, guid: 3fb7bb68ab391054e98de124f186c6e8, type: 3}
+  - {fileID: 2327635626864916457, guid: 15e3183a129b76c41898a4fc0f84878b, type: 3}
+  - {fileID: 6598280673755036580, guid: 3fb7bb68ab391054e98de124f186c6e8, type: 3}
+  - {fileID: 6475727440085059412, guid: a997848de52000549b58c68411ac7fbf, type: 3}
+  - {fileID: 6475727440085059412, guid: a997848de52000549b58c68411ac7fbf, type: 3}
   player: {fileID: 91383399078053157, guid: 2af6ec18dfb288f4c8dfd202ceaac66a, type: 3}

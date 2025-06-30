@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlaytestUI : MonoBehaviour
 {
@@ -28,5 +29,13 @@ public class PlaytestUI : MonoBehaviour
         currentGoals += 1;
 
         showCollected.text = currentGoals + "/" + maxGoals;
+    }
+
+    private void Update()
+    {
+        if (currentGoals == maxGoals)
+        {
+            SceneManager.LoadScene("EndScreen");
+        }
     }
 }

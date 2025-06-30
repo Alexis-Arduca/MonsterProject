@@ -453,6 +453,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2113496785}
   m_SourcePrefab: {fileID: 100100000, guid: 0b795711f0dfd1a4692099c0b700411a, type: 3}
+--- !u!1 &54404254 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 735943558468852704, guid: 52944895c85acdb41a292ddc41f358c9, type: 3}
+  m_PrefabInstance: {fileID: 845221739}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &57196484 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5d3cd8e7678293f4ea334c28a80d5eea, type: 3}
@@ -7233,7 +7238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45c2f0c735ed1964faf7a1ec71ba11ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pausePanel: {fileID: 0}
+  pausePanel: {fileID: 1614177289}
 --- !u!4 &268300161
 Transform:
   m_ObjectHideFlags: 0
@@ -7461,6 +7466,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: Star
+      value: 
+      objectReference: {fileID: 2001254403}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 54404254}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -22635,6 +22648,11 @@ MonoBehaviour:
   initialBounceForce: 30
   bounceReduction: 0.8
   maxBounces: 5
+--- !u!1 &750509786 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6477581377144183379, guid: 52944895c85acdb41a292ddc41f358c9, type: 3}
+  m_PrefabInstance: {fileID: 845221739}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &764148771 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bd83c4f0580379c43a21a3c655c18073, type: 3}
@@ -23004,6 +23022,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: Star
+      value: 
+      objectReference: {fileID: 2001254403}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 54404254}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -23231,6 +23257,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: Star
+      value: 
+      objectReference: {fileID: 2001254403}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 54404254}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -23927,7 +23961,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCount: 0
-  startMessage: {fileID: 0}
+  startMessage: {fileID: 750509786}
   cameraPresentation: {fileID: 859532822}
 --- !u!114 &859532824
 MonoBehaviour:
@@ -24417,6 +24451,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThunderBiome
       objectReference: {fileID: 0}
+    - target: {fileID: 7285654702673485716, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 22.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285654702673485716, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.416
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285654702673485716, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 46.94
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24553,6 +24599,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: Star
+      value: 
+      objectReference: {fileID: 2001254403}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 54404254}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -25326,7 +25380,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1042963353
 Transform:
   m_ObjectHideFlags: 0
@@ -25357,6 +25411,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: Star
+      value: 
+      objectReference: {fileID: 2001254403}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 54404254}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -25805,6 +25867,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: Star
+      value: 
+      objectReference: {fileID: 2001254403}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 54404254}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -28150,6 +28220,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: Star
+      value: 
+      objectReference: {fileID: 2001254403}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 54404254}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -34200,6 +34278,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 54404254}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -35106,6 +35188,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: db912d5a3a061ff4583c69d782d221e0, type: 3}
   m_PrefabInstance: {fileID: 1083608257}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1614177289 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6635088878969633054, guid: 52944895c85acdb41a292ddc41f358c9, type: 3}
+  m_PrefabInstance: {fileID: 845221739}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1617360666
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35118,6 +35205,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: Star
+      value: 
+      objectReference: {fileID: 2001254403}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 54404254}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -36020,6 +36115,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: Star
+      value: 
+      objectReference: {fileID: 2001254403}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 54404254}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -37374,6 +37477,11 @@ MonoBehaviour:
   m_Bidirectional: 1
   m_AutoUpdatePosition: 0
   m_Area: 0
+--- !u!1 &2001254403 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8170666306977892062, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+  m_PrefabInstance: {fileID: 1488422713}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2011920135
 GameObject:
   m_ObjectHideFlags: 0
@@ -48195,41 +48303,9 @@ PrefabInstance:
       propertyPath: 'biomes.Array.data[2]'
       value: 
       objectReference: {fileID: 901039527}
-    - target: {fileID: 5190455265039279881, guid: 08f76175013c12647a186caf65d9db3f, type: 3}
-      propertyPath: collectibles.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5190455265039279881, guid: 08f76175013c12647a186caf65d9db3f, type: 3}
-      propertyPath: 'collectibles.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2327635626864916457, guid: 15e3183a129b76c41898a4fc0f84878b, type: 3}
-    - target: {fileID: 5190455265039279881, guid: 08f76175013c12647a186caf65d9db3f, type: 3}
-      propertyPath: 'collectibles.Array.data[1]'
-      value: 
-      objectReference: {fileID: 6598280673755036580, guid: 3fb7bb68ab391054e98de124f186c6e8, type: 3}
-    - target: {fileID: 5190455265039279881, guid: 08f76175013c12647a186caf65d9db3f, type: 3}
-      propertyPath: 'collectibles.Array.data[2]'
-      value: 
-      objectReference: {fileID: 2327635626864916457, guid: 15e3183a129b76c41898a4fc0f84878b, type: 3}
-    - target: {fileID: 5190455265039279881, guid: 08f76175013c12647a186caf65d9db3f, type: 3}
-      propertyPath: 'collectibles.Array.data[3]'
-      value: 
-      objectReference: {fileID: 6598280673755036580, guid: 3fb7bb68ab391054e98de124f186c6e8, type: 3}
-    - target: {fileID: 5190455265039279881, guid: 08f76175013c12647a186caf65d9db3f, type: 3}
-      propertyPath: 'collectibles.Array.data[4]'
-      value: 
-      objectReference: {fileID: 6475727440085059412, guid: a997848de52000549b58c68411ac7fbf, type: 3}
-    - target: {fileID: 5190455265039279881, guid: 08f76175013c12647a186caf65d9db3f, type: 3}
-      propertyPath: 'collectibles.Array.data[5]'
-      value: 
-      objectReference: {fileID: 6475727440085059412, guid: a997848de52000549b58c68411ac7fbf, type: 3}
     - target: {fileID: 6017609759255937546, guid: 08f76175013c12647a186caf65d9db3f, type: 3}
       propertyPath: m_Name
       value: WorldGenerator
-      objectReference: {fileID: 0}
-    - target: {fileID: 6017609759255937546, guid: 08f76175013c12647a186caf65d9db3f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
