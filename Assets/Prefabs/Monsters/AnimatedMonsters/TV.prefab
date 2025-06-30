@@ -248,7 +248,7 @@ MonoBehaviour:
   weakness: 
   immunity: 
   isFriendly: 0
-  spawnBiome: 0
+  spawnBiome: 1
   currentState: 0
   patrolSpeed: 10
   patrolChangeInterval: 3

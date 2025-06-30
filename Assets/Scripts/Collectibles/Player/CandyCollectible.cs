@@ -10,11 +10,13 @@ public class PlaytestCollectible : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             GameEventsManager.instance.playtestEvent.OnCollect();
-
-            GetComponent<MeshRenderer>().enabled = false;
-            GetComponent<SphereCollider>().enabled = false;
-            Star.SetActive(false);
             plusOne.SetActive(true);
+
+            // GetComponent<MeshRenderer>().enabled = false;
+            // GetComponent<SphereCollider>().enabled = false;
+
+            // Star.SetActive(false);
+            Destroy(this.gameObject);
         }
     }
 }

@@ -453,6 +453,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2113496785}
   m_SourcePrefab: {fileID: 100100000, guid: 0b795711f0dfd1a4692099c0b700411a, type: 3}
+--- !u!1 &54404254 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 735943558468852704, guid: 52944895c85acdb41a292ddc41f358c9, type: 3}
+  m_PrefabInstance: {fileID: 845221739}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &57196484 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5d3cd8e7678293f4ea334c28a80d5eea, type: 3}
@@ -7233,7 +7238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45c2f0c735ed1964faf7a1ec71ba11ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pausePanel: {fileID: 0}
+  pausePanel: {fileID: 1614177289}
 --- !u!4 &268300161
 Transform:
   m_ObjectHideFlags: 0
@@ -7461,6 +7466,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: Star
+      value: 
+      objectReference: {fileID: 2001254403}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 54404254}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -23009,6 +23022,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: Star
+      value: 
+      objectReference: {fileID: 2001254403}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 54404254}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -23236,6 +23257,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: Star
+      value: 
+      objectReference: {fileID: 2001254403}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 54404254}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -24570,6 +24599,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: Star
+      value: 
+      objectReference: {fileID: 2001254403}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 54404254}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -25374,6 +25411,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: Star
+      value: 
+      objectReference: {fileID: 2001254403}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 54404254}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -25822,6 +25867,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: Star
+      value: 
+      objectReference: {fileID: 2001254403}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 54404254}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -28167,6 +28220,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: Star
+      value: 
+      objectReference: {fileID: 2001254403}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 54404254}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -34217,6 +34278,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 54404254}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -35123,6 +35188,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: db912d5a3a061ff4583c69d782d221e0, type: 3}
   m_PrefabInstance: {fileID: 1083608257}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1614177289 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6635088878969633054, guid: 52944895c85acdb41a292ddc41f358c9, type: 3}
+  m_PrefabInstance: {fileID: 845221739}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1617360666
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35135,6 +35205,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: Star
+      value: 
+      objectReference: {fileID: 2001254403}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 54404254}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -36037,6 +36115,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: Star
+      value: 
+      objectReference: {fileID: 2001254403}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 54404254}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -37391,6 +37477,11 @@ MonoBehaviour:
   m_Bidirectional: 1
   m_AutoUpdatePosition: 0
   m_Area: 0
+--- !u!1 &2001254403 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8170666306977892062, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+  m_PrefabInstance: {fileID: 1488422713}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2011920135
 GameObject:
   m_ObjectHideFlags: 0
