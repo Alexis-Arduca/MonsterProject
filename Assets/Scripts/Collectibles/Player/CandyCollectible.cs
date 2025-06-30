@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlaytestCollectible : MonoBehaviour
 {
     public GameObject Star;
+    public GameObject plusOne;
 
     protected virtual void OnTriggerEnter(Collider other)
     {
@@ -13,6 +14,7 @@ public class PlaytestCollectible : MonoBehaviour
             GetComponent<MeshRenderer>().enabled = false;
             GetComponent<SphereCollider>().enabled = false;
             Star.SetActive(false);
+            plusOne.SetActive(true);
         }
     }
 }

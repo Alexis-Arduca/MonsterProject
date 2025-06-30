@@ -2935,6 +2935,10 @@ PrefabInstance:
       value: PlaytestCollectible (7)
       objectReference: {fileID: 0}
     - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 1999021357}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: Scores.Array.size
       value: 10
       objectReference: {fileID: 0}
@@ -8363,6 +8367,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 1999021357}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -8590,6 +8598,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 1999021357}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -10454,6 +10466,10 @@ PrefabInstance:
       value: PlaytestCollectible
       objectReference: {fileID: 0}
     - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 1999021357}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: Scores.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -11393,6 +11409,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 1999021357}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -11860,6 +11880,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 1999021357}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -14444,6 +14468,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 1999021357}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -20494,6 +20522,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 1999021357}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -21448,6 +21480,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 1999021357}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -22226,6 +22262,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 735943558468852704, guid: 52944895c85acdb41a292ddc41f358c9, type: 3}
+      propertyPath: m_TagString
+      value: PlusOne
+      objectReference: {fileID: 0}
     - target: {fileID: 4529765363645699809, guid: 52944895c85acdb41a292ddc41f358c9, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -22483,6 +22523,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 1999021357}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -24022,6 +24066,11 @@ MonoBehaviour:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dd883ce0832ea374ca202e2a8b012378, type: 3}
   m_PrefabInstance: {fileID: 2124323058}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1999021357 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 735943558468852704, guid: 52944895c85acdb41a292ddc41f358c9, type: 3}
+  m_PrefabInstance: {fileID: 1726910734}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2011920135
 GameObject:
