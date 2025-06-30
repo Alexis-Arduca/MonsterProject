@@ -16720,6 +16720,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 775938126}
     m_Modifications:
+    - target: {fileID: -7511558181221131132, guid: c12ad5e1351f6430ca290352285df11e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9069c556f56a1472d863beeeab1b59dd, type: 2}
     - target: {fileID: 1609354356605345510, guid: 14395fdd01008104bbfbd160b921276a, type: 3}
       propertyPath: m_Name
       value: cliff_01 (2)
@@ -16776,10 +16780,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: c12ad5e1351f6430ca290352285df11e, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 9069c556f56a1472d863beeeab1b59dd, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16961,6 +16961,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 775938126}
     m_Modifications:
+    - target: {fileID: -7511558181221131132, guid: c12ad5e1351f6430ca290352285df11e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9069c556f56a1472d863beeeab1b59dd, type: 2}
     - target: {fileID: 1609354356605345510, guid: 14395fdd01008104bbfbd160b921276a, type: 3}
       propertyPath: m_Name
       value: cliff_01 (5)
@@ -17017,10 +17021,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: c12ad5e1351f6430ca290352285df11e, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 9069c556f56a1472d863beeeab1b59dd, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17192,6 +17192,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 775938126}
     m_Modifications:
+    - target: {fileID: -7511558181221131132, guid: c12ad5e1351f6430ca290352285df11e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9069c556f56a1472d863beeeab1b59dd, type: 2}
     - target: {fileID: 1609354356605345510, guid: 14395fdd01008104bbfbd160b921276a, type: 3}
       propertyPath: m_Name
       value: cliff_01 (3)
@@ -17248,10 +17252,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: c12ad5e1351f6430ca290352285df11e, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 9069c556f56a1472d863beeeab1b59dd, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18172,6 +18172,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 1639038386}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -19708,6 +19712,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 775938126}
     m_Modifications:
+    - target: {fileID: -7511558181221131132, guid: c12ad5e1351f6430ca290352285df11e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9069c556f56a1472d863beeeab1b59dd, type: 2}
     - target: {fileID: 1609354356605345510, guid: 14395fdd01008104bbfbd160b921276a, type: 3}
       propertyPath: m_Name
       value: cliff_01 (6)
@@ -19764,10 +19772,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: c12ad5e1351f6430ca290352285df11e, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 9069c556f56a1472d863beeeab1b59dd, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26134,6 +26138,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 775938126}
     m_Modifications:
+    - target: {fileID: -7511558181221131132, guid: c12ad5e1351f6430ca290352285df11e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9069c556f56a1472d863beeeab1b59dd, type: 2}
     - target: {fileID: 1609354356605345510, guid: 14395fdd01008104bbfbd160b921276a, type: 3}
       propertyPath: m_Name
       value: cliff_01 (7)
@@ -26190,10 +26198,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: c12ad5e1351f6430ca290352285df11e, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 9069c556f56a1472d863beeeab1b59dd, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26768,6 +26772,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 775938126}
     m_Modifications:
+    - target: {fileID: -7511558181221131132, guid: c12ad5e1351f6430ca290352285df11e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9069c556f56a1472d863beeeab1b59dd, type: 2}
     - target: {fileID: 1609354356605345510, guid: 14395fdd01008104bbfbd160b921276a, type: 3}
       propertyPath: m_Name
       value: cliff_01 (8)
@@ -26824,10 +26832,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: c12ad5e1351f6430ca290352285df11e, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 9069c556f56a1472d863beeeab1b59dd, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -34841,6 +34845,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 1639038386}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -35068,6 +35076,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 1639038386}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -36210,6 +36222,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 775938126}
     m_Modifications:
+    - target: {fileID: -7511558181221131132, guid: c12ad5e1351f6430ca290352285df11e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9069c556f56a1472d863beeeab1b59dd, type: 2}
     - target: {fileID: 1609354356605345510, guid: 14395fdd01008104bbfbd160b921276a, type: 3}
       propertyPath: m_Name
       value: cliff_01 (4)
@@ -36266,10 +36282,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: c12ad5e1351f6430ca290352285df11e, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 9069c556f56a1472d863beeeab1b59dd, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -36317,6 +36329,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 1639038386}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -37428,6 +37444,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 1639038386}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -38239,6 +38259,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 1639038386}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -39674,6 +39698,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 775938126}
     m_Modifications:
+    - target: {fileID: -7511558181221131132, guid: c12ad5e1351f6430ca290352285df11e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9069c556f56a1472d863beeeab1b59dd, type: 2}
     - target: {fileID: 1609354356605345510, guid: 14395fdd01008104bbfbd160b921276a, type: 3}
       propertyPath: m_Name
       value: cliff_01 (1)
@@ -39730,10 +39758,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: c12ad5e1351f6430ca290352285df11e, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 9069c556f56a1472d863beeeab1b59dd, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -39996,6 +40020,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 775938126}
     m_Modifications:
+    - target: {fileID: -7511558181221131132, guid: c12ad5e1351f6430ca290352285df11e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9069c556f56a1472d863beeeab1b59dd, type: 2}
     - target: {fileID: 1609354356605345510, guid: 14395fdd01008104bbfbd160b921276a, type: 3}
       propertyPath: m_Name
       value: cliff_01
@@ -40052,10 +40080,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: c12ad5e1351f6430ca290352285df11e, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 9069c556f56a1472d863beeeab1b59dd, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -41662,6 +41686,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 1639038386}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -47839,6 +47867,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 775938126}
     m_Modifications:
+    - target: {fileID: -7511558181221131132, guid: c12ad5e1351f6430ca290352285df11e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9069c556f56a1472d863beeeab1b59dd, type: 2}
     - target: {fileID: 1609354356605345510, guid: 14395fdd01008104bbfbd160b921276a, type: 3}
       propertyPath: m_Name
       value: cliff_01 (9)
@@ -47895,10 +47927,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: c12ad5e1351f6430ca290352285df11e, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 9069c556f56a1472d863beeeab1b59dd, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -47946,6 +47974,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 1639038386}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -49164,6 +49196,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 1639038386}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -49434,6 +49470,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52944895c85acdb41a292ddc41f358c9, type: 3}
+--- !u!1 &1639038386 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 735943558468852704, guid: 52944895c85acdb41a292ddc41f358c9, type: 3}
+  m_PrefabInstance: {fileID: 1639038385}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1640164947
 GameObject:
   m_ObjectHideFlags: 0
@@ -50992,6 +51033,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaytestCollectible (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6563996395176291477, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
+      propertyPath: plusOne
+      value: 
+      objectReference: {fileID: 1639038386}
     - target: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4

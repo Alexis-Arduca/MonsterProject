@@ -13,11 +13,16 @@ public class ToLevelScript : MonoBehaviour
         {
             Invoke("LoadPlaytest", 0.1f);
         }
+
+        if (currentScene.name == "EndScreen")
+        {
+            Invoke("LoadPlaytest", 0.1f);
+        }
     }
 
     public void LoadPlaytest()
     {
-        SceneManager.LoadScene("Playtest");
+        SceneManager.LoadScene("playtest mia");
     }
 
     public void restartLevel()

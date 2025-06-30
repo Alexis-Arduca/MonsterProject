@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Jump")]
     public float jumpForce = 10f;
-    public float fallMultiplier = 2.5f;
+    public float fallMultiplier = 1.5f;
     public bool isGrounded = true;
     public bool isOnIce = false;
 
