@@ -180,6 +180,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2277830145841877216, guid: 79024531076b926499d205d9972547e0, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: bbe08c78dc41fde48917dcbbe910ca80, type: 2}
     - target: {fileID: 919132149155446097, guid: 79024531076b926499d205d9972547e0, type: 3}
       propertyPath: m_Name
       value: Kitty
@@ -377,7 +381,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 25d0eed9324b7964da983436c02b7814, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

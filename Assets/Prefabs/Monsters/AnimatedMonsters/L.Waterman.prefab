@@ -246,7 +246,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 2354a72b5d64af845af4635e5b2d50e3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -395,7 +395,7 @@ MonoBehaviour:
   Params: []
   OverrideAttenuation: 1
   OverrideMinDistance: 10
-  OverrideMaxDistance: 15
+  OverrideMaxDistance: 14.976374
 --- !u!1001 &3496371778535410347
 PrefabInstance:
   m_ObjectHideFlags: 0
