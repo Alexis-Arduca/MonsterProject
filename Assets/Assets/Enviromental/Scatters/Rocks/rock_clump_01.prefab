@@ -182,6 +182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4994183135837559688}
   - component: {fileID: 8411795830112416400}
+  - component: {fileID: 9049957062775517441}
   m_Layer: 0
   m_Name: rock_clump_01
   m_TagString: Untagged
@@ -234,6 +235,28 @@ LODGroup:
     renderers:
     - renderer: {fileID: 478095042146024393}
   m_Enabled: 1
+--- !u!64 &9049957062775517441
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7986202739723804195}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5470458682542197753, guid: 00315d58b3a46ff4cac482ebbfe180c3, type: 3}
 --- !u!1 &8638602704111388185
 GameObject:
   m_ObjectHideFlags: 0

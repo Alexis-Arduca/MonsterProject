@@ -20,6 +20,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Thought Bubble
       objectReference: {fileID: 0}
+    - target: {fileID: 5680785687243993407, guid: a7c1f2ff2ed141e46b35a6c76fbb9994, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8041271412900688965, guid: a7c1f2ff2ed141e46b35a6c76fbb9994, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -187,7 +191,7 @@ PrefabInstance:
     - target: {fileID: -1343210651756382459, guid: 185cdd940ea615b4b814d9e5e997901a, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
-      objectReference: {fileID: 2100000, guid: e2efd06a834505b4ea3bb56015cb13cf, type: 2}
+      objectReference: {fileID: 2100000, guid: b5a97ae19217b784e9c45a080a0ff460, type: 2}
     - target: {fileID: 919132149155446097, guid: 185cdd940ea615b4b814d9e5e997901a, type: 3}
       propertyPath: m_Name
       value: TV

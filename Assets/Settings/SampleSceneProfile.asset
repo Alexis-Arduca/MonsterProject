@@ -18,7 +18,7 @@ MonoBehaviour:
     m_Value: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 1.08
+    m_Value: 1.35
   intensity:
     m_OverrideState: 1
     m_Value: 2
@@ -129,7 +129,7 @@ MonoBehaviour:
   active: 1
   mode:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 1
   neutralHDRRangeReductionMode:
     m_OverrideState: 0
     m_Value: 2
@@ -172,10 +172,10 @@ MonoBehaviour:
     m_Value: {x: 1, y: 1, z: 1, w: 0}
   gamma:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.9196985, z: 0.94720864, w: -0.17084658}
+    m_Value: {x: 1, y: 0.9196985, z: 0.94720864, w: -0.06355932}
   gain:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: -0.34169328}
+    m_Value: {x: 1, y: 1, z: 1, w: 0.03966255}
 --- !u!114 &7391319092446245454
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -227,17 +227,17 @@ MonoBehaviour:
         - serializedVersion: 3
           time: 0
           value: 0
-          inSlope: 3.8440628
-          outSlope: 3.8440628
+          inSlope: 1.8136941
+          outSlope: 1.8136941
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.19009902
-          value: 0.4752066
-          inSlope: 1.5120565
-          outSlope: 1.5120565
+          time: 0.15522388
+          value: 0.3757962
+          inSlope: 2.3776157
+          outSlope: 2.3776157
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
@@ -245,8 +245,8 @@ MonoBehaviour:
         - serializedVersion: 3
           time: 1
           value: 1
-          inSlope: 0.45797887
-          outSlope: 0.45797887
+          inSlope: 0.2081715
+          outSlope: 0.2081715
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
