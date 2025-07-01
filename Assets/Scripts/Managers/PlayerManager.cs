@@ -69,8 +69,8 @@ public class PlayerManager : MonoBehaviour
     {
         Vector3[] spawnPoints = new Vector3[]
         {
-            new Vector3(-7.3f, 2, 25.68f),
-            new Vector3(-7.3f, 2, 25.68f),
+            new Vector3(0 ,2, 0),
+            new Vector3(0 ,2, 0),
 
         };
         return spawnPoints[playerIndex % spawnPoints.Length];

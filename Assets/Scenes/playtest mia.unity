@@ -10936,6 +10936,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: IceBiome
       objectReference: {fileID: 0}
+    - target: {fileID: 7640368170883852607, guid: f33d4348e598664469ab858890388f2f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.019
+      objectReference: {fileID: 0}
+    - target: {fileID: 8301469289165402334, guid: f33d4348e598664469ab858890388f2f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.282
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37770,6 +37778,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: FireBiome
       objectReference: {fileID: 0}
+    - target: {fileID: 5448954926668895499, guid: 804833b826aa2a8418df344ccab31f8d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 51.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448954926668895499, guid: 804833b826aa2a8418df344ccab31f8d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8.257
+      objectReference: {fileID: 0}
+    - target: {fileID: 6784016594661553803, guid: 804833b826aa2a8418df344ccab31f8d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.64
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -45934,6 +45954,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1042963353}
     m_Modifications:
+    - target: {fileID: 1357928945697381172, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 1357928945697381172, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 65.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 1603407362893216050, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1603407362893216050, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 23.53
+      objectReference: {fileID: 0}
     - target: {fileID: 1882156667052452538, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
       propertyPath: codeList.Array.size
       value: 0
@@ -45994,9 +46030,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3728151044121773277, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -51.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 3728151044121773277, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 3728151044121773277, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 60.43
+      objectReference: {fileID: 0}
     - target: {fileID: 5013860845908494421, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
       propertyPath: m_Name
       value: ThunderBiome
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285654702673485716, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 55.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285654702673485716, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285654702673485716, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 39.92
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -47397,7 +47457,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 7d03243a2b6326d4b95be39639840cf9, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 49fd936f23ece334eb009462efd5457a, type: 2}
   m_BuildHeightMesh: 0
 --- !u!4 &972518550 stripped
 Transform:
