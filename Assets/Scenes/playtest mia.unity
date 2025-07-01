@@ -453,6 +453,59 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14395fdd01008104bbfbd160b921276a, type: 3}
+--- !u!1 &13385968
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 13385970}
+  - component: {fileID: 13385969}
+  m_Layer: 0
+  m_Name: colliders pond (21)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &13385969
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13385968}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.51233864, y: 8.119126, z: 3.7327437}
+  m_Center: {x: -0.24381262, y: 3.5595624, z: 0.47475234}
+--- !u!4 &13385970
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13385968}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.8410628, z: -0, w: 0.54093754}
+  m_LocalPosition: {x: 101.5, y: 0.09, z: 221.1}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 3.8377087}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 114.505, z: 0}
 --- !u!1 &17516880 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3379836402047742272, guid: bd83c4f0580379c43a21a3c655c18073, type: 3}
@@ -1032,6 +1085,59 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6635088878969633054, guid: 52944895c85acdb41a292ddc41f358c9, type: 3}
   m_PrefabInstance: {fileID: 740105670189173178}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &45122065
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 45122067}
+  - component: {fileID: 45122066}
+  m_Layer: 0
+  m_Name: colliders pond (40)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &45122066
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45122065}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.51233864, y: 10.0635195, z: 8.734166}
+  m_Center: {x: -0.24378191, y: 4.531721, z: 4.1066914}
+--- !u!4 &45122067
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45122065}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0003246001, y: -0.88446677, z: -0.012662874, w: -0.46643132}
+  m_LocalPosition: {x: 40.39, y: 0.09, z: 64.63}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 1.7158085}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: -1.301, y: -235.618, z: 0.644}
 --- !u!1001 &45781407
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10589,6 +10695,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4609631473175035285, guid: caf3631f339357d48a0034b98fa68915, type: 3}
   m_PrefabInstance: {fileID: 184695505}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &185030083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 185030085}
+  - component: {fileID: 185030084}
+  m_Layer: 0
+  m_Name: colliders pond (10)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &185030084
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185030083}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5123391, y: 8.119126, z: 6.241561}
+  m_Center: {x: -0.24378094, y: 3.5595605, z: 2.6207736}
+--- !u!4 &185030085
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185030083}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.9150654, z: -0, w: 0.4033055}
+  m_LocalPosition: {x: -71.41, y: 0.09, z: 213.11}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 3.8377087}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -132.43, z: 0}
 --- !u!1001 &185066674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11795,6 +11954,59 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 736910e3d8984004fb3ee1e92cd20f91, type: 3}
+--- !u!1 &251606744
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 251606746}
+  - component: {fileID: 251606745}
+  m_Layer: 0
+  m_Name: colliders pond (14)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &251606745
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251606744}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.512339, y: 8.119126, z: 6.1458945}
+  m_Center: {x: -0.24382737, y: 3.5595605, z: 2.2828038}
+--- !u!4 &251606746
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251606744}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.71298087, z: -0, w: 0.7011835}
+  m_LocalPosition: {x: -147.02, y: 0.09, z: 197.42}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 2.1874692}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90.956, z: 0}
 --- !u!1 &252612618 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1500838157198093432, guid: bd83c4f0580379c43a21a3c655c18073, type: 3}
@@ -11891,6 +12103,59 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d475b03a3c7eaa445bebc31c686df274, type: 3}
+--- !u!1 &256758462
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 256758464}
+  - component: {fileID: 256758463}
+  m_Layer: 0
+  m_Name: colliders pond (12)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &256758463
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256758462}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.512339, y: 8.119126, z: 4.0403605}
+  m_Center: {x: -0.24383037, y: 3.5595605, z: 3.3796873}
+--- !u!4 &256758464
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256758462}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.7145714, z: -0, w: 0.69956243}
+  m_LocalPosition: {x: -105.47, y: 0.09, z: 193}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 3.8377087}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -91.216, z: 0}
 --- !u!1001 &259094994
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13651,6 +13916,59 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d475b03a3c7eaa445bebc31c686df274, type: 3}
+--- !u!1 &301770652
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 301770654}
+  - component: {fileID: 301770653}
+  m_Layer: 0
+  m_Name: colliders pond (13)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &301770653
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301770652}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.512339, y: 8.119126, z: 5.7150884}
+  m_Center: {x: -0.24382697, y: 3.5595605, z: 2.0674016}
+--- !u!4 &301770654
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301770652}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.6280251, z: -0, w: 0.77819306}
+  m_LocalPosition: {x: -127, y: 0.09, z: 193.1}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 3.8377087}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -77.809, z: 0}
 --- !u!4 &302456680 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6390361328388893039, guid: 14395fdd01008104bbfbd160b921276a, type: 3}
@@ -13836,6 +14154,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8899331054161021484, guid: 4620fea4f0ef086408b65c9de0559901, type: 3}
   m_PrefabInstance: {fileID: 310125334}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &311256948
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 311256950}
+  - component: {fileID: 311256949}
+  m_Layer: 0
+  m_Name: colliders pond (28)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &311256949
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311256948}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.51233864, y: 8.119126, z: 4.0334635}
+  m_Center: {x: -0.24387178, y: 3.5595624, z: 1.8437545}
+--- !u!4 &311256950
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311256948}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.5790394, z: -0, w: 0.8152996}
+  m_LocalPosition: {x: 97.29, y: 0.09, z: 287.93}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 5.094656}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -70.766, z: 0}
 --- !u!1001 &317642089
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23227,6 +23598,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6390361328388893039, guid: 14395fdd01008104bbfbd160b921276a, type: 3}
   m_PrefabInstance: {fileID: 892631477}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &470967669
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 470967671}
+  - component: {fileID: 470967670}
+  m_Layer: 0
+  m_Name: colliders pond (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &470967670
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470967669}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.51233864, y: 8.119126, z: 5.135718}
+  m_Center: {x: -0.2437808, y: 3.5595605, z: 4.0421968}
+--- !u!4 &470967671
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470967669}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.86472136, z: -0, w: 0.5022519}
+  m_LocalPosition: {x: -141.16, y: 0.09, z: 139.52}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 7.857663}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 119.702, z: 0}
 --- !u!4 &472671189 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6390361328388893039, guid: 14395fdd01008104bbfbd160b921276a, type: 3}
@@ -24232,6 +24656,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6390361328388893039, guid: 14395fdd01008104bbfbd160b921276a, type: 3}
   m_PrefabInstance: {fileID: 934988888}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &508186861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 508186863}
+  - component: {fileID: 508186862}
+  m_Layer: 0
+  m_Name: colliders pond (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &508186862
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508186861}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.51233864, y: 8.119126, z: 6.791439}
+  m_Center: {x: -0.24378258, y: 3.5595624, z: 3.813995}
+--- !u!4 &508186863
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508186861}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.3211306, z: -0, w: 0.94703496}
+  m_LocalPosition: {x: -62.7, y: 0.09, z: 126.2}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 3.8377087}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 37.463, z: 0}
 --- !u!1 &509762172
 GameObject:
   m_ObjectHideFlags: 0
@@ -24316,6 +24793,112 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4609631473175035285, guid: 3b92b362c1d663c47b856a82d9342e9c, type: 3}
   m_PrefabInstance: {fileID: 1854690544}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &511919595
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 511919597}
+  - component: {fileID: 511919596}
+  m_Layer: 0
+  m_Name: colliders pond (46)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &511919596
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511919595}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5123393, y: 10.794728, z: 6.1069174}
+  m_Center: {x: -0.24376984, y: 4.897341, z: 3.105472}
+--- !u!4 &511919597
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511919595}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.010200536, y: -0.12339722, z: -0.00751018, w: -0.99227655}
+  m_LocalPosition: {x: 120, y: 0.6, z: 85.4}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 2.5062816}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 1.054, y: -345.813, z: 0.998}
+--- !u!1 &512370194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 512370196}
+  - component: {fileID: 512370195}
+  m_Layer: 0
+  m_Name: colliders pond (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &512370195
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512370194}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.512339, y: 8.119126, z: 4.9429994}
+  m_Center: {x: -0.24383779, y: 3.5595605, z: 2.4534414}
+--- !u!4 &512370196
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512370194}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.6449795, z: -0, w: 0.7641999}
+  m_LocalPosition: {x: -34, y: 0.09, z: 214.7}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 3.8377087}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -80.328, z: 0}
 --- !u!1001 &513476786
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26645,6 +27228,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6390361328388893039, guid: 14395fdd01008104bbfbd160b921276a, type: 3}
   m_PrefabInstance: {fileID: 583316723}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &589627346
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 589627348}
+  - component: {fileID: 589627347}
+  m_Layer: 0
+  m_Name: colliders pond (51)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &589627347
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589627346}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5123393, y: 10.2425, z: 6.570709}
+  m_Center: {x: -0.24377188, y: 4.6212254, z: 3.1268694}
+--- !u!4 &589627348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589627346}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.01243799, y: 0.645219, z: 0.002397942, w: -0.7638927}
+  m_LocalPosition: {x: 110.3, y: -1.3, z: 163.5}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 2.5062816}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0.912, y: -440.38098, z: -1.13}
 --- !u!1 &590539345
 GameObject:
   m_ObjectHideFlags: 0
@@ -31943,6 +32579,59 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &603508869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 603508871}
+  - component: {fileID: 603508870}
+  m_Layer: 0
+  m_Name: colliders pond (43)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &603508870
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603508869}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5123393, y: 10.005142, z: 6.3568387}
+  m_Center: {x: -0.2437757, y: 4.502546, z: 2.9805121}
+--- !u!4 &603508871
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603508869}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0065955427, y: -0.4900741, z: -0.010814461, w: -0.8715888}
+  m_LocalPosition: {x: 89.86, y: 0.94, z: 53.85}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 2.5062816}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0.051, y: -301.303, z: 1.451}
 --- !u!1001 &604706310
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33654,6 +34343,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6390361328388893039, guid: 14395fdd01008104bbfbd160b921276a, type: 3}
   m_PrefabInstance: {fileID: 825875924}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &659580172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 659580174}
+  - component: {fileID: 659580173}
+  m_Layer: 0
+  m_Name: colliders pond (42)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &659580173
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659580172}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5123393, y: 9.858198, z: 6.793933}
+  m_Center: {x: -0.24376924, y: 4.429081, z: 3.4848216}
+--- !u!4 &659580174
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659580172}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0039700135, y: -0.67503726, z: -0.012028828, w: -0.73767495}
+  m_LocalPosition: {x: 72.45, y: 0.76, z: 52.3}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 2.5062816}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: -0.595, y: -275.08398, z: 1.324}
 --- !u!1001 &660954373
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39461,6 +40203,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4609631473175035285, guid: caf3631f339357d48a0034b98fa68915, type: 3}
   m_PrefabInstance: {fileID: 836771383}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &841154841
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 841154843}
+  - component: {fileID: 841154842}
+  m_Layer: 0
+  m_Name: colliders pond (48)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &841154842
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841154841}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5123393, y: 11.0573, z: 6.6589594}
+  m_Center: {x: -0.24377717, y: 5.028629, z: 2.8294501}
+--- !u!4 &841154843
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841154841}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.011218555, y: 0.028011782, z: -0.005881986, w: -0.99952734}
+  m_LocalPosition: {x: 129.8, y: -0.1, z: 124.2}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 2.5062816}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 1.304, y: -363.203, z: 0.638}
 --- !u!1001 &843084367
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39714,6 +40509,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8899331054161021484, guid: 4620fea4f0ef086408b65c9de0559901, type: 3}
   m_PrefabInstance: {fileID: 854726632}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &855082102
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 855082104}
+  - component: {fileID: 855082103}
+  m_Layer: 0
+  m_Name: colliders pond (41)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &855082103
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855082102}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5123393, y: 10.202479, z: 8.586536}
+  m_Center: {x: -0.2437545, y: 4.6012, z: 4.1805058}
+--- !u!4 &855082104
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855082102}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0021741318, y: -0.77535945, z: -0.012479059, w: -0.6313932}
+  m_LocalPosition: {x: 52.33, y: 0.42, z: 56.46}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 2.5062816}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: -0.951, y: -258.323, z: 1.096}
 --- !u!4 &856219512 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bd83c4f0580379c43a21a3c655c18073, type: 3}
@@ -46348,6 +47196,59 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3433419747154280322, guid: c12ad5e1351f6430ca290352285df11e, type: 3}
+--- !u!1 &907096229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 907096231}
+  - component: {fileID: 907096230}
+  m_Layer: 0
+  m_Name: colliders pond (25)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &907096230
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907096229}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.512339, y: 8.119126, z: 5.4468603}
+  m_Center: {x: -0.24383163, y: 3.5595624, z: 1.7247137}
+--- !u!4 &907096231
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907096229}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.24614279, z: -0, w: 0.9692336}
+  m_LocalPosition: {x: 146.1, y: 0.09, z: 247}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 2.8788574}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -28.499, z: 0}
 --- !u!1001 &911398792
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46786,6 +47687,59 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.0000005, y: 1.9999999, z: 1.9999995}
   m_Center: {x: -0.000011503696, y: 0.00000047683716, z: 0.000015288591}
+--- !u!1 &922596064
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 922596066}
+  - component: {fileID: 922596065}
+  m_Layer: 0
+  m_Name: colliders pond (47)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &922596065
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922596064}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5123393, y: 10.511021, z: 9.824383}
+  m_Center: {x: -0.24375297, y: 4.7554874, z: 3.9212155}
+--- !u!4 &922596066
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922596064}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.010200536, y: -0.12339722, z: -0.00751018, w: -0.99227655}
+  m_LocalPosition: {x: 124.3, y: 0.3, z: 102.3}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 2.5062816}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 1.054, y: -345.813, z: 0.998}
 --- !u!1001 &927941994
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46955,6 +47909,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4609631473175035285, guid: caf3631f339357d48a0034b98fa68915, type: 3}
   m_PrefabInstance: {fileID: 931506992}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &932608453
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 932608455}
+  - component: {fileID: 932608454}
+  m_Layer: 0
+  m_Name: colliders pond (54)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &932608454
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932608453}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5123393, y: 10.837112, z: 5.180362}
+  m_Center: {x: -0.24369143, y: 4.918507, z: 2.6787982}
+--- !u!4 &932608455
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932608453}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.007979355, y: 0.98541397, z: 0.009837869, w: -0.16970254}
+  m_LocalPosition: {x: 74, y: -1.6, z: 157}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 4.148303}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: -0.956, y: -520.448, z: -1.093}
 --- !u!1001 &934988888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47522,7 +48529,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971941642}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
   m_Name: 
@@ -48751,6 +49758,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4609631473175035285, guid: 6c2a71efefcde9a4ab30a39a8613c4bb, type: 3}
   m_PrefabInstance: {fileID: 1012435659}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1013495147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1013495149}
+  - component: {fileID: 1013495148}
+  m_Layer: 0
+  m_Name: colliders pond (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1013495148
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013495147}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.512339, y: 8.119126, z: 4.128538}
+  m_Center: {x: -0.2438313, y: 3.5595605, z: 2.4512925}
+--- !u!4 &1013495149
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013495147}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.24660712, z: -0, w: 0.96911556}
+  m_LocalPosition: {x: -29.1, y: 0.09, z: 167.7}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 3.8377087}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 28.554, z: 0}
 --- !u!1 &1015944625
 GameObject:
   m_ObjectHideFlags: 0
@@ -49123,6 +50183,59 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14395fdd01008104bbfbd160b921276a, type: 3}
+--- !u!1 &1025340799
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1025340801}
+  - component: {fileID: 1025340800}
+  m_Layer: 0
+  m_Name: colliders pond (29)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1025340800
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025340799}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.51233864, y: 8.119126, z: 4.531176}
+  m_Center: {x: -0.2437999, y: 3.5595624, z: 1.7143513}
+--- !u!4 &1025340801
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025340799}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.73478454, z: -0, w: 0.6783007}
+  m_LocalPosition: {x: 76.45, y: 0.09, z: 293.52}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 5.094656}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -94.578, z: 0}
 --- !u!1 &1027843734
 GameObject:
   m_ObjectHideFlags: 0
@@ -49234,6 +50347,59 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14395fdd01008104bbfbd160b921276a, type: 3}
+--- !u!1 &1032964058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1032964060}
+  - component: {fileID: 1032964059}
+  m_Layer: 0
+  m_Name: colliders pond (20)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1032964059
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032964058}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.51233864, y: 8.119126, z: 3.745559}
+  m_Center: {x: -0.24381533, y: 3.5595624, z: 2.5350606}
+--- !u!4 &1032964060
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032964058}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.8410628, z: -0, w: 0.54093754}
+  m_LocalPosition: {x: 81.57, y: 0.09, z: 230.18}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 3.8377087}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 114.505, z: 0}
 --- !u!4 &1035752029 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bd83c4f0580379c43a21a3c655c18073, type: 3}
@@ -50230,6 +51396,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6390361328388893039, guid: 14395fdd01008104bbfbd160b921276a, type: 3}
   m_PrefabInstance: {fileID: 1071852145}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1072159665
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1072159667}
+  - component: {fileID: 1072159666}
+  m_Layer: 0
+  m_Name: colliders pond (22)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1072159666
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072159665}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.51233864, y: 8.119126, z: 5.8426313}
+  m_Center: {x: -0.24382998, y: 3.5595624, z: 1.4865215}
+--- !u!4 &1072159667
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072159665}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.6328904, z: -0, w: 0.77424145}
+  m_LocalPosition: {x: 114.8, y: 0.09, z: 218.3}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 3.8377087}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 78.527, z: 0}
 --- !u!1 &1072486598 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2997587440791758521, guid: 0b795711f0dfd1a4692099c0b700411a, type: 3}
@@ -50838,6 +52057,59 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 710147c0ebdbd394fa551f9d60915541, type: 3}
+--- !u!1 &1101873011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1101873013}
+  - component: {fileID: 1101873012}
+  m_Layer: 0
+  m_Name: colliders pond (50)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1101873012
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101873011}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5123393, y: 10.543582, z: 6.0043178}
+  m_Center: {x: -0.24376626, y: 4.771766, z: 3.1567707}
+--- !u!4 &1101873013
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101873011}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.012626925, y: 0.41803864, z: -0.0010072379, w: -0.90834093}
+  m_LocalPosition: {x: 122.3, y: -0.9, z: 153.2}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 2.5062816}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 1.363, y: -409.432, z: -0.5}
 --- !u!4 &1102225410 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6390361328388893039, guid: 14395fdd01008104bbfbd160b921276a, type: 3}
@@ -51503,6 +52775,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dde841f2a9bd90542a8c35996165d98e, type: 3}
   m_PrefabInstance: {fileID: 2122008039}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1140156374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1140156376}
+  - component: {fileID: 1140156375}
+  m_Layer: 0
+  m_Name: colliders pond (38)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1140156375
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140156374}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5123393, y: 9.635191, z: 6.3876405}
+  m_Center: {x: -0.24376151, y: 4.3175936, z: 2.6938243}
+--- !u!4 &1140156376
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140156374}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.9908405, z: -0, w: 0.13503757}
+  m_LocalPosition: {x: 36.66, y: 0.09, z: 87.09}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 1.7158085}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -164.478, z: 0}
 --- !u!1001 &1148246579
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51894,6 +53219,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4609631473175035285, guid: caf3631f339357d48a0034b98fa68915, type: 3}
   m_PrefabInstance: {fileID: 1171832966}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1173438162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1173438164}
+  - component: {fileID: 1173438163}
+  m_Layer: 0
+  m_Name: colliders pond (49)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1173438163
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173438162}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5123393, y: 10.717036, z: 6.236473}
+  m_Center: {x: -0.24376483, y: 4.858475, z: 3.040687}
+--- !u!4 &1173438164
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173438162}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.012174652, y: 0.22911628, z: -0.0034973687, w: -0.97331667}
+  m_LocalPosition: {x: 128.9, y: -0.5, z: 139.9}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 2.5062816}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 1.45, y: -386.491, z: 0.07}
 --- !u!1 &1179690586
 GameObject:
   m_ObjectHideFlags: 0
@@ -52642,6 +54020,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3624191957474362595, guid: 1c28c7489876353479e66e27366650de, type: 3}
   m_PrefabInstance: {fileID: 1199597122}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1200007398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1200007400}
+  - component: {fileID: 1200007399}
+  m_Layer: 0
+  m_Name: colliders pond (11)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1200007399
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200007398}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.512339, y: 8.119126, z: 6.3436503}
+  m_Center: {x: -0.24383803, y: 3.5595605, z: 3.4330664}
+--- !u!4 &1200007400
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200007398}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.7825224, z: -0, w: 0.62262243}
+  m_LocalPosition: {x: -86.06, y: 0.09, z: 198.37}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 3.8377087}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -102.984, z: 0}
 --- !u!1001 &1203648244
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54329,6 +55760,59 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1256338555}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1258892372
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1258892374}
+  - component: {fileID: 1258892373}
+  m_Layer: 0
+  m_Name: colliders pond (36)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1258892373
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258892372}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.51233864, y: 10.154353, z: 10.187587}
+  m_Center: {x: -0.24362998, y: 4.5772085, z: 2.4698925}
+--- !u!4 &1258892374
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258892372}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.971753, z: -0, w: 0.23600022}
+  m_LocalPosition: {x: 61.2, y: 0.09, z: 127.9}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 3.9894037}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -152.699, z: 0}
 --- !u!1 &1260160503
 GameObject:
   m_ObjectHideFlags: 0
@@ -55114,6 +56598,165 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4609631473175035285, guid: caf3631f339357d48a0034b98fa68915, type: 3}
   m_PrefabInstance: {fileID: 1280785767}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1284114330
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1284114332}
+  - component: {fileID: 1284114331}
+  m_Layer: 0
+  m_Name: colliders pond (19)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1284114331
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284114330}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.51233864, y: 8.119126, z: 5.38356}
+  m_Center: {x: -0.24381277, y: 3.5595624, z: 1.7160571}
+--- !u!4 &1284114332
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284114330}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.8410628, z: -0, w: 0.54093754}
+  m_LocalPosition: {x: 69.2, y: 0.09, z: 235.82}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 3.8377087}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 114.505, z: 0}
+--- !u!1 &1294962666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1294962668}
+  - component: {fileID: 1294962667}
+  m_Layer: 0
+  m_Name: colliders pond (37)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1294962667
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294962666}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.51233864, y: 9.595606, z: 8.063678}
+  m_Center: {x: -0.24377902, y: 4.2978024, z: 3.5318384}
+--- !u!4 &1294962668
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294962666}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.9457127, z: -0, w: 0.325004}
+  m_LocalPosition: {x: 46.8, y: 0.09, z: 100.1}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 2.0907667}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -142.068, z: 0}
+--- !u!1 &1295087593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1295087595}
+  - component: {fileID: 1295087594}
+  m_Layer: 0
+  m_Name: colliders pond (18)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1295087594
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295087593}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.51233864, y: 8.119126, z: 4.258673}
+  m_Center: {x: -0.24381521, y: 3.5595624, z: 2.2785037}
+--- !u!4 &1295087595
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295087593}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.7888003, z: -0, w: 0.6146496}
+  m_LocalPosition: {x: 49.71, y: 0.09, z: 240.73}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 3.8377087}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 104.147, z: 0}
 --- !u!1001 &1295245307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61219,6 +62862,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3876334139568449957, guid: a0b2d4ae91b44bb45b28ed67faeb6db2, type: 3}
   m_PrefabInstance: {fileID: 99213938}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1331578836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1331578838}
+  - component: {fileID: 1331578837}
+  m_Layer: 0
+  m_Name: colliders pond (24)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1331578837
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331578836}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.512339, y: 8.119126, z: 3.3973749}
+  m_Center: {x: -0.24381976, y: 3.5595624, z: 1.4468876}
+--- !u!4 &1331578838
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331578836}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.036647208, z: -0, w: 0.99932826}
+  m_LocalPosition: {x: 146.2, y: 0.09, z: 233}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 3.8377087}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 4.2, z: 0}
 --- !u!1001 &1332054573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62051,6 +63747,59 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d475b03a3c7eaa445bebc31c686df274, type: 3}
+--- !u!1 &1380511559
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1380511561}
+  - component: {fileID: 1380511560}
+  m_Layer: 0
+  m_Name: colliders pond (45)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1380511560
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380511559}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5123393, y: 10.105674, z: 5.9847684}
+  m_Center: {x: -0.24377581, y: 4.552812, z: 3.1665456}
+--- !u!4 &1380511561
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380511559}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.009397757, y: -0.22207858, z: -0.008493286, w: -0.97494656}
+  m_LocalPosition: {x: 113.33, y: 0.84, z: 71.61}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 2.5062816}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0.834, y: -334.327, z: 1.188}
 --- !u!4 &1386381776 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6390361328388893039, guid: 14395fdd01008104bbfbd160b921276a, type: 3}
@@ -62282,6 +64031,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6390361328388893039, guid: 14395fdd01008104bbfbd160b921276a, type: 3}
   m_PrefabInstance: {fileID: 1393570266}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1394219148
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1394219150}
+  - component: {fileID: 1394219149}
+  m_Layer: 0
+  m_Name: colliders pond
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1394219149
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394219148}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.51233864, y: 8.119126, z: 7.709732}
+  m_Center: {x: -0.24383068, y: 3.5595627, z: 3.354866}
+--- !u!4 &1394219150
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394219148}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.34855616, z: -0, w: 0.9372879}
+  m_LocalPosition: {x: -45.88, y: 0.09, z: 148.28}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 3.8377087}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 40.798, z: 0}
 --- !u!1001 &1395829863
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63150,6 +64952,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4609631473175035285, guid: caf3631f339357d48a0034b98fa68915, type: 3}
   m_PrefabInstance: {fileID: 1436173656}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1437163733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1437163735}
+  - component: {fileID: 1437163734}
+  m_Layer: 0
+  m_Name: colliders pond (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1437163734
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437163733}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.51233864, y: 8.119126, z: 7.709732}
+  m_Center: {x: -0.24383068, y: 3.5595627, z: 3.354866}
+--- !u!4 &1437163735
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437163733}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.72920614, z: -0, w: 0.6842941}
+  m_LocalPosition: {x: -95.52, y: 0.09, z: 114.34}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 2.1622033}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 93.64, z: 0}
 --- !u!4 &1437301689 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6390361328388893039, guid: 14395fdd01008104bbfbd160b921276a, type: 3}
@@ -63165,6 +65020,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6390361328388893039, guid: 14395fdd01008104bbfbd160b921276a, type: 3}
   m_PrefabInstance: {fileID: 259558715}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1443479913
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1443479915}
+  - component: {fileID: 1443479914}
+  m_Layer: 0
+  m_Name: colliders pond (27)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1443479914
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443479913}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.51233864, y: 8.119126, z: 4.3966827}
+  m_Center: {x: -0.24381289, y: 3.5596037, z: 2.1380203}
+--- !u!4 &1443479915
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443479913}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.29462683, z: -0, w: 0.95561236}
+  m_LocalPosition: {x: 110.15, y: 0.09, z: 269.05}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 5.094656}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -34.27, z: 0}
 --- !u!1001 &1444487961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63722,6 +65630,59 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2934717439318261032, guid: bd83c4f0580379c43a21a3c655c18073, type: 3}
+--- !u!1 &1464128991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1464128993}
+  - component: {fileID: 1464128992}
+  m_Layer: 0
+  m_Name: colliders pond (23)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1464128992
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464128991}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.51233864, y: 8.119126, z: 4.9511776}
+  m_Center: {x: -0.243862, y: 3.5595624, z: 2.1967177}
+--- !u!4 &1464128993
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464128991}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.43392104, z: -0, w: 0.9009509}
+  m_LocalPosition: {x: 132.3, y: 0.09, z: 221.9}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 3.8377087}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 51.433, z: 0}
 --- !u!4 &1466290754 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c12ad5e1351f6430ca290352285df11e, type: 3}
@@ -66479,6 +68440,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4609631473175035285, guid: caf3631f339357d48a0034b98fa68915, type: 3}
   m_PrefabInstance: {fileID: 1567405607}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1570870708
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1570870710}
+  - component: {fileID: 1570870709}
+  m_Layer: 0
+  m_Name: colliders pond (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1570870709
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570870708}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.512339, y: 8.119126, z: 4.6526217}
+  m_Center: {x: -0.2438321, y: 3.5595605, z: 1.826308}
+--- !u!4 &1570870710
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570870708}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.016666079, z: -0, w: 0.9998612}
+  m_LocalPosition: {x: -20.24, y: 0.09, z: 183.98}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 3.8377087}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -1.91, z: 0}
 --- !u!1001 &1572743789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67221,6 +69235,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8816021713234918405, guid: f89d09a0b8879f54dacb252d997f2284, type: 3}
   m_PrefabInstance: {fileID: 1617360666}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1618024281
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1618024283}
+  - component: {fileID: 1618024282}
+  m_Layer: 0
+  m_Name: colliders pond (26)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1618024282
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618024281}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.51233864, y: 8.119126, z: 4.179115}
+  m_Center: {x: -0.2439039, y: 3.5595624, z: 2.0883904}
+--- !u!4 &1618024283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618024281}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.5737845, z: -0, w: 0.81900626}
+  m_LocalPosition: {x: 140, y: 0.09, z: 258.2}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 7.776082}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -70.029, z: 0}
 --- !u!1001 &1619685596
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67894,6 +69961,59 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7deca2205fc51964ca272fbcbddcc205, type: 3}
+--- !u!1 &1660070631
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1660070633}
+  - component: {fileID: 1660070632}
+  m_Layer: 0
+  m_Name: colliders pond (53)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1660070632
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660070631}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5123393, y: 10.821398, z: 8.210712}
+  m_Center: {x: -0.24376561, y: 4.910642, z: 3.3677042}
+--- !u!4 &1660070633
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660070631}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.010279626, y: 0.90644455, z: 0.007401556, w: -0.42213482}
+  m_LocalPosition: {x: 82.4, y: -1.7, z: 164}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 1.495423}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: -0.272, y: -490.05298, z: -1.426}
 --- !u!1001 &1661895718
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68744,6 +70864,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3624191957474362595, guid: e1aa97febfdf7e64da9c77d1bf2a9566, type: 3}
   m_PrefabInstance: {fileID: 1687698722}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1690237913
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1690237915}
+  - component: {fileID: 1690237914}
+  m_Layer: 0
+  m_Name: colliders pond (35)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1690237914
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690237913}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5123388, y: 10.687021, z: 7.999444}
+  m_Center: {x: -0.24379584, y: 2.7064724, z: 4.914686}
+--- !u!4 &1690237915
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690237913}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.75241566, z: -0, w: 0.65868855}
+  m_LocalPosition: {x: 96.77, y: 0.09, z: 166.47}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 1.5208157}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -97.6, z: 0}
 --- !u!1 &1690440400
 GameObject:
   m_ObjectHideFlags: 0
@@ -68823,6 +70996,59 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1694867673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1694867675}
+  - component: {fileID: 1694867674}
+  m_Layer: 0
+  m_Name: colliders pond (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1694867674
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694867673}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.51233864, y: 8.119126, z: 6.8249526}
+  m_Center: {x: -0.24381934, y: 3.5595605, z: 2.912475}
+--- !u!4 &1694867675
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694867673}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.44875884, z: -0, w: 0.8936529}
+  m_LocalPosition: {x: -79.55, y: 0.09, z: 113.24}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 3.6754503}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 53.328, z: 0}
 --- !u!1 &1696235607
 GameObject:
   m_ObjectHideFlags: 0
@@ -69909,6 +72135,59 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 710147c0ebdbd394fa551f9d60915541, type: 3}
+--- !u!1 &1730741818
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1730741820}
+  - component: {fileID: 1730741819}
+  m_Layer: 0
+  m_Name: colliders pond (39)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1730741819
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730741818}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.51233864, y: 9.557694, z: 8.203034}
+  m_Center: {x: -0.24374995, y: 4.278847, z: 2.717378}
+--- !u!4 &1730741820
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730741818}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.9769508, z: -0, w: -0.21346468}
+  m_LocalPosition: {x: 35.27, y: 0.09, z: 75.78}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 1.7158085}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -204.651, z: 0}
 --- !u!1 &1736544881
 GameObject:
   m_ObjectHideFlags: 0
@@ -71922,6 +74201,59 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 252612620}
   m_SourcePrefab: {fileID: 100100000, guid: bd83c4f0580379c43a21a3c655c18073, type: 3}
+--- !u!1 &1798577769
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1798577771}
+  - component: {fileID: 1798577770}
+  m_Layer: 0
+  m_Name: colliders pond (16)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1798577770
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1798577769}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.512339, y: 8.119126, z: 29.728436}
+  m_Center: {x: -0.24317111, y: 3.5595605, z: 14.910768}
+--- !u!4 &1798577771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1798577769}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.9531244, z: -0, w: -0.30257875}
+  m_LocalPosition: {x: -167.3, y: 0.09, z: 186.17}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 2.1874692}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -215.225, z: 0}
 --- !u!4 &1799587902 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6390361328388893039, guid: 14395fdd01008104bbfbd160b921276a, type: 3}
@@ -72417,6 +74749,59 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14395fdd01008104bbfbd160b921276a, type: 3}
+--- !u!1 &1815702717
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1815702719}
+  - component: {fileID: 1815702718}
+  m_Layer: 0
+  m_Name: colliders pond (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1815702718
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815702717}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.512339, y: 8.119126, z: 5.424948}
+  m_Center: {x: -0.2438319, y: 3.5595605, z: 2.2124674}
+--- !u!4 &1815702719
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815702717}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.33966798, z: -0, w: 0.94054544}
+  m_LocalPosition: {x: -21.95, y: 0.09, z: 200.1}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 3.8377087}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -39.713, z: 0}
 --- !u!1001 &1816602213
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72889,6 +75274,59 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1 &1843737784
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1843737786}
+  - component: {fileID: 1843737785}
+  m_Layer: 0
+  m_Name: colliders pond (31)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1843737785
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843737784}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.51233864, y: 8.119126, z: 3.8145032}
+  m_Center: {x: -0.24381942, y: 3.5595624, z: 1.8552558}
+--- !u!4 &1843737786
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843737784}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.99999976, z: -0, w: 0.00072727544}
+  m_LocalPosition: {x: 37.9, y: 0.09, z: 276.7}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 5.094656}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -179.917, z: 0}
 --- !u!1001 &1848612868
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -86114,6 +88552,59 @@ Transform:
   - {fileID: 1785174227}
   m_Father: {fileID: 928617702}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1995127426
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1995127428}
+  - component: {fileID: 1995127427}
+  m_Layer: 0
+  m_Name: colliders pond (32)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1995127427
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995127426}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.51233864, y: 8.119126, z: 8.063678}
+  m_Center: {x: -0.24377936, y: 3.5595624, z: 3.5318394}
+--- !u!4 &1995127428
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995127426}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.94101435, z: -0, w: -0.33836675}
+  m_LocalPosition: {x: 37.9, y: 0.09, z: 256.9}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 2.8184655}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -219.555, z: 0}
 --- !u!1001 &1995923959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -86500,6 +88991,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4994183135837559688, guid: efadd730204e31f498ecdb811457c4a9, type: 3}
   m_PrefabInstance: {fileID: 1114420234}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2006605673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2006605675}
+  - component: {fileID: 2006605674}
+  m_Layer: 0
+  m_Name: colliders pond (15)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &2006605674
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006605673}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.512339, y: 8.119126, z: 6.569731}
+  m_Center: {x: -0.24379784, y: 3.5595605, z: 1.9273874}
+--- !u!4 &2006605675
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006605673}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.9423537, z: -0, w: 0.33461842}
+  m_LocalPosition: {x: -160.09, y: 0.09, z: 195.04}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 2.1874692}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -140.901, z: 0}
 --- !u!1 &2007405140
 GameObject:
   m_ObjectHideFlags: 0
@@ -87238,6 +89782,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3624191957474362595, guid: e1aa97febfdf7e64da9c77d1bf2a9566, type: 3}
   m_PrefabInstance: {fileID: 2017178060}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2018056158
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2018056160}
+  - component: {fileID: 2018056159}
+  m_Layer: 0
+  m_Name: colliders pond (44)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &2018056159
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018056158}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5123393, y: 10.076177, z: 6.3085775}
+  m_Center: {x: -0.24376643, y: 4.5380607, z: 3.004633}
+--- !u!4 &2018056160
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018056158}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.00769979, y: -0.39537466, z: -0.01005818, w: -0.91843265}
+  m_LocalPosition: {x: 102.99, y: 0.93, z: 61.83}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 2.5062816}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0.355, y: -313.413, z: 1.408}
 --- !u!1001 &2020212663
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -105418,6 +108015,59 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2015065755}
   m_SourcePrefab: {fileID: 100100000, guid: dde841f2a9bd90542a8c35996165d98e, type: 3}
+--- !u!1 &2123959011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2123959013}
+  - component: {fileID: 2123959012}
+  m_Layer: 0
+  m_Name: colliders pond (30)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &2123959012
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123959011}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5123388, y: 8.119126, z: 4.6578817}
+  m_Center: {x: -0.24390118, y: 3.5595624, z: 2.2626967}
+--- !u!4 &2123959013
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123959011}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.90642977, z: -0, w: 0.42235655}
+  m_LocalPosition: {x: 55.89, y: 0.09, z: 291.87}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 5.094656}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -130.033, z: 0}
 --- !u!1 &2125231056 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1507767883509144192, guid: dde841f2a9bd90542a8c35996165d98e, type: 3}
@@ -105717,6 +108367,59 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d475b03a3c7eaa445bebc31c686df274, type: 3}
+--- !u!1 &2142491512
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2142491514}
+  - component: {fileID: 2142491513}
+  m_Layer: 0
+  m_Name: colliders pond (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &2142491513
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142491512}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.512339, y: 8.119126, z: 5.424948}
+  m_Center: {x: -0.2438319, y: 3.5595605, z: 2.2124674}
+--- !u!4 &2142491514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142491512}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.79117745, z: -0, w: 0.6115866}
+  m_LocalPosition: {x: -53, y: 0.09, z: 217.9}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 3.8377087}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -104.591, z: 0}
 --- !u!1001 &2144045226
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -106094,3 +108797,54 @@ SceneRoots:
   - {fileID: 243965048}
   - {fileID: 1645269623}
   - {fileID: 1707887418}
+  - {fileID: 1394219150}
+  - {fileID: 1295087595}
+  - {fileID: 1284114332}
+  - {fileID: 1032964060}
+  - {fileID: 13385970}
+  - {fileID: 1072159667}
+  - {fileID: 1464128993}
+  - {fileID: 1331578838}
+  - {fileID: 907096231}
+  - {fileID: 1618024283}
+  - {fileID: 1443479915}
+  - {fileID: 311256950}
+  - {fileID: 1025340801}
+  - {fileID: 2123959013}
+  - {fileID: 1843737786}
+  - {fileID: 1995127428}
+  - {fileID: 1690237915}
+  - {fileID: 1258892374}
+  - {fileID: 1294962668}
+  - {fileID: 1140156376}
+  - {fileID: 1730741820}
+  - {fileID: 45122067}
+  - {fileID: 855082104}
+  - {fileID: 659580174}
+  - {fileID: 603508871}
+  - {fileID: 2018056160}
+  - {fileID: 1380511561}
+  - {fileID: 511919597}
+  - {fileID: 922596066}
+  - {fileID: 841154843}
+  - {fileID: 1173438164}
+  - {fileID: 1101873013}
+  - {fileID: 589627348}
+  - {fileID: 1660070633}
+  - {fileID: 932608455}
+  - {fileID: 1013495149}
+  - {fileID: 1570870710}
+  - {fileID: 1815702719}
+  - {fileID: 512370196}
+  - {fileID: 2142491514}
+  - {fileID: 185030085}
+  - {fileID: 1200007400}
+  - {fileID: 256758464}
+  - {fileID: 301770654}
+  - {fileID: 251606746}
+  - {fileID: 2006605675}
+  - {fileID: 1798577771}
+  - {fileID: 508186863}
+  - {fileID: 1694867675}
+  - {fileID: 1437163735}
+  - {fileID: 470967671}
