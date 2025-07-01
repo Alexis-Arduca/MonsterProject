@@ -5,6 +5,7 @@ public class Collectible : MonoBehaviour
     [Header("Description")]
     [SerializeField] protected string itemName;
     [SerializeField] protected BiomesTemplate.BiomeType spawnBiome;
+    public int monsterCode;
     private int code;
 
     /// <summary>

@@ -49,7 +49,7 @@ public class Biomes : MonoBehaviour
     /// </summary>
     private void SpawnMonstersAndCollectibles()
     {
-        if (assignedMonsters == null || assignedCollectibles == null || codeList == null)
+        if (assignedMonsters == null || assignedCollectibles == null)
         {
             Debug.LogWarning($"Monsters spawn cancelled for biome {name}: not enough data.");
             return;
@@ -65,36 +65,39 @@ public class Biomes : MonoBehaviour
         List<GameObject> availableSpawnPoints = new List<GameObject>(monsterSpawnpoints);
         availableSpawnPoints = availableSpawnPoints.OrderBy(x => Random.value).ToList();
 
-        for (int i = 0; i < monsterNumber; i++)
+        foreach (Monster monsterPrefab in assignedMonsters.ToList())
         {
-            if (availableSpawnPoints.Count < 1)
+            if (availableSpawnPoints.Count == 0) { return; }
+
+            Collectible matchingCollectible = assignedCollectibles.FirstOrDefault(c => c.monsterCode == monsterPrefab.monsterCode);
+            if (matchingCollectible == null)
             {
-                return;
+                Debug.LogWarning($"No matching collectible found for monsterCode {monsterPrefab.monsterCode} in biome {name}");
+                continue;
             }
 
-            int codeIndex = Random.Range(0, codeList.Count);
-            int sharedCode = codeList[codeIndex];
-            codeList.RemoveAt(codeIndex);
+            int sharedCode = monsterPrefab.monsterCode;
 
-            int monsterIndex = Random.Range(0, assignedMonsters.Count);
-            Monster monsterPrefab = assignedMonsters[monsterIndex];
-            assignedMonsters.RemoveAt(monsterIndex);
-
-            int spawnIndex = 0;
-            GameObject monsterSpawnPoint = availableSpawnPoints[spawnIndex];
-            Vector3 monsterPos = monsterSpawnPoint.transform.position;
+            GameObject spawnPoint = availableSpawnPoints[0];
+            Vector3 monsterPos = spawnPoint.transform.position;
             GameObject monsterObj = Instantiate(monsterPrefab.gameObject, monsterPos, Quaternion.identity);
             monsterObj.GetComponent<Monster>().SetupCode(sharedCode);
-            availableSpawnPoints.RemoveAt(spawnIndex);
+            availableSpawnPoints.RemoveAt(0);
 
-            int collectibleIndex = Random.Range(0, assignedCollectibles.Count);
-            Collectible collectiblePrefab = assignedCollectibles[collectibleIndex];
-            assignedCollectibles.RemoveAt(collectibleIndex);
-
-            Vector3 collectiblePos = GetCollectibleSpawnPosition(monsterSpawnPoint);
-            GameObject collectibleObj = Instantiate(collectiblePrefab.gameObject, collectiblePos, Quaternion.identity);
+            Vector3 collectiblePos = GetCollectibleSpawnPosition(spawnPoint);
+            GameObject collectibleObj = Instantiate(matchingCollectible.gameObject, collectiblePos, Quaternion.identity);
             collectibleObj.GetComponent<Collectible>().SetupCode(sharedCode);
+
+            // SetupAnimation(collectibleObj, collectiblePos);
+
+            assignedMonsters.Remove(monsterPrefab);
+            assignedCollectibles.Remove(matchingCollectible);
         }
+    }
+
+    private void SetupAnimation(GameObject obj, Vector3 startPos)
+    {
+        
     }
 
     /// <summary>

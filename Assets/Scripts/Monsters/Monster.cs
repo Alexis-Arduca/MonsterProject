@@ -57,6 +57,7 @@ public class Monster : MonoBehaviour
     [SerializeField] protected float rotationSpeed = 5f;
 
     [Header("Bubble")]
+    public int monsterCode;
     public ThoughtBubbleController thoughtBubble;
     public Image wantedItem;
 
@@ -292,17 +293,18 @@ public class Monster : MonoBehaviour
 
         if (Vector3.Distance(playerPos, transform.position) > maxFollowDistance)
         {
+            agent.isStopped = false;
+            Debug.Log("Prout");
             monsterAnimator.SetBool("isMoving", true);
 
-            if (monsterAnimator.GetBool("isMoving"))
-            {
-                agent.SetDestination(playerPos);
+            var playerInput = PlayerInput.all[0];
+            playerPos = playerInput.transform.position;
+            agent.SetDestination(playerPos);
 
-                Vector3 moveDirection = agent.velocity.normalized;
-                if (moveDirection != Vector3.zero)
-                {
-                    RotateTowardsDirection(moveDirection);
-                }
+            Vector3 moveDirection = agent.velocity.normalized;
+            if (moveDirection != Vector3.zero)
+            {
+                RotateTowardsDirection(moveDirection);
             }
         }
         else

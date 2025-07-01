@@ -272,6 +272,7 @@ MonoBehaviour:
   sitChance: 0.1
   maxFollowDistance: 3
   rotationSpeed: 5
+  monsterCode: 6
   thoughtBubble: {fileID: 285063555843553686}
   wantedItem: {fileID: 1495243078228266362}
 --- !u!54 &1903790596406747557
