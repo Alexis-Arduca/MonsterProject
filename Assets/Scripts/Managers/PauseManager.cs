@@ -18,7 +18,7 @@ public class PauseManager : MonoBehaviour
 
     void Awake()
     {
-        this.fixedDeltaTime = Time.fixedDeltaTime;   
+        this.fixedDeltaTime = Time.fixedDeltaTime;
     }
 
     private void OnDisable()
@@ -39,5 +39,15 @@ public class PauseManager : MonoBehaviour
         {
             Time.timeScale = 1.0f;
         }
+    }
+
+    public bool GetOnPause()
+    {
+        return pauseState;
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

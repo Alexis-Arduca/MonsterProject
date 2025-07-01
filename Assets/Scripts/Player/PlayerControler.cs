@@ -1,6 +1,10 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 public class PlayerControler : MonoBehaviour
 {
     private bool playerAction = false;
@@ -22,12 +26,14 @@ public class PlayerControler : MonoBehaviour
     private readonly float cameraMaxRotationY = 50f;
     private readonly float cameraMinRotationY = -50f;
     private readonly Vector3 spawnPosition = new Vector3(-2.4f, 2.74f, 14.3f);
+    private PauseManager pauseManager;
 
     void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
         playerId = playerInput.playerIndex;
         playerCamera = GetComponentInChildren<Camera>();
+        pauseManager = GameObject.FindObjectOfType<PauseManager>();
     }
 
     void Start()
@@ -127,7 +133,18 @@ public class PlayerControler : MonoBehaviour
 
     public void OnDebug(InputValue value)
     {
-        BackOnSpawn();
+        if (pauseManager.GetOnPause())
+        {
+#if UNITY_EDITOR
+            EditorApplication.isPlaying = false;
+#else
+                Application.Quit();
+#endif
+        }
+        else
+        {
+            BackOnSpawn();
+        }
     }
 
     public void OnPause(InputValue value)
