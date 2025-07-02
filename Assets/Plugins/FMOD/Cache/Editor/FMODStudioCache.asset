@@ -42,7 +42,7 @@ MonoBehaviour:
   Path: ../Fmod/Sounds Fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638864577211302564
+  lastModified: 638864577210000000
   FileSizes:
   - Name: Desktop
     Value: 1218
@@ -188,7 +188,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -7558951177626287699}
   cacheVersion: 131848
-  cacheTime: 638864577211302564
+  cacheTime: 638864577210000000
   SerializableEventsDict:
   - key: event:/Ambience/Room Tone
     index: 0
@@ -281,7 +281,7 @@ MonoBehaviour:
   Path: ../Fmod/Sounds Fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638864577211280401
+  lastModified: 638864577210000000
   FileSizes:
   - Name: Desktop
     Value: 8598528

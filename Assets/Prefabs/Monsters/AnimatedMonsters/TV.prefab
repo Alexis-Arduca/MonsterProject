@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 835230017271085639, guid: a7c1f2ff2ed141e46b35a6c76fbb9994, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 7d6797ed5c673ec44b7bb84ac712b761, type: 3}
+      objectReference: {fileID: 21300000, guid: c66fa989faadce540bb427f683f844f6, type: 3}
     - target: {fileID: 2063705422815104683, guid: a7c1f2ff2ed141e46b35a6c76fbb9994, type: 3}
       propertyPath: cameraTransform
       value: 
@@ -104,6 +104,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8422269710152357079, guid: a7c1f2ff2ed141e46b35a6c76fbb9994, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8422269710152357079, guid: a7c1f2ff2ed141e46b35a6c76fbb9994, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8422269710152357079, guid: a7c1f2ff2ed141e46b35a6c76fbb9994, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -187,7 +199,7 @@ PrefabInstance:
     - target: {fileID: -1343210651756382459, guid: 185cdd940ea615b4b814d9e5e997901a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: e2efd06a834505b4ea3bb56015cb13cf, type: 2}
+      objectReference: {fileID: 2100000, guid: 26ecda70b01c3b042984541b5575270e, type: 2}
     - target: {fileID: -1343210651756382459, guid: 185cdd940ea615b4b814d9e5e997901a, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 

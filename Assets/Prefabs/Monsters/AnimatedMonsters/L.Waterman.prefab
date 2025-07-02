@@ -420,7 +420,7 @@ PrefabInstance:
     - target: {fileID: 835230017271085639, guid: a7c1f2ff2ed141e46b35a6c76fbb9994, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 13905a30d2add0b4daa8b7a8ddb09857, type: 3}
+      objectReference: {fileID: 21300000, guid: fdb23e44faff451489f3aaaa3f8e29b0, type: 3}
     - target: {fileID: 2063705422815104683, guid: a7c1f2ff2ed141e46b35a6c76fbb9994, type: 3}
       propertyPath: cameraTransform
       value: 
@@ -508,6 +508,18 @@ PrefabInstance:
     - target: {fileID: 8041271412900688965, guid: a7c1f2ff2ed141e46b35a6c76fbb9994, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8422269710152357079, guid: a7c1f2ff2ed141e46b35a6c76fbb9994, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8422269710152357079, guid: a7c1f2ff2ed141e46b35a6c76fbb9994, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8422269710152357079, guid: a7c1f2ff2ed141e46b35a6c76fbb9994, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -55,7 +55,7 @@ PrefabInstance:
     - target: {fileID: -1206874426333947015, guid: d6d235478cedcf941bace3dd0e564438, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 5352daee170485744a53fe210e0f2eef, type: 2}
+      objectReference: {fileID: 2100000, guid: 529449e2f6b2e1645934d594bbfb369e, type: 2}
     - target: {fileID: 919132149155446097, guid: d6d235478cedcf941bace3dd0e564438, type: 3}
       propertyPath: m_Name
       value: Blueblue
@@ -424,7 +424,7 @@ PrefabInstance:
     - target: {fileID: 835230017271085639, guid: a7c1f2ff2ed141e46b35a6c76fbb9994, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 7d6797ed5c673ec44b7bb84ac712b761, type: 3}
+      objectReference: {fileID: 21300000, guid: 1cce9c10c52997f4987e1549cac68fd8, type: 3}
     - target: {fileID: 2063705422815104683, guid: a7c1f2ff2ed141e46b35a6c76fbb9994, type: 3}
       propertyPath: cameraTransform
       value: 
@@ -512,6 +512,18 @@ PrefabInstance:
     - target: {fileID: 8041271412900688965, guid: a7c1f2ff2ed141e46b35a6c76fbb9994, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8422269710152357079, guid: a7c1f2ff2ed141e46b35a6c76fbb9994, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8422269710152357079, guid: a7c1f2ff2ed141e46b35a6c76fbb9994, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8422269710152357079, guid: a7c1f2ff2ed141e46b35a6c76fbb9994, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

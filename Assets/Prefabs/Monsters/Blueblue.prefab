@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 835230017271085639, guid: a7c1f2ff2ed141e46b35a6c76fbb9994, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 7d6797ed5c673ec44b7bb84ac712b761, type: 3}
+      objectReference: {fileID: 21300000, guid: 1cce9c10c52997f4987e1549cac68fd8, type: 3}
     - target: {fileID: 2063705422815104683, guid: a7c1f2ff2ed141e46b35a6c76fbb9994, type: 3}
       propertyPath: cameraTransform
       value: 
@@ -99,6 +99,18 @@ PrefabInstance:
     - target: {fileID: 8041271412900688965, guid: a7c1f2ff2ed141e46b35a6c76fbb9994, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8422269710152357079, guid: a7c1f2ff2ed141e46b35a6c76fbb9994, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8422269710152357079, guid: a7c1f2ff2ed141e46b35a6c76fbb9994, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8422269710152357079, guid: a7c1f2ff2ed141e46b35a6c76fbb9994, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -250,7 +262,6 @@ MonoBehaviour:
   isFriendly: 0
   spawnBiome: 1
   currentState: 0
-  power: {fileID: 0}
   patrolSpeed: 1.5
   patrolChangeInterval: 3
   maxPatrolDistance: 5
@@ -260,6 +271,8 @@ MonoBehaviour:
   sitDurationMax: 8
   sitChance: 0.1
   maxFollowDistance: 2
+  rotationSpeed: 5
+  monsterCode: 0
   thoughtBubble: {fileID: 6065716471788212204}
   wantedItem: {fileID: 4834988709251300096}
 --- !u!54 &4099154235229860480
