@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/StartScreen.unity
-    guid: 07584e75bc8bf6f49bf552c0293ecc1e
+    path: Assets/Scenes/StartScreenNew.unity
+    guid: 784a668ac8d1a8840b46f77494652f1a
   - enabled: 1
     path: Assets/Scenes/playtest mia.unity
     guid: c819a4c37bba6394f89f55b6189e6aef
   - enabled: 1
-    path: Assets/Scenes/EndScreen.unity
-    guid: 42ec63de5e0a1de4d876c3439ddc54e8
+    path: Assets/Scenes/EndScreenNew.unity
+    guid: 0d887a0ed10bb5048a567e7a1046f840
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

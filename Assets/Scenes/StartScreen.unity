@@ -908,6 +908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8714cbbd1d95e144cb78f3ccf42488f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageInteraction: {fileID: 0}
   clip:
   - {fileID: 0}
 --- !u!114 &85056497
@@ -3147,6 +3148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 589de7ba3b5aebe47a82a1345378696b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageInteraction: {fileID: 0}
   clip: {fileID: 0}
 --- !u!1 &355755817
 GameObject:
@@ -4000,6 +4002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 589de7ba3b5aebe47a82a1345378696b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageInteraction: {fileID: 0}
   clip: {fileID: 0}
 --- !u!1 &486880679 stripped
 GameObject:
@@ -4710,6 +4713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 589de7ba3b5aebe47a82a1345378696b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageInteraction: {fileID: 0}
   clip: {fileID: 0}
 --- !u!1001 &551805985
 PrefabInstance:
@@ -5222,6 +5226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 589de7ba3b5aebe47a82a1345378696b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageInteraction: {fileID: 0}
   clip: {fileID: 0}
 --- !u!1001 &622184968
 PrefabInstance:
@@ -7473,6 +7478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 589de7ba3b5aebe47a82a1345378696b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageInteraction: {fileID: 0}
   clip: {fileID: 0}
 --- !u!1 &837224054
 GameObject:
@@ -8230,6 +8236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 589de7ba3b5aebe47a82a1345378696b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageInteraction: {fileID: 0}
   clip: {fileID: 0}
 --- !u!1001 &902586811
 PrefabInstance:
@@ -18379,7 +18386,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b249274776e70ec419591783e083f175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lobby: {fileID: 8986860753588761542, guid: 00a24dc25a58e274fb15ef392c50c2b3, type: 3}
   biomes:
   - {fileID: 1882156667052452538, guid: 58365e7c54d24144e80140c3e5db65e1, type: 3}
   - {fileID: 1882156667052452538, guid: 804833b826aa2a8418df344ccab31f8d, type: 3}
@@ -19478,6 +19484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35e3cbe758146bf4ab39a8da9abc34e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageInteraction: {fileID: 0}
   clip: {fileID: 0}
 --- !u!114 &1662008556
 MonoBehaviour:
@@ -21289,6 +21296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 589de7ba3b5aebe47a82a1345378696b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageInteraction: {fileID: 0}
   clip: {fileID: 0}
 --- !u!1 &1952586357
 GameObject:
@@ -22464,7 +22472,6 @@ SceneRoots:
   - {fileID: 1460631278}
   - {fileID: 243965048}
   - {fileID: 1822257846}
-  - {fileID: 1606421651}
   - {fileID: 1328297171}
   - {fileID: 1510415939}
   - {fileID: 322181972}
@@ -22486,3 +22493,4 @@ SceneRoots:
   - {fileID: 1333467944}
   - {fileID: 1399010710}
   - {fileID: 1215307928}
+  - {fileID: 1606421651}

@@ -9,12 +9,12 @@ public class ToLevelScript : MonoBehaviour
         
         Scene currentScene = SceneManager.GetActiveScene();
 
-        if (currentScene.name == "StartScreen")
+        if (currentScene.name == "StartScreenNew")
         {
             Invoke("LoadPlaytest", 0.1f);
         }
 
-        if (currentScene.name == "EndScreen")
+        if (currentScene.name == "EndScreenNew")
         {
             Invoke("LoadPlaytest", 0.1f);
         }
