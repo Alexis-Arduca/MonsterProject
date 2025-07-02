@@ -1,12 +1,25 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Collectible : MonoBehaviour
 {
     [Header("Description")]
     [SerializeField] protected string itemName;
     [SerializeField] protected BiomesTemplate.BiomeType spawnBiome;
+    private GameObject interactImage;
     public int monsterCode;
     private int code;
+    private bool isPickup = false;
+
+    public void SetImage(GameObject image)
+    {
+        interactImage = image;
+    }
+
+    public void IsPickup()
+    {
+        isPickup = !isPickup;
+    }
 
     /// <summary>
     /// Getter functions
@@ -28,5 +41,25 @@ public class Collectible : MonoBehaviour
     public virtual int GetCode()
     {
         return code;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player") && !isPickup)
+        {
+            interactImage.SetActive(true);
+        }
+        else
+        {
+            interactImage.SetActive(false);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            interactImage.SetActive(false);
+        }
     }
 }

@@ -294,7 +294,6 @@ public class Monster : MonoBehaviour
         if (Vector3.Distance(playerPos, transform.position) > maxFollowDistance)
         {
             agent.isStopped = false;
-            Debug.Log("Prout");
             monsterAnimator.SetBool("isMoving", true);
 
             var playerInput = PlayerInput.all[0];
@@ -339,7 +338,7 @@ public class Monster : MonoBehaviour
         Vector3 endPos = link.endPos;
 
         float t = 0;
-        ResetMonsterAnimation();
+        // ResetMonsterAnimation();
         monsterAnimator.SetBool("isJumping", true);
         while (t < jumpDuration)
         {

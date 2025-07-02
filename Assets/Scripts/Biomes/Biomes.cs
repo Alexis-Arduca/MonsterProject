@@ -14,6 +14,7 @@ public class Biomes : MonoBehaviour
 
     [Header("Spawn Settings")]
     private readonly float topViewRotation = 40f;
+    public GameObject interactImage;
 
     void Awake()
     {
@@ -87,12 +88,15 @@ public class Biomes : MonoBehaviour
             Vector3 collectiblePos = GetCollectibleSpawnPosition(spawnPoint);
             GameObject collectibleObj = Instantiate(matchingCollectible.gameObject, collectiblePos, Quaternion.identity);
             collectibleObj.GetComponent<Collectible>().SetupCode(sharedCode);
+            collectibleObj.GetComponent<Collectible>().SetImage(interactImage);
 
             // SetupAnimation(collectibleObj, collectiblePos);
 
             assignedMonsters.Remove(monsterPrefab);
             assignedCollectibles.Remove(matchingCollectible);
         }
+
+        interactImage.SetActive(false);
     }
 
     private void SetupAnimation(GameObject obj, Vector3 startPos)
