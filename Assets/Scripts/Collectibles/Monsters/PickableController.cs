@@ -14,7 +14,7 @@ public class PickableController : MonoBehaviour
 
     [Tooltip("The factor by which the item is scaled down when held.")]
     [Range(0.1f, 1f)]
-    public float scaleFactor = 0.5f;
+    public float scaleFactor = 0.1f;
 
     private Vector3 originalScale;
     private Transform originalParent;
@@ -31,7 +31,9 @@ public class PickableController : MonoBehaviour
         transform.localPosition = new Vector3(0.5f, 0, 1);
         transform.localRotation = Quaternion.identity;
 
-        transform.localScale = originalScale * scaleFactor;
+        // this.transform.GetChild(1).localScale = originalScale * scaleFactor;
+
+        transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
 
         this.gameObject.GetComponent<Collectible>().IsPickup();
 

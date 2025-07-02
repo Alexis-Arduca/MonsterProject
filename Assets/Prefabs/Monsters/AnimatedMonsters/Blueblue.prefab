@@ -164,7 +164,7 @@ MonoBehaviour:
   sitDurationMin: 4
   sitDurationMax: 9
   sitChance: 0.1
-  maxFollowDistance: 2
+  maxFollowDistance: 20
   rotationSpeed: 5
   monsterCode: 2
   thoughtBubble: {fileID: 5378332060457000722}
@@ -263,7 +263,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 71532344d06fa1848b3ef0e69dddd901, type: 2}
+  - {fileID: 2100000, guid: 959ef821d19a06046828a2cccaf81375, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

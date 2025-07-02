@@ -4,6 +4,7 @@ using UnityEngine;
 public class EdibleHandler : MonoBehaviour
 {
     private bool canInteract;
+    public GameObject imageInteraction;
 
     void Start()
     {
@@ -30,6 +31,7 @@ public class EdibleHandler : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             canInteract = true;
+            imageInteraction.SetActive(true);
         }
     }
 
@@ -38,6 +40,7 @@ public class EdibleHandler : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             canInteract = true;
+            imageInteraction.SetActive(true);
         }
     }
 
@@ -46,6 +49,7 @@ public class EdibleHandler : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             canInteract = false;
+            imageInteraction.SetActive(false);
         }
     }
 
@@ -54,6 +58,7 @@ public class EdibleHandler : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             canInteract = false;
+            imageInteraction.SetActive(false);
         }
     }
 }

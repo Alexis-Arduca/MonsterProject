@@ -45,7 +45,7 @@ public class Monster : MonoBehaviour
     private bool isInteract;
 
     [Header("Follow")]
-    [SerializeField] protected float maxFollowDistance = 2f;
+    [SerializeField] private float maxFollowDistance = 50f;
     private NavMeshAgent agent;
     private Vector3 playerPos;
     private float jumpHeight = 2f;
@@ -174,6 +174,7 @@ public class Monster : MonoBehaviour
         if (itemCode == code)
         {
             thoughtBubble.HideBubble();
+            this.gameObject.GetComponent<LineRenderer>().enabled = false;
             currentState = State.Following;
             DeactivateTrail(itemCode);
             Destroy(item);
@@ -293,6 +294,7 @@ public class Monster : MonoBehaviour
 
         if (Vector3.Distance(playerPos, transform.position) > maxFollowDistance)
         {
+            Debug.Log(Vector3.Distance(playerPos, transform.position));
             agent.isStopped = false;
             monsterAnimator.SetBool("isMoving", true);
 

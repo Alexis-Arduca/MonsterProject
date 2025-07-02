@@ -27,6 +27,7 @@ public class PlayerControler : MonoBehaviour
     private readonly float cameraMinRotationY = -50f;
     private readonly Vector3 spawnPosition = new Vector3(-2.4f, 2.74f, 14.3f);
     private PauseManager pauseManager;
+    private bool isInRange;
 
     void Awake()
     {
@@ -83,19 +84,17 @@ public class PlayerControler : MonoBehaviour
     {
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out _hit, InteractDistance))
         {
-            //
+            isInRange = true;
+        }
+        else
+        {
+            isInRange = false;
         }
     }
 
     public void OnAction(InputValue value)
     {
-        if (currentEdible != null && currentEdible.GetInteraction())
-        {
-            currentEdible.InteractWith();
-            return;
-        }
-
-        if (_hit.collider != null)
+        if (isInRange)
         {
             if (_hit.collider.TryGetComponent(out PickableController pickableController))
             {
@@ -109,6 +108,12 @@ public class PlayerControler : MonoBehaviour
         else if (_pickableController != null)
         {
             HandleDrop();
+        }
+        
+        if (currentEdible != null && currentEdible.GetInteraction())
+        {
+            currentEdible.InteractWith();
+            return;
         }
     }
 
